@@ -1,26 +1,21 @@
-# mapping_set_id: "https://github.com/selgebali/datacite4.6-jsonld/blob/main/mappings/datacite-schemaorg.sssom.tsv"
-# mapping_set_version: "0.1.0"
-# mapping_set_description: "SSSOM mappings from DataCite Metadata Schema 4.6 properties and controlled vocabulary terms to Schema.org. Schema.org targets only; DataCite-to-DCTERMS/DCAT-AP mappings are maintained in a separate artefact."
-# creator_id: "https://orcid.org/0000-0003-1378-5495"
-# license: "https://creativecommons.org/licenses/by/4.0/"
-# subject_source: "https://schema.stage.datacite.org/linked-data/"
-# object_source: "https://schema.org/"
-# mapping_date: "2026-05-12"
 # curie_map:
-#   datacite-class: "https://schema.stage.datacite.org/linked-data/class/"
-#   datacite-prop: "https://schema.stage.datacite.org/linked-data/property/"
-#   datacite-vocab: "https://schema.stage.datacite.org/linked-data/vocab/"
-#   schema: "https://schema.org/"
-#   skos: "http://www.w3.org/2004/02/skos/core#"
-#   semapv: "https://w3id.org/semapv/vocab/"
-#
-# Notes:
-#   - Subject IRIs for sub-elements use nested paths (e.g. property/creator/creatorName).
-#     These resolve via the redirect workflow to the canonical flat property files.
-#   - dateType values with no schema.org equivalent (Accepted, Submitted, Withdrawn, Other, Valid)
-#     are intentionally omitted; they are covered in the DataCite-DCTERMS mapping.
-#     Note: schema:validFrom is NOT in the domain of CreativeWork/Dataset and was therefore removed.
-#   - object_id values use https://schema.org/ (HTTPS) per current schema.org convention.
+#   datacite-ld: https://schema.stage.datacite.org/linked-data/
+#   datacite-class: https://schema.stage.datacite.org/linked-data/class/
+#   datacite-prop: https://schema.stage.datacite.org/linked-data/property/
+#   datacite-vocab: https://schema.stage.datacite.org/linked-data/vocab/
+#   schema: https://schema.org/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+#   orcid: https://orcid.org/
+# mapping_set_id: https://github.com/selgebali/datacite-metadata-toolkit/blob/main/mappings/datacite-schemaorg.sssom.tsv
+# mapping_set_version: 0.1.0
+# mapping_set_description: "SSSOM mappings from DataCite Metadata Schema 4.6 properties and controlled vocabulary terms to Schema.org. Schema.org targets only; DataCite-to-DCTERMS/DCAT-AP mappings are maintained in a separate artefact. Subject IRIs for sub-elements use nested paths (e.g. property/creator/creatorName) that resolve via the redirect workflow to the canonical flat property files. dateType values with no schema.org equivalent (Accepted, Submitted, Withdrawn, Other, Valid) are intentionally omitted and covered in the DataCite-DCTERMS mapping; schema:validFrom is not in the domain of CreativeWork/Dataset and was removed. object_id values use https://schema.org/ (HTTPS) per current schema.org convention."
+# creator_id:
+#   - orcid:0000-0003-1378-5495
+# license: https://creativecommons.org/licenses/by/4.0/
+# subject_source: "datacite-ld:"
+# object_source: "schema:"
+# mapping_date: 2026-05-12
 subject_id	predicate_id	object_id	mapping_justification	subject_label	object_label	comment
 datacite-prop:identifier	skos:exactMatch	schema:identifier	semapv:ManualMappingCuration	identifier	identifier	DataCite's mandatory DOI maps directly to schema:identifier as a PropertyValue
 datacite-prop:identifierType	skos:exactMatch	schema:propertyID	semapv:ManualMappingCuration	identifierType	propertyID	The scheme name (e.g. DOI) is the propertyID of a schema:PropertyValue
