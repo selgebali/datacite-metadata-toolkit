@@ -1,6 +1,6 @@
 # rdf-vocabulary-staging
 
-This directory contains the **source files for the DataCite 4.6 linked-data vocabulary**. These are the files you edit when adding or updating vocabulary terms, classes, properties, or context mappings. Build scripts in `../rdf-build-scripts/` consume this directory to produce distribution bundles and GitHub Pages content.
+This directory contains the **source files for the DataCite linked-data vocabulary (versions 4.6 and 4.7)**. These are the files you edit when adding or updating vocabulary terms, classes, properties, or context mappings. Build scripts in `../rdf-build-scripts/` consume this directory to produce distribution bundles and GitHub Pages content.
 
 ---
 
@@ -8,22 +8,25 @@ This directory contains the **source files for the DataCite 4.6 linked-data voca
 
 ```
 rdf-vocabulary-staging/
-├── class/          # 21 RDF class definitions
-├── property/       # 78 RDF property definitions
-├── vocab/          # 9 controlled vocabulary schemes
+├── class/          # 21 RDF class definitions (DataCite 4.6 + 4.7)
+├── property/       # 79 RDF property definitions (DataCite 4.6 + 4.7)
+├── vocab/          # 11 controlled vocabulary schemes — 152 terms total (DataCite 4.6 + 4.7)
 │   ├── contributorType/       (22 terms)
 │   ├── dateType/              (12 terms)
 │   ├── descriptionType/       (6 terms)
+│   ├── funderIdentifierType/  (5 terms  — added in DataCite 4.7)
+│   ├── identifierType/        (1 term   — added in DataCite 4.7)
 │   ├── nameType/              (2 terms)
 │   ├── numberType/            (4 terms)
-│   ├── relatedIdentifierType/ (21 terms)
-│   ├── relationType/          (38 terms)
-│   ├── resourceTypeGeneral/   (32 terms)
+│   ├── relatedIdentifierType/ (23 terms)
+│   ├── relationType/          (39 terms)
+│   ├── resourceTypeGeneral/   (34 terms)
 │   └── titleType/             (4 terms)
 ├── context/
 │   └── fullcontext.jsonld     # JSON-LD context mapping DataCite keys to IRIs
 └── manifest/
-    └── datacite-4.6.json      # Versioned index of all defined resources
+    ├── datacite-4.6.json      # Versioned index for DataCite 4.6
+    └── datacite-4.7.json      # Versioned index for DataCite 4.7
 ```
 
 **Generated at build time** (not committed):
@@ -72,9 +75,9 @@ Maps compact DataCite JSON keys (e.g. `creator`, `resourceTypeGeneral`) to their
 }
 ```
 
-### `manifest/datacite-4.6.json`
+### `manifest/datacite-4.6.json` / `manifest/datacite-4.7.json`
 
-A versioned inventory of every class, property, and vocabulary term defined in this directory. Start here to programmatically discover available resources for a given schema version.
+Versioned inventories of every class, property, and vocabulary term defined in this directory, one per DataCite schema version. Start with the relevant file to programmatically discover available resources for a given version.
 
 ---
 
