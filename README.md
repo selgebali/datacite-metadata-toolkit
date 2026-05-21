@@ -14,21 +14,24 @@ It is the **source of truth** for the DataCite linked-data namespace. The namesp
 .
 ├── rdf-vocabulary-staging/          # Vocabulary source files (edit these)
 │   ├── class/                       # 21 RDF class definitions (Resource, Creator, Title, …)
-│   ├── property/                    # 78 RDF property definitions (identifier, creatorName, …)
-│   ├── vocab/                       # 9 controlled vocabulary schemes
-│   │   ├── contributorType/         # <Term>.jsonld files + <scheme>.jsonld ConceptScheme
-│   │   ├── dateType/
-│   │   ├── descriptionType/
-│   │   ├── nameType/
-│   │   ├── numberType/
-│   │   ├── relatedIdentifierType/
-│   │   ├── relationType/
-│   │   ├── resourceTypeGeneral/
-│   │   └── titleType/
+│   ├── property/                    # 79 RDF property definitions (identifier, creatorName, …)
+│   ├── vocab/                       # 11 controlled vocabulary schemes (152 terms total)
+│   │   ├── contributorType/         # 22 terms — <Term>.jsonld + <scheme>.jsonld ConceptScheme
+│   │   ├── dateType/                # 12 terms
+│   │   ├── descriptionType/         # 6 terms
+│   │   ├── funderIdentifierType/    # 5 terms  (added in DataCite 4.7)
+│   │   ├── identifierType/          # 1 term   (added in DataCite 4.7)
+│   │   ├── nameType/                # 2 terms
+│   │   ├── numberType/              # 4 terms
+│   │   ├── relatedIdentifierType/   # 23 terms
+│   │   ├── relationType/            # 39 terms
+│   │   ├── resourceTypeGeneral/     # 34 terms
+│   │   └── titleType/               # 4 terms
 │   ├── context/
 │   │   └── fullcontext.jsonld       # JSON-LD context mapping DataCite keys to IRIs
 │   └── manifest/
-│       └── datacite-4.6.json        # Versioned index of all defined resources
+│       ├── datacite-4.6.json        # Versioned index for DataCite 4.6
+│       └── datacite-4.7.json        # Versioned index for DataCite 4.7
 │
 ├── validation-and-conversion/
 │   ├── schemas/
