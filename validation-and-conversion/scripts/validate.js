@@ -4,7 +4,7 @@ const { validate } = require("jskos-validate");
 
 // Accept either a JSON object containing arrays (e.g. {"mappings": [...]})
 // or NDJSON (one JSON object per line).
-const filePath = process.argv[2] || "jskos-mappings.ndjson";
+const filePath = process.argv[2] || "mappings/jskos-mappings.json";
 const text     = fs.readFileSync(filePath, "utf8");
 
 let items = [];

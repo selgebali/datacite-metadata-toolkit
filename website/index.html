@@ -354,8 +354,8 @@
         </p>
         <div class="meta" aria-label="Quick facts">
           <span class="chip">Audience: Developers, metadata engineers, tool builders</span>
-          <span class="chip">Current staged version: DataCite 4.6</span>
-          <span class="chip">Machine entry point: <a href="/linked-data/manifest/datacite-4.6.json">manifest</a></span>
+          <span class="chip">Current staged version: DataCite 4.7</span>
+          <span class="chip">Machine entry point: <a href="/linked-data/manifest/datacite-current.json">datacite-current.json</a></span>
         </div>
       </div>
     </section>
@@ -366,10 +366,10 @@
         <p class="muted">Choose the entry point that matches what you need.</p>
         <div class="grid">
           <article class="card span-6">
-            <h3>I need a machine-readable index of everything (v4.6)</h3>
-            <p>Open the manifest to discover classes, properties, vocabulary schemes, and terms.</p>
-            <a href="/linked-data/manifest/datacite-4.6.json">Open v4.6 manifest</a>
-            <div class="path"><code>/linked-data/manifest/datacite-4.6.json</code></div>
+            <h3>I need a machine-readable index of everything</h3>
+            <p>Open the latest manifest to discover classes, properties, vocabulary schemes, and terms. Versioned manifests are also available for 4.6 and 4.7.</p>
+            <a href="/linked-data/manifest/datacite-current.json">Open current manifest</a>
+            <div class="path"><code>/linked-data/manifest/datacite-current.json</code> &middot; <a href="/linked-data/manifest/datacite-4.7.json">4.7</a> &middot; <a href="/linked-data/manifest/datacite-4.6.json">4.6</a></div>
           </article>
           <article class="card span-6">
             <h3>I need field/property definitions</h3>
@@ -408,15 +408,18 @@
         <h2 id="versions-title">Available Versions</h2>
         <div class="split">
           <div>
-            <p><strong>DataCite 4.6</strong> (current staged set)</p>
+            <p><strong>DataCite 4.7</strong> (current staged set)</p>
             <p class="muted">
-              This staged namespace currently exposes a DataCite 4.6 linked-data set with JSON-LD class, property,
-              vocabulary, context, and manifest resources.
+              This staged namespace currently exposes a DataCite 4.7 linked-data set with JSON-LD class, property,
+              vocabulary, context, and manifest resources. 4.7 adds <code>Poster</code> and <code>Presentation</code> to
+              <code>resourceTypeGeneral</code>, <code>RAiD</code> and <code>SWHID</code> to <code>relatedIdentifierType</code>,
+              <code>Other</code> to <code>relationType</code>, and a new <code>relationTypeInformation</code> property.
             </p>
-            <p><a href="/linked-data/manifest/datacite-4.6.json">Open the DataCite 4.6 manifest</a></p>
+            <p><a href="/linked-data/manifest/datacite-4.7.json">Open the DataCite 4.7 manifest</a></p>
+            <p><a href="/linked-data/manifest/datacite-4.6.json">Open the DataCite 4.6 manifest</a> (prior version)</p>
           </div>
           <aside class="callout" aria-label="Versioning note">
-            Add future versions here (for example, <code>4.7</code>) and keep manifests as the primary machine-readable entry points.
+            <code>datacite-current.json</code> always points at the latest version. Use it for moving targets; use the versioned manifests for reproducibility.
           </aside>
         </div>
       </section>

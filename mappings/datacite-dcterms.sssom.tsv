@@ -1,68 +1,35 @@
-# mapping_set_id: "https://github.com/selgebali/datacite4.6-jsonld/blob/main/mappings/datacite-dcterms.sssom.tsv"
-# mapping_set_version: "0.1.0"
-# mapping_set_description: "SSSOM mappings from DataCite Metadata Schema 4.6 to DCTERMS (Dublin Core Terms) and DCAT-AP. Companion file to datacite-schemaorg.sssom.tsv; covers elements with no adequate Schema.org equivalent."
-# creator_id: "https://orcid.org/0000-0003-1378-5495"
-# license: "https://creativecommons.org/licenses/by/4.0/"
-# mapping_date: "2026-05-12"
-# subject_source: "https://schema.stage.datacite.org/linked-data/"
-# object_source: "http://purl.org/dc/terms/"
+# comment: |
+#   SSSOM mappings from DataCite Metadata Schema 4.6 to DCTERMS (Dublin Core Terms).
+#   Companion file to datacite-schemaorg.sssom.tsv. Strictly limited to DataCite
+#   terms with NO adequate Schema.org equivalent — overlap with schemaorg is
+#   excluded by design. Currently this means four dateType values omitted from
+#   the Schema.org file (Accepted, Submitted, Valid, Withdrawn) plus the
+#   relationType pair IsReplacedBy / Replaces, which Schema.org does not model.
+#   Subject IRIs for sub-elements use nested paths that resolve via the redirect
+#   workflow to the canonical flat property files.
 # curie_map:
-#   datacite-class: "https://schema.stage.datacite.org/linked-data/class/"
-#   datacite-prop: "https://schema.stage.datacite.org/linked-data/property/"
-#   datacite-vocab: "https://schema.stage.datacite.org/linked-data/vocab/"
-#   dcterms: "http://purl.org/dc/terms/"
-#   dcat: "http://www.w3.org/ns/dcat#"
-#   skos: "http://www.w3.org/2004/02/skos/core#"
-#   semapv: "https://w3id.org/semapv/vocab/"
-#
-# Notes:
-#   - This file is a STUB. Full mappings will be developed in a dedicated DataCite-DCTERMS/DCAT-AP sprint.
-#   - Priority rows captured here are dateType values omitted from the Schema.org mapping due to
-#     domain violations or missing Schema.org equivalents.
-#   - Subject IRIs for sub-elements use the same nested path convention as the Schema.org file.
+#   datacite-ld: https://schema.stage.datacite.org/linked-data/
+#   datacite-class: https://schema.stage.datacite.org/linked-data/class/
+#   datacite-prop: https://schema.stage.datacite.org/linked-data/property/
+#   datacite-vocab: https://schema.stage.datacite.org/linked-data/vocab/
+#   dcterms: http://purl.org/dc/terms/
+#   dcat: http://www.w3.org/ns/dcat#
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+#   orcid: https://orcid.org/
+# mapping_set_id: https://github.com/selgebali/datacite-metadata-toolkit/blob/main/mappings/datacite-dcterms.sssom.tsv
+# mapping_set_version: 0.2.0
+# mapping_set_description: "SSSOM mappings from DataCite Metadata Schema 4.6 to DCTERMS (Dublin Core Terms). Strictly limited to DataCite terms with no adequate Schema.org equivalent; companion to datacite-schemaorg.sssom.tsv. Overlap with schemaorg is excluded by design."
+# creator_id:
+#   - orcid:0000-0003-1378-5495
+# license: https://creativecommons.org/licenses/by/4.0/
+# subject_source: "datacite-ld:"
+# object_source: "dcterms:"
+# mapping_date: 2026-05-22
 subject_id	predicate_id	object_id	mapping_justification	subject_label	object_label	comment
-datacite-prop:identifier	skos:exactMatch	dcterms:identifier	semapv:ManualMappingCuration	identifier	identifier	DataCite's mandatory DOI maps directly to dcterms:identifier
-datacite-prop:creator	skos:exactMatch	dcterms:creator	semapv:ManualMappingCuration	creator	creator	Primary agents map to dcterms:creator
-datacite-prop:title	skos:exactMatch	dcterms:title	semapv:ManualMappingCuration	title	title	Primary title maps to dcterms:title
-datacite-prop:publisher	skos:exactMatch	dcterms:publisher	semapv:ManualMappingCuration	publisher	publisher	Publisher maps to dcterms:publisher
-datacite-prop:publicationYear	skos:exactMatch	dcterms:issued	semapv:ManualMappingCuration	publicationYear	issued	Publication year maps to dcterms:issued
-datacite-prop:subject	skos:exactMatch	dcterms:subject	semapv:ManualMappingCuration	subject	subject	Subject/keyword maps to dcterms:subject
-datacite-prop:contributor	skos:exactMatch	dcterms:contributor	semapv:ManualMappingCuration	contributor	contributor	Contributor maps to dcterms:contributor
-datacite-prop:date	skos:exactMatch	dcterms:date	semapv:ManualMappingCuration	date	date	Generic date container maps to dcterms:date
-datacite-vocab:dateType/Accepted	skos:exactMatch	dcterms:dateAccepted	semapv:ManualMappingCuration	Accepted	dateAccepted	Acceptance date maps exactly to dcterms:dateAccepted
-datacite-vocab:dateType/Available	skos:exactMatch	dcterms:available	semapv:ManualMappingCuration	Available	available	Availability date maps exactly to dcterms:available
-datacite-vocab:dateType/Copyrighted	skos:exactMatch	dcterms:dateCopyrighted	semapv:ManualMappingCuration	Copyrighted	dateCopyrighted	Copyright date maps exactly to dcterms:dateCopyrighted
-datacite-vocab:dateType/Collected	skos:closeMatch	dcterms:created	semapv:ManualMappingCuration	Collected	created	Data collection is a form of creation; closeMatch because collection period may differ from file creation
-datacite-vocab:dateType/Coverage	skos:exactMatch	dcterms:coverage	semapv:ManualMappingCuration	Coverage	coverage	Temporal or spatial coverage maps to dcterms:coverage
-datacite-vocab:dateType/Created	skos:exactMatch	dcterms:created	semapv:ManualMappingCuration	Created	created	Resource creation date maps exactly to dcterms:created
-datacite-vocab:dateType/Issued	skos:exactMatch	dcterms:issued	semapv:ManualMappingCuration	Issued	issued	Issuance date maps exactly to dcterms:issued
-datacite-vocab:dateType/Submitted	skos:exactMatch	dcterms:dateSubmitted	semapv:ManualMappingCuration	Submitted	dateSubmitted	Submission date maps exactly to dcterms:dateSubmitted
-datacite-vocab:dateType/Updated	skos:exactMatch	dcterms:modified	semapv:ManualMappingCuration	Updated	modified	Update date maps exactly to dcterms:modified
-datacite-vocab:dateType/Valid	skos:exactMatch	dcterms:valid	semapv:ManualMappingCuration	Valid	valid	Validity period maps exactly to dcterms:valid
-datacite-vocab:dateType/Withdrawn	skos:relatedMatch	dcterms:modified	semapv:ManualMappingCuration	Withdrawn	modified	No dcterms equivalent for withdrawal; closest is dcterms:modified; relatedMatch only
-datacite-prop:language	skos:exactMatch	dcterms:language	semapv:ManualMappingCuration	language	language	Language maps exactly to dcterms:language
-datacite-prop:rights	skos:exactMatch	dcterms:rights	semapv:ManualMappingCuration	rights	rights	Rights statement maps exactly to dcterms:rights
-datacite-prop:rights/rightsURI	skos:exactMatch	dcterms:license	semapv:ManualMappingCuration	rightsURI	license	URI of the rights/license maps to dcterms:license
-datacite-prop:description	skos:exactMatch	dcterms:description	semapv:ManualMappingCuration	description	description	Description maps exactly to dcterms:description
-datacite-prop:format	skos:exactMatch	dcterms:format	semapv:ManualMappingCuration	format	format	Technical format maps exactly to dcterms:format
-datacite-prop:relatedIdentifier	skos:exactMatch	dcterms:relation	semapv:ManualMappingCuration	relatedIdentifier	relation	Related identifier maps to dcterms:relation; specific relation types map to sub-properties (hasPart, isPartOf, etc.)
-datacite-vocab:relationType/IsPartOf	skos:exactMatch	dcterms:isPartOf	semapv:ManualMappingCuration	IsPartOf	isPartOf
-datacite-vocab:relationType/HasPart	skos:exactMatch	dcterms:hasPart	semapv:ManualMappingCuration	HasPart	hasPart
-datacite-vocab:relationType/IsVersionOf	skos:exactMatch	dcterms:isVersionOf	semapv:ManualMappingCuration	IsVersionOf	isVersionOf
-datacite-vocab:relationType/HasVersion	skos:exactMatch	dcterms:hasVersion	semapv:ManualMappingCuration	HasVersion	hasVersion
-datacite-vocab:relationType/IsReferencedBy	skos:exactMatch	dcterms:isReferencedBy	semapv:ManualMappingCuration	IsReferencedBy	isReferencedBy
-datacite-vocab:relationType/References	skos:exactMatch	dcterms:references	semapv:ManualMappingCuration	References	references
-datacite-vocab:relationType/IsNewVersionOf	skos:exactMatch	dcterms:isVersionOf	semapv:ManualMappingCuration	IsNewVersionOf	isVersionOf
-datacite-vocab:relationType/IsPreviousVersionOf	skos:exactMatch	dcterms:hasVersion	semapv:ManualMappingCuration	IsPreviousVersionOf	hasVersion
-datacite-vocab:relationType/IsRequiredBy	skos:exactMatch	dcterms:isRequiredBy	semapv:ManualMappingCuration	IsRequiredBy	isRequiredBy
-datacite-vocab:relationType/Requires	skos:exactMatch	dcterms:requires	semapv:ManualMappingCuration	Requires	requires
-datacite-vocab:relationType/IsReplacedBy	skos:exactMatch	dcterms:isReplacedBy	semapv:ManualMappingCuration	IsReplacedBy	isReplacedBy
-datacite-vocab:relationType/Replaces	skos:exactMatch	dcterms:replaces	semapv:ManualMappingCuration	Replaces	replaces
-datacite-vocab:relationType/IsDerivedFrom	skos:exactMatch	dcterms:source	semapv:ManualMappingCuration	IsDerivedFrom	source	Source of derivation maps to dcterms:source
-datacite-prop:relatedItem	skos:exactMatch	dcterms:relation	semapv:ManualMappingCuration	relatedItem	relation	Structured related item maps to dcterms:relation
-datacite-prop:alternateIdentifier	skos:exactMatch	dcterms:identifier	semapv:ManualMappingCuration	alternateIdentifier	identifier	Alternate identifier is also a dcterms:identifier for the same resource
-datacite-prop:version	skos:exactMatch	dcterms:hasVersion	semapv:ManualMappingCuration	version	hasVersion	Version string maps to dcterms:hasVersion
-datacite-prop:size	skos:exactMatch	dcterms:extent	semapv:ManualMappingCuration	size	extent	Size/extent maps exactly to dcterms:extent
-datacite-prop:geoLocation	skos:exactMatch	dcterms:spatial	semapv:ManualMappingCuration	geoLocation	spatial	Spatial location maps to dcterms:spatial (sub-property of dcterms:coverage)
-datacite-class:Resource	skos:exactMatch	dcterms:BibliographicResource	semapv:ManualMappingCuration	Resource	BibliographicResource	Top-level DataCite resource maps to dcterms:BibliographicResource
-datacite-class:FundingReference	skos:relatedMatch	dcterms:source	semapv:ManualMappingCuration	FundingReference	source	Funding reference loosely relates to dcterms:source; no dedicated dcterms class
+datacite-vocab:dateType/Accepted	skos:exactMatch	dcterms:dateAccepted	semapv:ManualMappingCuration	Accepted	dateAccepted	Acceptance date maps exactly to dcterms:dateAccepted; no schema.org equivalent
+datacite-vocab:dateType/Submitted	skos:exactMatch	dcterms:dateSubmitted	semapv:ManualMappingCuration	Submitted	dateSubmitted	Submission date maps exactly to dcterms:dateSubmitted; no schema.org equivalent
+datacite-vocab:dateType/Valid	skos:exactMatch	dcterms:valid	semapv:ManualMappingCuration	Valid	valid	Validity period maps exactly to dcterms:valid; no schema.org equivalent
+datacite-vocab:dateType/Withdrawn	skos:relatedMatch	dcterms:modified	semapv:ManualMappingCuration	Withdrawn	modified	No dcterms equivalent for withdrawal; closest is dcterms:modified; relatedMatch only. No schema.org equivalent either.
+datacite-vocab:relationType/IsReplacedBy	skos:exactMatch	dcterms:isReplacedBy	semapv:ManualMappingCuration	IsReplacedBy	isReplacedBy	Direct lexical and semantic match; no schema.org equivalent
+datacite-vocab:relationType/Replaces	skos:exactMatch	dcterms:replaces	semapv:ManualMappingCuration	Replaces	replaces	Direct lexical and semantic match; no schema.org equivalent

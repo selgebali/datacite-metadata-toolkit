@@ -43,6 +43,7 @@
     "https://schema.stage.datacite.org/linked-data/property/affiliation.jsonld",
     "https://schema.stage.datacite.org/linked-data/property/affiliationIdentifier.jsonld",
     "https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme.jsonld",
+    "https://schema.stage.datacite.org/linked-data/property/alternateIdentifier.jsonld",
     "https://schema.stage.datacite.org/linked-data/property/alternateIdentifierType.jsonld",
     "https://schema.stage.datacite.org/linked-data/property/awardNumber.jsonld",
     "https://schema.stage.datacite.org/linked-data/property/awardTitle.jsonld",

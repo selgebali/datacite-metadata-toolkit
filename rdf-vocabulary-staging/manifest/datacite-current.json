@@ -1,7 +1,7 @@
 {
   "namespace": "https://schema.stage.datacite.org/linked-data/",
   "currentVersion": "4.7",
-  "updated": "2026-05-13",
+  "updated": "2026-05-22",
   "links": {
     "manifest": "https://schema.stage.datacite.org/linked-data/manifest/datacite-4.7.json",
     "distJsonld": "https://schema.stage.datacite.org/linked-data/dist/datacite-4.7.jsonld",

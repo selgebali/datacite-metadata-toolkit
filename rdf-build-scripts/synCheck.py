@@ -95,7 +95,6 @@ def check_defs_enum(def_key: str, def_obj: dict):
     else:
         folder_terms = terms_in_vocab_folder(scheme_dir)
         normalized_enum = {ALIAS_FRAGMENTS.get(t, t) for t in enum_set}
-        expected_in_folder = {t for t in normalized_enum if t == ALIAS_FRAGMENTS.get(t, t)}
         # Compare with alias normalization: profile may use "Crossref Funder ID" but folder file is CrossrefFunderID
         folder_norm = {ALIAS_FRAGMENTS.get(t, t) for t in folder_terms}
         if normalized_enum != folder_norm:

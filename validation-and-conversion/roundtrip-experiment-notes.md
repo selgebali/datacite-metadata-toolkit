@@ -58,7 +58,7 @@ Beautify `original.c14n.xml` and `roundtrip.c14n.xml` using an online tool (e.g.
 
 ## Step 4 — Validate against XSD
 
-Used `roundtrip.c14n.xml` to validate against the DataCite XSD via bolognese (see `../examples/xml-roundtrip/validate_xml.rb`).
+Used `roundtrip.c14n.xml` to validate against the DataCite XSD via bolognese (see `scripts/validate_xml.rb`).
 
 **Result: ✓ XML is valid against DataCite (kernel-4) schema**
 

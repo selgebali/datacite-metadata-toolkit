@@ -477,7 +477,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         skos:inScheme      <https://schema.stage.datacite.org/linked-data/vocab/relationType>;
         skos:notation      "Other";
         skos:prefLabel     "Other"@en;
-        skos:scopeNote     "If selected, supply a value for relationTypeInformation (or relationTypeInformation for RelatedItem)."@en;
+        skos:scopeNote     "If selected, supply a value for relationTypeInformation describing the nature of the relationship; applies to both relatedIdentifier and relatedItem."@en;
         skos:topConceptOf  <https://schema.stage.datacite.org/linked-data/vocab/relationType> .
 
 <https://schema.stage.datacite.org/linked-data/vocab/relationType/Obsoletes>
@@ -2149,6 +2149,12 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         rdfs:comment  "The type of the AlternateIdentifier."@en;
         rdfs:label    "alternateIdentifierType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/alternateIdentifierType.jsonld> .
+
+<https://schema.stage.datacite.org/linked-data/property/alternateIdentifier>
+        rdf:type      rdf:Property;
+        rdfs:comment  "An identifier or identifiers other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string unique within its domain of issue, such as a local identifier, a serial number of an instrument, or an inventory number."@en;
+        rdfs:label    "alternateIdentifier"@en;
+        rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/alternateIdentifier.jsonld> .
 
 <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>
         rdf:type      rdf:Property;

@@ -37,7 +37,7 @@
       "title": "DataCite Linked Data Current Distribution Pointer",
       "identifier": "datacite-current",
       "versionInfo": "4.7",
-      "modified": "2026-05-13",
+      "modified": "2026-05-22",
       "source": "https://schema.stage.datacite.org/linked-data/manifest/datacite-4.7.json",
       "seeAlso": [
         "https://schema.stage.datacite.org/linked-data/dist/datacite-4.7.jsonld",

@@ -5,7 +5,7 @@
   "prefLabel": "Other",
   "notation": "Other",
   "definition": "indicates that A is related to B and the relationship does not fit into an existing category",
-  "scopeNote": "If selected, supply a value for relationTypeInformation (or relationTypeInformation for RelatedItem).",
+  "scopeNote": "If selected, supply a value for relationTypeInformation describing the nature of the relationship; applies to both relatedIdentifier and relatedItem.",
   "example": [
     "<relatedIdentifier relatedIdentifierType=\"DOI\" relationType=\"Other\" relationTypeInformation=\"is output of\" resourceTypeGeneral=\"Project\">10.21384/p27z-6n52</relatedIdentifier>"
   ],

@@ -16,7 +16,7 @@
     <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
     <dcterms:identifier>datacite-4.6</dcterms:identifier>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2026-05-13</dcterms:created>
+    >2026-05-22</dcterms:created>
   </owl:Ontology>
   <rdfs:Class rdf:about="https://schema.stage.datacite.org/linked-data/class/RelatedItem">
     <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/class/RelatedItem.jsonld"/>
@@ -142,6 +142,11 @@
     <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/property/pointLatitude.jsonld"/>
     <rdfs:label xml:lang="en">pointLatitude</rdfs:label>
     <rdfs:comment xml:lang="en">Latitudinal dimension of point.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://schema.stage.datacite.org/linked-data/property/alternateIdentifier">
+    <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/property/alternateIdentifier.jsonld"/>
+    <rdfs:label xml:lang="en">alternateIdentifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier or identifiers other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string unique within its domain of issue, such as a local identifier, a serial number of an instrument, or an inventory number.</rdfs:comment>
   </rdf:Property>
   <rdf:Property rdf:about="https://schema.stage.datacite.org/linked-data/property/westBoundLongitude">
     <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/property/westBoundLongitude.jsonld"/>

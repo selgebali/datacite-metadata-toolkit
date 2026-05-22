@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DataCite 4.6 — JSON‑LD Profile, Schema &amp; Crosswalks</title>
-  <meta name="description" content="DataCite 4.6 JSON Schema & JSON‑LD context with SKOS/JSKOS crosswalks. Beginner‑friendly docs, quick start, and links to the live files." />
+  <title>DataCite 4.6 / 4.7 — JSON‑LD Profile, Schema &amp; Crosswalks</title>
+  <meta name="description" content="DataCite 4.6 and 4.7 JSON Schema & JSON‑LD context with SKOS/JSKOS/SSSOM crosswalks. Beginner‑friendly docs, quick start, and links to the live files." />
   <style>
     :root{
       --bg: #0b0d10;
@@ -76,14 +76,14 @@
 <body>
   <header class="hero">
     <div class="wrap">
-      <h1>DataCite 4.6 — JSON‑LD Profile &amp; JSON Schema</h1>
+      <h1>DataCite 4.6 / 4.7 — JSON‑LD Profile &amp; JSON Schema</h1>
       <p class="tagline">
-        Validate DataCite 4.6 payloads and publish them as linked data. This site hosts the live JSON Schema, the JSON‑LD <code>@context</code>, and SKOS/JSKOS crosswalks — with a quick start for beginners.
+        Validate DataCite 4.6 and 4.7 payloads and publish them as linked data. This site hosts the live JSON Schema, the JSON‑LD <code>@context</code>, and SKOS / JSKOS / SSSOM crosswalks — with a quick start for beginners.
       </p>
       <div class="cta-row">
         <a class="btn" href="https://schema.stage.datacite.org/linked-data/schema-profiles/integrated.json">Full Profile (JSON Schema + @context)</a>
-        <a class="btn" href="https://github.com/selgebali/datacite4.6-jsonld/blob/main/mappings/SKOS_crosswalks.jsonld">Open SKOS_crosswalks</a>
-        <a class="btn" href="https://github.com/selgebali/datacite4.6-jsonld#readme">README (Beginner’s Guide)</a>
+        <a class="btn" href="https://github.com/selgebali/datacite-metadata-toolkit/blob/main/mappings/SKOS_crosswalks.jsonld">Open SKOS_crosswalks</a>
+        <a class="btn" href="https://github.com/selgebali/datacite-metadata-toolkit#readme">README (Beginner’s Guide)</a>
       </div>
       <span class="pill">Draft‑07 JSON Schema</span>
       <span class="pill">JSON‑LD</span>
@@ -93,6 +93,16 @@
 
   <main class="wrap">
     <section id="whats-new">
+      <h2>What’s new in 4.7</h2>
+      <div class="grid">
+        <div class="card"><h3>Resource Types</h3><p><code>resourceTypeGeneral</code> adds <strong>Poster</strong>, <strong>Presentation</strong>.</p></div>
+        <div class="card"><h3>Related Identifier Types</h3><p><code>relatedIdentifierType</code> adds <strong>RAiD</strong>, <strong>SWHID</strong>.</p></div>
+        <div class="card"><h3>Relation Types</h3><p><code>relationType</code> adds <strong>Other</strong>.</p></div>
+        <div class="card"><h3>New Property</h3><p><code>relationTypeInformation</code> — additional information about the selected <code>relationType</code> (applies to <code>relatedIdentifier</code> and <code>relatedItem</code>).</p></div>
+      </div>
+    </section>
+
+    <section id="whats-new-46">
       <h2>What’s new in 4.6</h2>
       <div class="grid">
         <div class="card"><h3>Resource Types</h3><p><code>resourceTypeGeneral</code> adds <strong>Project</strong>, <strong>Award</strong>.</p></div>
@@ -112,10 +122,12 @@
         </div>
         
         <div class="card">
-          <h3>SKOS / JSKOS Crosswalks</h3>
+          <h3>SKOS / JSKOS / SSSOM Crosswalks</h3>
           <ul>
-            <li><a href="skos-mappings/SKOS_crosswalks.jsonld">SKOS_crosswalks.jsonld</a></li>
-            <li><a href="skos-mappings/jskos-mappings.json">jskos-mappings.json</a></li>
+            <li><a href="https://github.com/selgebali/datacite-metadata-toolkit/blob/main/mappings/SKOS_crosswalks.jsonld">SKOS_crosswalks.jsonld</a></li>
+            <li><a href="https://github.com/selgebali/datacite-metadata-toolkit/blob/main/mappings/jskos-mappings.json">jskos-mappings.json</a></li>
+            <li><a href="https://github.com/selgebali/datacite-metadata-toolkit/blob/main/mappings/datacite-schemaorg.sssom.tsv">datacite-schemaorg.sssom.tsv</a></li>
+            <li><a href="https://github.com/selgebali/datacite-metadata-toolkit/blob/main/mappings/datacite-dcterms.sssom.tsv">datacite-dcterms.sssom.tsv</a></li>
           </ul>
         </div>
       </div>
@@ -129,7 +141,7 @@
           <pre><code>pip install jsonschema</code></pre>
           <pre><code>from jsonschema import Draft7Validator
 import json
-schema = json.load(open("docs/datacite4.6-profile.json"))
+schema = json.load(open("validation-and-conversion/schemas/schema-profiles/datacite4.6-profile.json"))
 payload = json.load(open("example-submit.json"))
 Draft7Validator(schema).validate(payload)
 print("OK")</code></pre>
@@ -147,8 +159,8 @@ print("OK")</code></pre>
         </div>
         <div class="card">
           <h3>Validate a response</h3>
-          <pre><code>doc = json.load(open("docs/datacite4.6-profile.json"))
-resp = json.load(open("datacite_example_filledin.json"))
+          <pre><code>doc = json.load(open("validation-and-conversion/schemas/schema-profiles/integrated.json"))
+resp = json.load(open("validation-and-conversion/examples/datacite_example_filledin.json"))
 Draft7Validator(doc["responseProfile"]).validate(resp)</code></pre>
         </div>
       </div>
@@ -189,7 +201,7 @@ Draft7Validator(doc["responseProfile"]).validate(resp)</code></pre>
   </main>
 
   <footer class="wrap">
-    <p>Source on <a href="https://github.com/selgebali/datacite4.6-jsonld">GitHub</a>. Built for clarity and interoperability.</p>
+    <p>Source on <a href="https://github.com/selgebali/datacite-metadata-toolkit">GitHub</a>. Built for clarity and interoperability.</p>
   </footer>
 </body>
 </html>

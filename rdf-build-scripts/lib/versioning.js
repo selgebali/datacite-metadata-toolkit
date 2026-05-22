@@ -94,8 +94,8 @@ function resolveCurrentVersion(repoRoot) {
  * Returns the root directory that contains the vocabulary files
  * (class/, property/, vocab/, manifest/, context/, dist/).
  *
- * In datacite4.6-jsonld the vocabulary lives under rdf-vocabulary-staging/.
- * In schema.datacite.org-linked-data the vocabulary lives at the repo root.
+ * In datacite-metadata-toolkit the vocabulary lives under rdf-vocabulary-staging/.
+ * In schema.datacite.org-linked-data (the flat publication mirror) the vocabulary lives at the repo root.
  */
 function resolveVocabRoot(projectRoot) {
   const stagingPath = path.join(projectRoot, "rdf-vocabulary-staging");

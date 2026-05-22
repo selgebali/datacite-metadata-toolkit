@@ -2088,6 +2088,12 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         rdfs:label    "alternateIdentifierType"@en;
         rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/alternateIdentifierType.jsonld> .
 
+<https://schema.stage.datacite.org/linked-data/property/alternateIdentifier>
+        rdf:type      owl:ObjectProperty;
+        rdfs:comment  "An identifier or identifiers other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string unique within its domain of issue, such as a local identifier, a serial number of an instrument, or an inventory number."@en;
+        rdfs:label    "alternateIdentifier"@en;
+        rdfs:seeAlso  <https://schema.stage.datacite.org/linked-data/property/alternateIdentifier.jsonld> .
+
 <https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme>
         rdf:type      owl:ObjectProperty;
         rdfs:comment  "The name of the affiliation identifier scheme"@en;
@@ -2110,7 +2116,7 @@ PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
         rdf:type            owl:Ontology;
         rdfs:comment        "Integrated distribution of the DataCite linked-data classes, properties, vocabulary schemes, and vocabulary terms for schema version 4.6."@en;
         rdfs:seeAlso        <https://schema.stage.datacite.org/linked-data/dist/datacite-4.6.rdf> , <https://schema.stage.datacite.org/linked-data/dist/datacite-4.6.ttl> , <https://schema.stage.datacite.org/linked-data/dist/datacite-4.6.jsonld>;
-        dcterms:created     "2026-05-13"^^xsd:date;
+        dcterms:created     "2026-05-22"^^xsd:date;
         dcterms:identifier  "datacite-4.6";
         dcterms:license     <https://www.apache.org/licenses/LICENSE-2.0>;
         dcterms:source      <https://schema.stage.datacite.org/linked-data/manifest/datacite-4.6.json>;

@@ -85,7 +85,7 @@ datacite-prop:language	skos:exactMatch	schema:inLanguage	semapv:ManualMappingCur
 datacite-prop:resourceType	skos:closeMatch	schema:description	semapv:ManualMappingCuration	resourceType	description	Free-text resource type description; closeMatch because schema:description is broader
 datacite-prop:resourceTypeGeneral	skos:closeMatch	schema:additionalType	semapv:ManualMappingCuration	resourceTypeGeneral	additionalType	General type drives the JSON-LD @type; closeMatch because additionalType is typically a URI not an enum value
 datacite-vocab:resourceTypeGeneral/Audiovisual	skos:exactMatch	schema:MediaObject	semapv:ManualMappingCuration	Audiovisual	MediaObject	Series of visual representations possibly including sound
-datacite-vocab:resourceTypeGeneral/Award	skos:broadMatch	schema:Grant	semapv:ManualMappingCuration	Award	Grant	DataCite Award is broader than schema:Grant (covers non-monetary awards); Grant is a narrower schema.org class
+datacite-vocab:resourceTypeGeneral/Award	skos:narrowMatch	schema:Grant	semapv:ManualMappingCuration	Award	Grant	DataCite Award is broader than schema:Grant (covers non-monetary awards); Grant is a narrower schema.org class, so use narrowMatch (object is narrower than subject)
 datacite-vocab:resourceTypeGeneral/Book	skos:exactMatch	schema:Book	semapv:ManualMappingCuration	Book	Book	Written work bound as a book
 datacite-vocab:resourceTypeGeneral/BookChapter	skos:exactMatch	schema:Chapter	semapv:ManualMappingCuration	BookChapter	Chapter	A chapter within a book
 datacite-vocab:resourceTypeGeneral/Collection	skos:exactMatch	schema:Collection	semapv:ManualMappingCuration	Collection	Collection	Aggregation of resources

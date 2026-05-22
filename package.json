@@ -1,8 +1,8 @@
 {
-  "name": "datacite-jsonld",
+  "name": "datacite-metadata-toolkit",
   "version": "0.0.0",
   "private": true,
-  "description": "DataCite 4.6 metadata schema: JSON-LD vocabulary, JSON Schema profiles, and tooling.",
+  "description": "DataCite Metadata Schema (4.6 and 4.7): RDF/JSON-LD vocabulary, JSON Schema profiles, XML-to-JSON conversion, and SKOS/JSKOS/SSSOM crosswalks to Schema.org, DCTERMS, DCAT-AP, and Wikidata.",
   "license": "Apache-2.0",
   "scripts": {
     "syncCheck": "python3 rdf-build-scripts/synCheck.py",

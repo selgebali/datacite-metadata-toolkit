@@ -143,6 +143,11 @@
     <rdfs:label xml:lang="en">pointLatitude</rdfs:label>
     <rdfs:comment xml:lang="en">Latitudinal dimension of point.</rdfs:comment>
   </rdf:Property>
+  <rdf:Property rdf:about="https://schema.stage.datacite.org/linked-data/property/alternateIdentifier">
+    <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/property/alternateIdentifier.jsonld"/>
+    <rdfs:label xml:lang="en">alternateIdentifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier or identifiers other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string unique within its domain of issue, such as a local identifier, a serial number of an instrument, or an inventory number.</rdfs:comment>
+  </rdf:Property>
   <rdf:Property rdf:about="https://schema.stage.datacite.org/linked-data/property/westBoundLongitude">
     <rdfs:seeAlso rdf:resource="https://schema.stage.datacite.org/linked-data/property/westBoundLongitude.jsonld"/>
     <rdfs:label xml:lang="en">westBoundLongitude</rdfs:label>
@@ -1699,7 +1704,7 @@
     <skos:hasTopConcept>
       <skos:Concept rdf:about="https://schema.stage.datacite.org/linked-data/vocab/relationType/Other">
         <skos:topConceptOf rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/relationType"/>
-        <skos:scopeNote xml:lang="en">If selected, supply a value for relationTypeInformation (or relationTypeInformation for RelatedItem).</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">If selected, supply a value for relationTypeInformation describing the nature of the relationship; applies to both relatedIdentifier and relatedItem.</skos:scopeNote>
         <skos:prefLabel xml:lang="en">Other</skos:prefLabel>
         <skos:notation>Other</skos:notation>
         <skos:inScheme rdf:resource="https://schema.stage.datacite.org/linked-data/vocab/relationType"/>

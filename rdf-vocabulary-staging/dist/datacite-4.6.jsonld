@@ -92,7 +92,7 @@
       "title": "DataCite Linked Data 4.6 Distribution",
       "identifier": "datacite-4.6",
       "versionInfo": "4.6",
-      "created": "2026-05-13",
+      "created": "2026-05-22",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "source": "https://schema.stage.datacite.org/linked-data/manifest/datacite-4.6.json",
       "seeAlso": [
@@ -316,6 +316,15 @@
       "comment": "The name of the affiliation identifier scheme",
       "seeAlso": [
         "https://schema.stage.datacite.org/linked-data/property/affiliationIdentifierScheme.jsonld"
+      ]
+    },
+    {
+      "id": "https://schema.stage.datacite.org/linked-data/property/alternateIdentifier",
+      "type": "rdf:Property",
+      "label": "alternateIdentifier",
+      "comment": "An identifier or identifiers other than the primary Identifier applied to the resource being registered. This may be any alphanumeric string unique within its domain of issue, such as a local identifier, a serial number of an instrument, or an inventory number.",
+      "seeAlso": [
+        "https://schema.stage.datacite.org/linked-data/property/alternateIdentifier.jsonld"
       ]
     },
     {
