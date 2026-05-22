@@ -103,6 +103,25 @@ The staging namespace is rooted at `https://schema.stage.datacite.org/linked-dat
 
 The GitHub Pages deploy publishes this layout so the IRIs resolve to both human-readable HTML pages and machine-readable JSON-LD. `generate-production-namespace.sh` rewrites the staging host to `https://schema.datacite.org/linked-data/` for production release.
 
+### Shared controlled lists
+
+Two `relatedItem` sub-properties reuse the controlled vocabularies of other DataCite properties — per spec, **not** as parallel vocabularies. The JSON-LD context (`rdf-vocabulary-staging/context/fullcontext.jsonld`) reflects this by pointing both `@vocab` bases at the canonical scheme directories:
+
+| Sub-property | Reuses list from | Spec reference |
+|---|---|---|
+| `relatedItemType` | `resourceTypeGeneral` (vocab/resourceTypeGeneral/) | [4.7 §20.a](https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/relateditem/): *"Use the controlled list values as stated in 10.a resourceTypeGeneral"* |
+| `relatedItemIdentifierType` | `relatedIdentifierType` (vocab/relatedIdentifierType/) | [4.7 §20.1.a](https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/relateditem/): matches property 12.a exactly |
+
+This means a value like `Dataset` appearing under `relatedItemType` resolves to the same SKOS Concept IRI as it would under `resourceTypeGeneral` (`…/vocab/resourceTypeGeneral/Dataset`). Consumers distinguish the two usages by the **predicate** (`property:relatedItemType` vs `property:resourceTypeGeneral`), not the object. This eliminates the maintenance hazard of keeping two parallel vocabularies in sync as new values are added (e.g. 4.7's `Poster`/`Presentation` automatically apply to both fields).
+
+Three related fields are **open lists** per spec — values are free text, not constrained to a controlled vocabulary. The context types them as `xsd:string`:
+
+| Sub-property | Spec reference | Typical values |
+|---|---|---|
+| `alternateIdentifierType` | [4.7 §11.a](https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/alternateidentifier/) | Free text (e.g. Local accession number, Inventory number) |
+| `subjectScheme` | [4.7 §6.a](https://datacite-metadata-schema.readthedocs.io/en/4.7/properties/subject/) | Free text (e.g. LCSH, ANZSRC Fields of Research, MeSH) |
+| `nameIdentifierScheme`, `affiliationIdentifierScheme`, `rightsIdentifierScheme`, `publisherIdentifierScheme` | various — recommended values, not strictly closed | ORCID, ROR, ISNI, SPDX, … |
+
 ---
 
 ## How to Use
@@ -384,6 +403,7 @@ Applied on top of 4.6 via the Detect → Review → Apply pipeline. Changes:
 - **`relatedIdentifierType`**: adds **`RAiD`**, **`SWHID`**
 - **`relationType`**: adds **`Other`**
 - New property **`relationTypeInformation`** (additional information about the selected relationType, applies to both `relatedIdentifier` and `relatedItem`)
+- **`descriptionType=SeriesInformation`** is soft-deprecated — the spec directs new content to encode series metadata via the structured `relatedItem` property with `relationType=IsPublishedIn` instead. The `SeriesInformation` term remains valid for backwards compatibility; see [vocab/descriptionType/SeriesInformation.jsonld](rdf-vocabulary-staging/vocab/descriptionType/SeriesInformation.jsonld) for the supersession note.
 
 See `reports/release-apply-4.7.md` and `rdf-vocabulary-staging/manifest/release-matrix-4.6-4.7.json` for the full apply record.
 
@@ -398,6 +418,8 @@ Adds or updates these controlled values, all represented in the vocabulary files
 | `contributorType` | `Translator` |
 | `relationType` | `IsTranslationOf`, `HasTranslation` |
 | `dateType` | `Coverage` |
+
+4.6 also introduced the `subject` sub-property **`classificationCode`** to support subject schemes such as ANZSRC that lack per-term `valueURI`s.
 
 ---
 
