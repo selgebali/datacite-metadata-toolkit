@@ -4,7 +4,9 @@
 
 This repository provides machine-readable linked-data resources and tooling for the **DataCite Metadata Schema** (currently versions 4.6 and 4.7): RDF class and property definitions, controlled vocabulary terms as resolvable IRIs, JSON Schema validation profiles, an XML-to-JSON conversion script, and SKOS / JSKOS / SSSOM crosswalk mappings to external vocabularies (Schema.org, DCTERMS, DCAT-AP, Wikidata).
 
-It is the **source of truth** for the DataCite linked-data namespace. The namespace itself is published from a separate flat-layout mirror, [`datacite/schema.datacite.org-linked-data`](https://github.com/datacite/schema.datacite.org-linked-data), which is kept in sync by an automated PR workflow ([`.github/workflows/sync-to-publication.yml`](.github/workflows/sync-to-publication.yml)). **Do not edit the publication repo directly** — all changes start here.
+It is the **source of truth** for the DataCite linked-data namespace. The namespace itself is published from a separate flat-layout mirror, [`datacite/schema.datacite.org-linked-data`](https://github.com/datacite/schema.datacite.org-linked-data). **Do not edit the publication repo directly** — all changes start here.
+
+> **Note**: the automated sync workflow that opened PRs against the publication mirror is currently **disabled** (file present at [`.github/workflows/sync-to-publication.yml.disabled`](.github/workflows/sync-to-publication.yml.disabled)). Changes to this repo's `main` branch must be mirrored manually until the automation is re-enabled. To re-enable, rename the file back to `sync-to-publication.yml`.
 
 ---
 

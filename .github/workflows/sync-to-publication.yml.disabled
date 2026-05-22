@@ -1,5 +1,15 @@
 name: Sync to publication repo (schema.datacite.org-linked-data)
 
+# *** DISABLED ***
+# This workflow is intentionally deactivated by file extension
+# (.yml.disabled). GitHub Actions only loads .yml/.yaml files from
+# .github/workflows/, so renaming the extension stops it from firing
+# while preserving git history. To re-enable: rename back to .yml.
+#
+# Reason: namespace publication to datacite/schema.datacite.org-linked-data
+# is being handled manually for now. Re-enable when the automated sync
+# pipeline is ready to resume.
+
 # This workflow is the implementation of "single-source publish":
 #
 #   - This repository (datacite-metadata-toolkit) is the source of truth
