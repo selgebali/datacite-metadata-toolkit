@@ -163,8 +163,8 @@ datacite-vocab:relationType/IsBasedOn	skos:exactMatch	schema:isBasedOn	semapv:Ma
 datacite-vocab:relationType/IsBasisFor	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsBasisFor	isBasedOn	Inverse of IsBasedOn; schema:isBasedOn has no explicit inverse
 datacite-vocab:relationType/IsVersionOf	skos:closeMatch	schema:isBasedOn	semapv:ManualMappingCuration	IsVersionOf	isBasedOn	Version relationship to a more general resource; isBasedOn is the closest schema.org term
 datacite-vocab:relationType/HasVersion	skos:relatedMatch	schema:isBasedOn	semapv:ManualMappingCuration	HasVersion	isBasedOn	Inverse of IsVersionOf
-datacite-vocab:relationType/IsTranslationOf	skos:exactMatch	schema:translationOfWork	semapv:ManualMappingCuration	IsTranslationOf	translationOfWork	This resource is a translation of another; new in DataCite 4.6
-datacite-vocab:relationType/HasTranslation	skos:exactMatch	schema:workTranslation	semapv:ManualMappingCuration	HasTranslation	workTranslation	This resource has a translated version; new in DataCite 4.6
+datacite-vocab:relationType/IsTranslationOf	skos:exactMatch	schema:translationOfWork	semapv:ManualMappingCuration	IsTranslationOf	translationOfWork	This resource is a translation of another; new in DataCite 4.7
+datacite-vocab:relationType/HasTranslation	skos:exactMatch	schema:workTranslation	semapv:ManualMappingCuration	HasTranslation	workTranslation	This resource has a translated version; new in DataCite 4.7
 datacite-prop:size	skos:exactMatch	schema:contentSize	semapv:ManualMappingCuration	size	contentSize	File size or extent of the resource
 datacite-prop:format	skos:exactMatch	schema:encodingFormat	semapv:ManualMappingCuration	format	encodingFormat	Media or file format (e.g. application/pdf)
 datacite-prop:version	skos:exactMatch	schema:version	semapv:ManualMappingCuration	version	version	Version string or number of the resource

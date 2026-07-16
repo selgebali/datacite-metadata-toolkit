@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://w3id.org/tib/datacite/schema-profiles/datacite4.6-profile.json",
+    "https://w3id.org/tib/datacite/schema-profiles/datacite4.7-profile.json",
     {
       "datacite-ld": "https://w3id.org/tib/datacite/",
       "datacite-class": "https://w3id.org/tib/datacite/class/",
@@ -16,10 +16,10 @@
   ],
   "@graph": [
     {
-      "@id": "datacite-ld:vocab/datacite-4.6",
+      "@id": "datacite-ld:vocab/datacite-4.7",
       "@type": "skos:ConceptScheme",
-      "skos:prefLabel": "DataCite Metadata Schema v4.6",
-      "skos:definition": "Concept scheme for DataCite Metadata Schema version 4.6."
+      "skos:prefLabel": "DataCite Metadata Schema v4.7",
+      "skos:definition": "Concept scheme for DataCite Metadata Schema version 4.7."
     },
     {
       "@id": "datacite-prop:identifier",
@@ -41,7 +41,7 @@
         "@id": "wd:Q853614"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -53,7 +53,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -81,7 +81,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -96,7 +96,7 @@
         "@id": "wd:Q82799"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -105,7 +105,7 @@
       "skos:prefLabel": "DataCite NameType Scheme",
       "skos:definition": "Controlled list of DataCite nameType values.",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       },
       "skos:hasTopConcept": [
         {
@@ -168,7 +168,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -185,7 +185,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -205,7 +205,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -217,7 +217,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -229,7 +229,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -244,7 +244,7 @@
         "@id": "wd:Q46135267"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -264,7 +264,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -276,7 +276,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -288,7 +288,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -311,7 +311,7 @@
         "@id": "schema:headline"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -323,7 +323,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -332,7 +332,7 @@
       "skos:prefLabel": "DataCite TitleType Scheme",
       "skos:definition": "Controlled list of DataCite titleType values.",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       },
       "skos:hasTopConcept": [
         {
@@ -447,7 +447,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -467,7 +467,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -479,7 +479,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -494,7 +494,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -517,7 +517,7 @@
         "@id": "schema:date"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -546,7 +546,7 @@
         "@id": "schema:DefinedTerm"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -564,7 +564,7 @@
         "@id": "wd:Q5962346"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -576,7 +576,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -588,7 +588,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -603,7 +603,7 @@
         "@id": "dcat:keyword"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -623,7 +623,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -643,7 +643,7 @@
         "@id": "schema:roleName"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -666,7 +666,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -683,7 +683,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -700,7 +700,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -723,7 +723,7 @@
         "@id": "wd:P496"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -735,7 +735,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -747,7 +747,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -762,7 +762,7 @@
         "@id": "wd:Q46135267"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -782,7 +782,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -794,7 +794,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -806,7 +806,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -815,7 +815,7 @@
       "skos:prefLabel": "DataCite DateType Scheme",
       "skos:definition": "Controlled list of DataCite dateType values.",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       },
       "skos:hasTopConcept": [
         {
@@ -914,7 +914,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -926,7 +926,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -1163,7 +1163,7 @@
         "@id": "schema:description"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -1180,7 +1180,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -1189,7 +1189,7 @@
       "skos:prefLabel": "DataCite ResourceTypeGeneral Scheme",
       "skos:definition": "Controlled list of DataCite resourceTypeGeneral values.",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       },
       "skos:hasTopConcept": [
         {
@@ -1318,7 +1318,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -1338,7 +1338,7 @@
         "@id": "datacite-prop:resourceType"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2105,7 +2105,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2117,7 +2117,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2137,7 +2137,7 @@
         "@id": "schema:isBasedOn"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2149,7 +2149,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2161,7 +2161,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2173,7 +2173,7 @@
         "@id": "schema:encodingFormat"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2182,7 +2182,7 @@
       "skos:prefLabel": "DataCite RelationType Scheme",
       "skos:definition": "Controlled list of DataCite relationType values.",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       },
       "skos:hasTopConcept": [
         {
@@ -2934,7 +2934,7 @@
       "@id": "datacite-vocab:relationType/IsTranslationOf",
       "@type": "skos:Concept",
       "skos:prefLabel": "IsTranslationOf",
-      "skos:definition": "The resource is a translation of another (new in DataCite 4.6).",
+      "skos:definition": "The resource is a translation of another (new in DataCite 4.7).",
       "skos:exactMatch": {
         "@id": "schema:translationOfWork"
       },
@@ -2949,7 +2949,7 @@
       "@id": "datacite-vocab:relationType/HasTranslation",
       "@type": "skos:Concept",
       "skos:prefLabel": "HasTranslation",
-      "skos:definition": "The resource has a translated version (new in DataCite 4.6).",
+      "skos:definition": "The resource has a translated version (new in DataCite 4.7).",
       "skos:exactMatch": {
         "@id": "schema:workTranslation"
       },
@@ -2969,7 +2969,7 @@
         "@id": "schema:contentSize"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -2986,7 +2986,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3003,7 +3003,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3020,7 +3020,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3035,7 +3035,7 @@
         "@id": "dcterms:license"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3047,7 +3047,7 @@
         "@id": "schema:identifier"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3059,7 +3059,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3068,7 +3068,7 @@
       "skos:prefLabel": "DataCite DescriptionType Scheme",
       "skos:definition": "Controlled list of DataCite descriptionType values.",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       },
       "skos:hasTopConcept": [
         {
@@ -3105,7 +3105,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3117,7 +3117,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3232,7 +3232,7 @@
         "@id": "dcat:spatialResolutionInMeters"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3247,7 +3247,7 @@
         "@id": "dcterms:Location"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3259,7 +3259,7 @@
         "@id": "schema:GeoCoordinates"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3271,7 +3271,7 @@
         "@id": "schema:latitude"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3283,7 +3283,7 @@
         "@id": "schema:longitude"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3295,7 +3295,7 @@
         "@id": "schema:GeoShape"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3307,7 +3307,7 @@
         "@id": "schema:box"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3319,7 +3319,7 @@
         "@id": "schema:box"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3331,7 +3331,7 @@
         "@id": "schema:box"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3343,7 +3343,7 @@
         "@id": "schema:box"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3355,7 +3355,7 @@
         "@id": "schema:GeoShape"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3375,7 +3375,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3387,7 +3387,7 @@
         "@id": "schema:name"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3404,7 +3404,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3416,7 +3416,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3428,7 +3428,7 @@
         "@id": "schema:identifier"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3440,7 +3440,7 @@
         "@id": "schema:url"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3452,7 +3452,7 @@
         "@id": "schema:name"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3477,7 +3477,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3494,7 +3494,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3506,7 +3506,7 @@
         "@id": "schema:propertyID"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3518,7 +3518,7 @@
         "@id": "schema:volumeNumber"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3530,7 +3530,7 @@
         "@id": "schema:issueNumber"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3542,7 +3542,7 @@
         "@id": "schema:issueNumber"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3554,7 +3554,7 @@
         "@id": "schema:pageStart"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3566,7 +3566,7 @@
         "@id": "schema:pageEnd"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3578,7 +3578,7 @@
         "@id": "schema:bookEdition"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3598,7 +3598,7 @@
         "@id": "wd:Q386724"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3618,7 +3618,7 @@
         "@id": "dcat:identifier"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3636,7 +3636,7 @@
       ],
       "skos:scopeNote": "Do not map at class level to schema:Person or schema:Organization; those bindings are made per-instance via nameType (see datacite:nameType_Personal and datacite:nameType_Organizational).",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3656,7 +3656,7 @@
         "@id": "wd:Q783521"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3676,7 +3676,7 @@
         "@id": "dcterms:Agent"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3691,7 +3691,7 @@
         "@id": "dcterms:issued"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3711,7 +3711,7 @@
         "@id": "dcterms:subject"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3736,7 +3736,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3754,7 +3754,7 @@
         "@id": "schema:Date"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3774,7 +3774,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3791,7 +3791,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3808,7 +3808,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3828,7 +3828,7 @@
         "@id": "dcterms:relation"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3843,7 +3843,7 @@
         "@id": "dcterms:extent"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3863,7 +3863,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3878,7 +3878,7 @@
         "@id": "dcterms:hasVersion"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3901,7 +3901,7 @@
         "@id": "schema:license"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3920,7 +3920,7 @@
       },
       "skos:scopeNote": "schema:description is a property on CreativeWork, not a class; the DataCite Description class is better modelled as a schema:PropertyValue carrying the text and a type label.",
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3951,7 +3951,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3971,7 +3971,7 @@
         "@id": "schema:MonetaryGrant"
       },
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     },
     {
@@ -3996,7 +3996,7 @@
         }
       ],
       "skos:inScheme": {
-        "@id": "datacite-ld:vocab/datacite-4.6"
+        "@id": "datacite-ld:vocab/datacite-4.7"
       }
     }
   ]
