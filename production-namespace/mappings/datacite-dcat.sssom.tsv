@@ -1,0 +1,46 @@
+# mapping_set_id: https://w3id.org/tib/datacite/mappings/datacite-dcat.sssom.tsv
+# mapping_set_version: 0.3.0
+# mapping_set_description: DataCite 4.7 term correspondences for DCAT 3, including DCTERMS terms reused by DCAT with
+#   row-specific provenance. This is not a complete DCAT-AP export or a conformance claim. Conditional dataset/distribution/attribution
+#   transformations are documented in conversion/dcat.json.
+# creator_id:
+# - orcid:0000-0003-1378-5495
+# creator_label:
+# - Sara El-Gebali
+# license: https://creativecommons.org/licenses/by/4.0/
+# subject_source: dataciteschema:kernel-4.7/metadata.xsd
+# subject_source_version: '4.7'
+# mapping_date: '2026-10-06'
+# comment: Curated from source definitions and official target documentation.
+#   Wikidata evidence is a dated lookup, not an immutable vocabulary release.
+# curie_map:
+#   orcid: https://orcid.org/
+#   dataciteschema: https://datacite-metadata-schema.readthedocs.io 
+#   datacite-class: https://w3id.org/tib/datacite/class/
+#   datacite-prop: https://w3id.org/tib/datacite/property/
+#   datacite-vocab: https://w3id.org/tib/datacite/vocab/
+#   dcterms: http://purl.org/dc/terms/
+#   dcmitype: http://purl.org/dc/dcmitype/
+#   dcat: http://www.w3.org/ns/dcat#
+#   wd: http://www.wikidata.org/entity/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+#   dcmi-doc: https://www.dublincore.org/specifications/dublin-core/
+#   w3c-tr: https://www.w3.org/TR/
+#   wd-doc: https://www.wikidata.org/wiki/
+subject_id	predicate_id	object_id	mapping_justification	subject_label	object_label	object_source	object_source_version	author_id	author_label	reviewer_id	reviewer_label	comment
+datacite-class:GeoLocation	skos:closeMatch	dcterms:Location	semapv:ManualMappingCuration	GeoLocation	Location	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	DCAT 3 uses DCTERMS Location for a spatial region or named place; geographic detail is not spatial resolution.
+datacite-prop:alternateIdentifier	skos:broadMatch	dcterms:identifier	semapv:ManualMappingCuration	alternateIdentifier	identifier	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	DCTERMS identifier also covers primary identifiers; DataCite limits this field to additional identifiers for the same instance. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:creator	skos:closeMatch	dcterms:creator	semapv:ManualMappingCuration	creator	creator	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe responsibility for creating the resource; DataCite priority order requires separate preservation. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:description	skos:closeMatch	dcterms:description	semapv:ManualMappingCuration	description	description	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both provide information describing the resource; preserve the DataCite descriptionType separately. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:geoLocation	skos:closeMatch	dcterms:spatial	semapv:ManualMappingCuration	geoLocation	spatial	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both express the spatial coverage of the described resource; coordinates and named places require a location representation. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:identifier	skos:closeMatch	dcterms:identifier	semapv:ManualMappingCuration	identifier	identifier	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both identify the described resource; preserve the DOI scheme and lexical value. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:language	skos:broadMatch	dcterms:language	semapv:ManualMappingCuration	language	language	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	DCTERMS language allows any language of the resource; DataCite records its primary language. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:publisher	skos:closeMatch	dcterms:publisher	semapv:ManualMappingCuration	publisher	publisher	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both identify the agent making the resource available; do not assume every publisher is an organization. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:resourceType	skos:broadMatch	dcterms:type	semapv:ManualMappingCuration	resourceType	type	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	DCTERMS type covers resource nature or genre; this DataCite field holds a resource type description. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:resourceTypeGeneral	skos:broadMatch	dcterms:type	semapv:ManualMappingCuration	resourceTypeGeneral	type	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	DCTERMS type is broader than the closed DataCite resourceTypeGeneral classification. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:rights	skos:closeMatch	dcterms:rights	semapv:ManualMappingCuration	rights	rights	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe rights in or over the resource; a rights statement is not necessarily a license. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:rightsURI	skos:closeMatch	dcterms:license	semapv:ManualMappingCuration	rightsURI	license	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	This DataCite field identifies the license by URI; retain the URI as the license document reference. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:title	skos:closeMatch	dcterms:title	semapv:ManualMappingCuration	title	title	dcmi-doc:dcmi-terms/2020-01-20/	2020-01-20	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both name the resource; preserve language and title type independently. DCAT 3 reuses this DCTERMS term; application to a catalogued resource requires the DCAT graph context.
+datacite-prop:version	skos:closeMatch	dcat:version	semapv:ManualMappingCuration	version	version	w3c-tr:vocab-dcat-3/	3	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both hold the version indicator for the described resource; this does not create a relation to another version.
+datacite-vocab:resourceTypeGeneral/Dataset	skos:closeMatch	dcat:Dataset	semapv:ManualMappingCuration	Dataset	Dataset	w3c-tr:vocab-dcat-3/	3	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe structured data; DCAT additionally situates datasets in an agent-published or curated catalog context.

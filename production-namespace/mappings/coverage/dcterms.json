@@ -1,0 +1,1781 @@
+{
+  "target": "dcterms",
+  "source_version": "4.7",
+  "records": [
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/AlternateIdentifier",
+      "status": "conversion_only",
+      "reason": "The AlternateIdentifier group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-alternateidentifier"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Contributor",
+      "status": "conversion_only",
+      "reason": "The Contributor group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-contributor"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Creator",
+      "status": "conversion_only",
+      "reason": "The Creator group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-creator"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Date",
+      "status": "conversion_only",
+      "reason": "The Date group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-date"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Description",
+      "status": "conversion_only",
+      "reason": "The Description group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-description"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Format",
+      "status": "conversion_only",
+      "reason": "The Format group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-format"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/FundingReference",
+      "status": "conversion_only",
+      "reason": "The FundingReference group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-fundingreference"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/GeoLocation",
+      "status": "mapped",
+      "reason": "Both denote a spatial region or named place; DataCite restricts the location to data collection or coverage."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Identifier",
+      "status": "conversion_only",
+      "reason": "The Identifier group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-identifier"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Language",
+      "status": "mapped",
+      "reason": "The language described by the DataCite group corresponds to a linguistic system; metadata wrappers require extraction."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/PublicationYear",
+      "status": "conversion_only",
+      "reason": "The PublicationYear group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-publicationyear"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Publisher",
+      "status": "conversion_only",
+      "reason": "The Publisher group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-publisher"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/RelatedIdentifier",
+      "status": "conversion_only",
+      "reason": "The RelatedIdentifier group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-relatedidentifier"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/RelatedItem",
+      "status": "conversion_only",
+      "reason": "The RelatedItem group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-relateditem"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Resource",
+      "status": "conversion_only",
+      "reason": "The Resource group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-resource"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/ResourceType",
+      "status": "conversion_only",
+      "reason": "The ResourceType group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-resourcetype"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Rights",
+      "status": "mapped",
+      "reason": "Both represent information about rights; DataCite URI and identifier qualifiers require separate preservation."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Size",
+      "status": "mapped",
+      "reason": "Both represent a resource extent or duration; extract the amount and unit from the metadata group."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Subject",
+      "status": "conversion_only",
+      "reason": "The Subject group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-subject"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Title",
+      "status": "conversion_only",
+      "reason": "The Title group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-title"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Version",
+      "status": "conversion_only",
+      "reason": "The Version group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class.",
+      "rule_ids": [
+        "group-version"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliation",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone.",
+      "rule_ids": [
+        "agent-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliationIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliationIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/alternateIdentifier",
+      "status": "mapped",
+      "reason": "DCTERMS identifier also covers primary identifiers; DataCite limits this field to additional identifiers for the same instance."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/alternateIdentifierType",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardNumber",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardTitle",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT has no complete funding-reference model. Preserve the funder and award as distinct entities, their identifiers, award title, and award page; an award page is not a resource landing page.",
+      "rule_ids": [
+        "funding-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardURI",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT has no complete funding-reference model. Preserve the funder and award as distinct entities, their identifiers, award title, and award page; an award page is not a resource landing page.",
+      "rule_ids": [
+        "funding-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/classificationCode",
+      "status": "conversion_only",
+      "reason": "Attach identifiers to their own entity rather than the main resource. Preserve scheme and lexical value separately; bare identifiers are not interchangeable with entity IRIs.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributor",
+      "status": "mapped",
+      "reason": "Both describe an agent contributing to the resource; contributor roles require separate preservation."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributorName",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone.",
+      "rule_ids": [
+        "agent-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributorType",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/creator",
+      "status": "mapped",
+      "reason": "Both describe responsibility for creating the resource; DataCite priority order requires separate preservation."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/creatorName",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone.",
+      "rule_ids": [
+        "agent-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/date",
+      "status": "mapped",
+      "reason": "Both associate a date or period with the resource; the dateType qualifier must remain available."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/dateInformation",
+      "status": "conversion_only",
+      "reason": "A date qualifier chooses how a date is interpreted; it is not a date value or equivalent date predicate. Keep dateInformation and ranges intact.",
+      "rule_ids": [
+        "date-annotations"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/dateType",
+      "status": "conversion_only",
+      "reason": "A date qualifier chooses how a date is interpreted; it is not a date value or equivalent date predicate. Keep dateInformation and ranges intact.",
+      "rule_ids": [
+        "date-annotations"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/description",
+      "status": "mapped",
+      "reason": "Both provide information describing the resource; preserve the DataCite descriptionType separately."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/descriptionType",
+      "status": "conversion_only",
+      "reason": "Abstract uses dcterms:abstract, TableOfContents uses dcterms:tableOfContents, and other types can use dcterms:description with the original type retained. Methods are not dcterms:instructionalMethod.",
+      "rule_ids": [
+        "descriptions"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/eastBoundLongitude",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/edition",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/familyName",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone.",
+      "rule_ids": [
+        "agent-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/firstPage",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/format",
+      "status": "mapped",
+      "reason": "DCTERMS format also includes physical medium and dimensions; DataCite format records the technical format."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderIdentifierType",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderName",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone.",
+      "rule_ids": [
+        "agent-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/fundingReference",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT has no complete funding-reference model. Preserve the funder and award as distinct entities, their identifiers, award title, and award page; an award page is not a resource landing page.",
+      "rule_ids": [
+        "funding-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocation",
+      "status": "mapped",
+      "reason": "Both express the spatial coverage of the described resource; coordinates and named places require a location representation."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationBox",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPlace",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPoint",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPolygon",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/givenName",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone.",
+      "rule_ids": [
+        "agent-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/identifier",
+      "status": "mapped",
+      "reason": "Both identify the described resource; preserve the DOI scheme and lexical value."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/identifierType",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/inPolygonPoint",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/issue",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/language",
+      "status": "mapped",
+      "reason": "DCTERMS language allows any language of the resource; DataCite records its primary language."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/lastPage",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameType",
+      "status": "conversion_only",
+      "reason": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone.",
+      "rule_ids": [
+        "agent-details"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/northBoundLatitude",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/number",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/numberType",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/pointLatitude",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/pointLongitude",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/polygonPoint",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publicationYear",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:issued; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "publication-year"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisher",
+      "status": "mapped",
+      "reason": "Both identify the agent making the resource available; do not assume every publisher is an organization."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisherIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisherIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedIdentifier",
+      "status": "conversion_only",
+      "reason": "Resolve the related resource identifier with its scheme and select a relationship using relationType. A generic dcterms:relation fallback loses the qualifier unless the original type and relationTypeInformation are retained.",
+      "rule_ids": [
+        "related-resources"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedIdentifierType",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItem",
+      "status": "conversion_only",
+      "reason": "Resolve the related resource identifier with its scheme and select a relationship using relationType. A generic dcterms:relation fallback loses the qualifier unless the original type and relationTypeInformation are retained.",
+      "rule_ids": [
+        "related-resources"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemIdentifierType",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemType",
+      "status": "conversion_only",
+      "reason": "Resolve the related resource identifier with its scheme and select a relationship using relationType. A generic dcterms:relation fallback loses the qualifier unless the original type and relationTypeInformation are retained.",
+      "rule_ids": [
+        "related-resources"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedMetadataScheme",
+      "status": "conversion_only",
+      "reason": "A scheme name or URI alone does not establish resource conformance. Preserve the scheme reference with the metadata/identifier/subject context in which it occurs.",
+      "rule_ids": [
+        "related-metadata-scheme"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relationType",
+      "status": "conversion_only",
+      "reason": "Resolve the related resource identifier with its scheme and select a relationship using relationType. A generic dcterms:relation fallback loses the qualifier unless the original type and relationTypeInformation are retained.",
+      "rule_ids": [
+        "related-resources"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relationTypeInformation",
+      "status": "conversion_only",
+      "reason": "Resolve the related resource identifier with its scheme and select a relationship using relationType. A generic dcterms:relation fallback loses the qualifier unless the original type and relationTypeInformation are retained.",
+      "rule_ids": [
+        "related-resources"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/resourceType",
+      "status": "mapped",
+      "reason": "DCTERMS type covers resource nature or genre; this DataCite field holds a resource type description."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/resourceTypeGeneral",
+      "status": "mapped",
+      "reason": "DCTERMS type is broader than the closed DataCite resourceTypeGeneral classification."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rights",
+      "status": "mapped",
+      "reason": "Both describe rights in or over the resource; a rights statement is not necessarily a license."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-context"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsURI",
+      "status": "mapped",
+      "reason": "This DataCite field identifies the license by URI; retain the URI as the license document reference."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/schemeType",
+      "status": "conversion_only",
+      "reason": "A scheme name or URI alone does not establish resource conformance. Preserve the scheme reference with the metadata/identifier/subject context in which it occurs.",
+      "rule_ids": [
+        "related-metadata-scheme"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/schemeURI",
+      "status": "conversion_only",
+      "reason": "A scheme name or URI alone does not establish resource conformance. Preserve the scheme reference with the metadata/identifier/subject context in which it occurs.",
+      "rule_ids": [
+        "related-metadata-scheme"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/size",
+      "status": "mapped",
+      "reason": "Both describe extent, including dimensions, amount, or duration; retain the original unit."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/southBoundLatitude",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/subject",
+      "status": "mapped",
+      "reason": "Both express the topic of the resource; preserve scheme identifiers and classification codes where supplied."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/subjectScheme",
+      "status": "conversion_only",
+      "reason": "Preserve subject identity and classification scheme. A subject URI describes the topic; it is not the identifier of the main resource.",
+      "rule_ids": [
+        "subject-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/title",
+      "status": "mapped",
+      "reason": "Both name the resource; preserve language and title type independently."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/titleType",
+      "status": "conversion_only",
+      "reason": "AlternativeTitle can use dcterms:alternative; translated titles require their language. Subtitle and Other must retain their qualifier because DCTERMS does not distinguish all title kinds.",
+      "rule_ids": [
+        "title-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/valueURI",
+      "status": "conversion_only",
+      "reason": "Preserve subject identity and classification scheme. A subject URI describes the topic; it is not the identifier of the main resource.",
+      "rule_ids": [
+        "subject-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/version",
+      "status": "conversion_only",
+      "reason": "A version number is not a related resource. Do not turn its literal value directly into dcterms:hasVersion or dcterms:isVersionOf.",
+      "rule_ids": [
+        "version-indicator"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/volume",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/westBoundLongitude",
+      "status": "conversion_only",
+      "reason": "Construct the location from the full geometry and preserve coordinate order and bounds. DCTERMS spatial alone does not encode polygon vertices or individual coordinates.",
+      "rule_ids": [
+        "geometry"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ContactPerson",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataCollector",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataCurator",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataManager",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Distributor",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Editor",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/HostingInstitution",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Other",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Producer",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectLeader",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectManager",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectMember",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAgency",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAuthority",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RelatedPerson",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ResearchGroup",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Researcher",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RightsHolder",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:rightsHolder; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Sponsor",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Supervisor",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Translator",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/WorkPackageLeader",
+      "status": "conversion_only",
+      "reason": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Accepted",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:dateAccepted; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-accepted"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Available",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:available; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-available"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Collected",
+      "status": "no_equivalent",
+      "reason": "The Collected date kind has no dedicated approved DCTERMS correspondence here. Preserve the qualified date using an extension; do not substitute publication or modification dates."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Copyrighted",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:dateCopyrighted; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-copyrighted"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Coverage",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:temporal; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Created",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:created; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-created"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Issued",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:issued; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-issued"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Other",
+      "status": "no_equivalent",
+      "reason": "The Other date kind has no dedicated approved DCTERMS correspondence here. Preserve the qualified date using an extension; do not substitute publication or modification dates."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Submitted",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:dateSubmitted; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-submitted"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Updated",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:modified; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-updated"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Valid",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:valid; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "date-valid"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Withdrawn",
+      "status": "no_equivalent",
+      "reason": "The Withdrawn date kind has no dedicated approved DCTERMS correspondence here. Preserve the qualified date using an extension; do not substitute publication or modification dates."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:abstract; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "descriptions"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Methods",
+      "status": "conversion_only",
+      "reason": "Abstract uses dcterms:abstract, TableOfContents uses dcterms:tableOfContents, and other types can use dcterms:description with the original type retained. Methods are not dcterms:instructionalMethod.",
+      "rule_ids": [
+        "descriptions"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Other",
+      "status": "conversion_only",
+      "reason": "Abstract uses dcterms:abstract, TableOfContents uses dcterms:tableOfContents, and other types can use dcterms:description with the original type retained. Methods are not dcterms:instructionalMethod.",
+      "rule_ids": [
+        "descriptions"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/SeriesInformation",
+      "status": "conversion_only",
+      "reason": "Abstract uses dcterms:abstract, TableOfContents uses dcterms:tableOfContents, and other types can use dcterms:description with the original type retained. Methods are not dcterms:instructionalMethod.",
+      "rule_ids": [
+        "descriptions"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/TableOfContents",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:tableOfContents; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "descriptions"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo",
+      "status": "conversion_only",
+      "reason": "Abstract uses dcterms:abstract, TableOfContents uses dcterms:tableOfContents, and other types can use dcterms:description with the original type retained. Methods are not dcterms:instructionalMethod.",
+      "rule_ids": [
+        "descriptions"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/CrossrefFunderID",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/GRID",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ISNI",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/Other",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ROR",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/identifierType/DOI",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/nameType/Organizational",
+      "status": "conversion_only",
+      "reason": "Personal and Organizational distinguish the named agent. Preserve this kind using an agent vocabulary; do not assert that the resource itself is a person or organization.",
+      "rule_ids": [
+        "name-kind"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/nameType/Personal",
+      "status": "conversion_only",
+      "reason": "Personal and Organizational distinguish the named agent. Preserve this kind using an agent vocabulary; do not assert that the resource itself is a person or organization.",
+      "rule_ids": [
+        "name-kind"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Article",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Chapter",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Other",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Report",
+      "status": "conversion_only",
+      "reason": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group.",
+      "rule_ids": [
+        "bibliographic-detail"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ARK",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/CSTR",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/DOI",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EAN13",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EISSN",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/Handle",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/IGSN",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISBN",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISSN",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISTC",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LISSN",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LSID",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PMID",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PURL",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RAiD",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RRID",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/SWHID",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/UPC",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URL",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URN",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/arXiv",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/bibcode",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/w3id",
+      "status": "conversion_only",
+      "reason": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record.",
+      "rule_ids": [
+        "identifier-schemes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Cites",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:references; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-cites"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Collects",
+      "status": "no_equivalent",
+      "reason": "The Collects relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Compiles",
+      "status": "no_equivalent",
+      "reason": "The Compiles relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Continues",
+      "status": "no_equivalent",
+      "reason": "The Continues relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Describes",
+      "status": "no_equivalent",
+      "reason": "The Describes relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Documents",
+      "status": "no_equivalent",
+      "reason": "The Documents relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasMetadata",
+      "status": "no_equivalent",
+      "reason": "The HasMetadata relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasPart",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:hasPart; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-haspart"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasTranslation",
+      "status": "no_equivalent",
+      "reason": "The HasTranslation relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasVersion",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:hasVersion; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-hasversion"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCitedBy",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isReferencedBy; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-iscitedby"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy",
+      "status": "no_equivalent",
+      "reason": "The IsCollectedBy relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCompiledBy",
+      "status": "no_equivalent",
+      "reason": "The IsCompiledBy relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsContinuedBy",
+      "status": "no_equivalent",
+      "reason": "The IsContinuedBy relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:source; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isderivedfrom"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDescribedBy",
+      "status": "no_equivalent",
+      "reason": "The IsDescribedBy relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDocumentedBy",
+      "status": "no_equivalent",
+      "reason": "The IsDocumentedBy relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsIdenticalTo",
+      "status": "no_equivalent",
+      "reason": "The IsIdenticalTo relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsMetadataFor",
+      "status": "no_equivalent",
+      "reason": "The IsMetadataFor relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsNewVersionOf",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isVersionOf; read the SSSOM comment and conversion rules before transforming data."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsObsoletedBy",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isReplacedBy; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isobsoletedby"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsOriginalFormOf",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:hasFormat; read the SSSOM comment and conversion rules before transforming data."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPartOf",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isPartOf; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-ispartof"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPreviousVersionOf",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:hasVersion; read the SSSOM comment and conversion rules before transforming data."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPublishedIn",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isPartOf; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-ispublishedin"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isReferencedBy; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isreferencedby"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsRequiredBy",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isRequiredBy; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isrequiredby"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsReviewedBy",
+      "status": "no_equivalent",
+      "reason": "The IsReviewedBy relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSourceOf",
+      "status": "no_equivalent",
+      "reason": "The IsSourceOf relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSupplementTo",
+      "status": "no_equivalent",
+      "reason": "The IsSupplementTo relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSupplementedBy",
+      "status": "no_equivalent",
+      "reason": "The IsSupplementedBy relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsTranslationOf",
+      "status": "no_equivalent",
+      "reason": "The IsTranslationOf relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsVariantFormOf",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isFormatOf; read the SSSOM comment and conversion rules before transforming data."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsVersionOf",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:isVersionOf; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isversionof"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Obsoletes",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:replaces; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-obsoletes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Other",
+      "status": "no_equivalent",
+      "reason": "The Other relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/References",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:references; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-references"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Requires",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:requires; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-requires"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Reviews",
+      "status": "no_equivalent",
+      "reason": "The Reviews relationship has no equally specific approved DCTERMS relation here. A generic dcterms:relation can preserve relatedness only if the original qualifier is retained; no term equivalence is asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Audiovisual",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Award",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Award. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Book",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite Book category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/BookChapter",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite BookChapter category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Collection",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ComputationalNotebook",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for ComputationalNotebook. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferencePaper",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite ConferencePaper category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferenceProceeding",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite ConferenceProceeding category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/DataPaper",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite DataPaper category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dataset",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dissertation",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite Dissertation category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Event",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Image",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Instrument",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Instrument. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/InteractiveResource",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Journal",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite Journal category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/JournalArticle",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite JournalArticle category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Model",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Model. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Other",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Other. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/OutputManagementPlan",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite OutputManagementPlan category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PeerReview",
+      "status": "mapped",
+      "reason": "For the registered review document, DCMI Type Text is the broader category; the evaluation activity itself must not be typed as Text."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PhysicalObject",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Poster",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Poster. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Preprint",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite Preprint category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Presentation",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Presentation. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Project",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Project. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Report",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite Report category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Service",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Software",
+      "status": "mapped",
+      "reason": "Both cover software programs; DataCite separates computational notebooks into another category, so equivalence is not asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Sound",
+      "status": "mapped",
+      "reason": "The DataCite category corresponds closely to the DCMI Type category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Standard",
+      "status": "mapped",
+      "reason": "Both denote an established reference against which things can be evaluated; no restriction to metadata schemes is implied."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/StudyRegistration",
+      "status": "mapped",
+      "reason": "DCMI Type Text is broader than the DataCite StudyRegistration category; a target export must retain the more specific source type when needed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Text",
+      "status": "mapped",
+      "reason": "DataCite Text excludes separately enumerated textual types; DCMI Type Text also includes those types."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Workflow",
+      "status": "no_equivalent",
+      "reason": "DCMI has no single approved equal-scope type for Workflow. Retain the source category; classifying every instance as Text, Software, or PhysicalObject would require resource-specific evidence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/AlternativeTitle",
+      "status": "mapped",
+      "reason": "Reviewed term correspondence with dcterms:alternative; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "title-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/Other",
+      "status": "conversion_only",
+      "reason": "AlternativeTitle can use dcterms:alternative; translated titles require their language. Subtitle and Other must retain their qualifier because DCTERMS does not distinguish all title kinds.",
+      "rule_ids": [
+        "title-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/Subtitle",
+      "status": "conversion_only",
+      "reason": "AlternativeTitle can use dcterms:alternative; translated titles require their language. Subtitle and Other must retain their qualifier because DCTERMS does not distinguish all title kinds.",
+      "rule_ids": [
+        "title-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle",
+      "status": "conversion_only",
+      "reason": "AlternativeTitle can use dcterms:alternative; translated titles require their language. Subtitle and Other must retain their qualifier because DCTERMS does not distinguish all title kinds.",
+      "rule_ids": [
+        "title-qualifiers"
+      ]
+    }
+  ]
+}

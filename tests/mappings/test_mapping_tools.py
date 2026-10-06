@@ -110,6 +110,12 @@ class MutationTest(unittest.TestCase):
         with self.assertRaisesRegex(MappingError, "status and SSSOM mappings disagree"):
             build(self.root, check=True)
 
+    def test_stale_published_copy_fails_check(self):
+        path = self.root / "production-namespace" / "mappings" / "coverage" / "dcat.json"
+        path.write_text(path.read_text(encoding="utf-8") + " ", encoding="utf-8")
+        with self.assertRaisesRegex(MappingError, "Stale published mapping"):
+            build(self.root, check=True)
+
     def test_build_regenerates_exports(self):
         (self.root / "mappings" / "jskos-mappings.json").write_text("{}", encoding="utf-8")
         build(self.root)

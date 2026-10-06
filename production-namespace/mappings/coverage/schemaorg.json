@@ -1,0 +1,1976 @@
+{
+  "target": "schemaorg",
+  "source_version": "4.7",
+  "records": [
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/AlternateIdentifier",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Contributor",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Organization, schema:Person; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "affiliations",
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Creator",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Organization, schema:Person; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "affiliations",
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Date",
+      "status": "conversion_only",
+      "reason": "Use typed-dates to preserve the event, value and precision; no one-to-one container/qualifier term exists.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Description",
+      "status": "conversion_only",
+      "reason": "Use description-values; Schema.org text alone loses this description-kind/container distinction.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Format",
+      "status": "conversion_only",
+      "reason": "Convert the field value under size-and-format; a field container is not an equivalent media/quantity/work class.",
+      "rule_ids": [
+        "size-and-format"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/FundingReference",
+      "status": "conversion_only",
+      "reason": "The funding rule may describe a funder alone or a grant; FundingReference is not universally equivalent to Grant.",
+      "rule_ids": [
+        "funding"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/GeoLocation",
+      "status": "conversion_only",
+      "reason": "A component or container of the geographic-coverage construction; not an independent equivalent target term.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Identifier",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Language",
+      "status": "conversion_only",
+      "reason": "The DataCite field container is converted to the resource language value; it is not a class of language entities.",
+      "rule_ids": [
+        "language-tags"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/PublicationYear",
+      "status": "conversion_only",
+      "reason": "Use typed-dates to preserve the event, value and precision; no one-to-one container/qualifier term exists.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Publisher",
+      "status": "conversion_only",
+      "reason": "DataCite names an entity acting in a publishing/holding role; publisher-node preserves its known identity without equating the class with Organization.",
+      "rule_ids": [
+        "publisher-node"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/RelatedIdentifier",
+      "status": "conversion_only",
+      "reason": "Dispatch the qualified relation with relation-dispatch; a generic related identifier/item does not imply citation.",
+      "rule_ids": [
+        "relation-dispatch"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/RelatedItem",
+      "status": "conversion_only",
+      "reason": "Use resource-types to classify the enclosing entity and retain the original type; there is no unconditional equivalent target term.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Resource",
+      "status": "conversion_only",
+      "reason": "Use resource-types to classify the enclosing entity and retain the original type; there is no unconditional equivalent target term.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/ResourceType",
+      "status": "conversion_only",
+      "reason": "Use resource-types to classify the enclosing entity and retain the original type; there is no unconditional equivalent target term.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Rights",
+      "status": "conversion_only",
+      "reason": "Use rights-and-licenses; the DataCite rights container is neither a license document nor a creative-work class.",
+      "rule_ids": [
+        "rights-and-licenses"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Size",
+      "status": "conversion_only",
+      "reason": "Convert the field value under size-and-format; a field container is not an equivalent media/quantity/work class.",
+      "rule_ids": [
+        "size-and-format"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Subject",
+      "status": "conversion_only",
+      "reason": "The subjects rule constructs term/set nodes or copies a keyword; the container/qualifier is not an equivalent target term.",
+      "rule_ids": [
+        "subjects"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Title",
+      "status": "conversion_only",
+      "reason": "The title-values rule preserves title text and context; qualifier distinctions have no one-to-one Schema.org term.",
+      "rule_ids": [
+        "title-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Version",
+      "status": "conversion_only",
+      "reason": "Convert the field value under size-and-format; a field container is not an equivalent media/quantity/work class.",
+      "rule_ids": [
+        "size-and-format"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliation",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:affiliation; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "affiliations"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliationIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "affiliations",
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliationIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "affiliations",
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/alternateIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/alternateIdentifierType",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardNumber",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "funding"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardTitle",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:name; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "funding"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardURI",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:url; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "funding"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/classificationCode",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:termCode; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "subjects"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributor",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:contributor; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributorName",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:name; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes",
+        "language-tags"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributorType",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:roleName; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/creator",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:creator; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/creatorName",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:name; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes",
+        "language-tags"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/date",
+      "status": "conversion_only",
+      "reason": "Use typed-dates to preserve the event, value and precision; no one-to-one container/qualifier term exists.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/dateInformation",
+      "status": "conversion_only",
+      "reason": "Use typed-dates to preserve the event, value and precision; no one-to-one container/qualifier term exists.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/dateType",
+      "status": "conversion_only",
+      "reason": "Use typed-dates to preserve the event, value and precision; no one-to-one container/qualifier term exists.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/description",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:description; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "description-values",
+        "language-tags"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/descriptionType",
+      "status": "conversion_only",
+      "reason": "Use description-values; Schema.org text alone loses this description-kind/container distinction.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/eastBoundLongitude",
+      "status": "conversion_only",
+      "reason": "A component or container of the geographic-coverage construction; not an independent equivalent target term.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/edition",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:bookEdition; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "bibliographic-location"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/familyName",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:familyName; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/firstPage",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:pageStart; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "bibliographic-location"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/format",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:encodingFormat; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "size-and-format"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "funding",
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderIdentifierType",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "funding",
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderName",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:name; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "funding"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/fundingReference",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:funding; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "funding"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocation",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:spatialCoverage; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationBox",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:box; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPlace",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:name; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPoint",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:GeoCoordinates; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPolygon",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:polygon; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/givenName",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:givenName; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/identifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/identifierType",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/inPolygonPoint",
+      "status": "conversion_only",
+      "reason": "A component or container of the geographic-coverage construction; not an independent equivalent target term.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/issue",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:issueNumber; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "bibliographic-location"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/language",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:inLanguage; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "language-tags"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/lastPage",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:pageEnd; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "bibliographic-location"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameType",
+      "status": "conversion_only",
+      "reason": "Selects the agent type through agent-nodes; Schema.org has no corresponding nameType qualifier.",
+      "rule_ids": [
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/northBoundLatitude",
+      "status": "conversion_only",
+      "reason": "A component or container of the geographic-coverage construction; not an independent equivalent target term.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/number",
+      "status": "conversion_only",
+      "reason": "Use typed-numbers to select a value destination on A and preserve its local publication context; no unconditional equivalent term.",
+      "rule_ids": [
+        "typed-numbers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/numberType",
+      "status": "conversion_only",
+      "reason": "Use typed-numbers to select a value destination on A and preserve its local publication context; no unconditional equivalent term.",
+      "rule_ids": [
+        "typed-numbers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/pointLatitude",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:latitude; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/pointLongitude",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:longitude; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/polygonPoint",
+      "status": "conversion_only",
+      "reason": "A component or container of the geographic-coverage construction; not an independent equivalent target term.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publicationYear",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:datePublished; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisher",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:publisher; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "language-tags",
+        "publisher-node"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisherIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-values",
+        "publisher-node"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisherIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values",
+        "publisher-node"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedIdentifier",
+      "status": "conversion_only",
+      "reason": "Dispatch the qualified relation with relation-dispatch; a generic related identifier/item does not imply citation.",
+      "rule_ids": [
+        "relation-dispatch"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedIdentifierType",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItem",
+      "status": "conversion_only",
+      "reason": "Dispatch the qualified relation with relation-dispatch; a generic related identifier/item does not imply citation.",
+      "rule_ids": [
+        "relation-dispatch"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemIdentifierType",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemType",
+      "status": "conversion_only",
+      "reason": "Use resource-types to classify the enclosing entity and retain the original type; there is no unconditional equivalent target term.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedMetadataScheme",
+      "status": "no_equivalent",
+      "reason": "No equivalent Schema.org metadata-schema qualifier; preserve the original relationship structure via metadata-scheme-qualifiers.",
+      "rule_ids": [
+        "metadata-scheme-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relationType",
+      "status": "conversion_only",
+      "reason": "Dispatch the qualified relation with relation-dispatch; a generic related identifier/item does not imply citation.",
+      "rule_ids": [
+        "relation-dispatch"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relationTypeInformation",
+      "status": "conversion_only",
+      "reason": "Dispatch the qualified relation with relation-dispatch; a generic related identifier/item does not imply citation.",
+      "rule_ids": [
+        "metadata-scheme-qualifiers",
+        "relation-dispatch"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/resourceType",
+      "status": "conversion_only",
+      "reason": "Use resource-types to classify the enclosing entity and retain the original type; there is no unconditional equivalent target term.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/resourceTypeGeneral",
+      "status": "conversion_only",
+      "reason": "Use resource-types to classify the enclosing entity and retain the original type; there is no unconditional equivalent target term.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rights",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:conditionsOfAccess, schema:license; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "language-tags",
+        "rights-and-licenses"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsIdentifier",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "identifier-values",
+        "rights-and-licenses"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values",
+        "rights-and-licenses"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsURI",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:license; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "rights-and-licenses"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/schemeType",
+      "status": "no_equivalent",
+      "reason": "No equivalent Schema.org metadata-schema qualifier; preserve the original relationship structure via metadata-scheme-qualifiers.",
+      "rule_ids": [
+        "metadata-scheme-qualifiers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/schemeURI",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values",
+        "metadata-scheme-qualifiers",
+        "rights-and-licenses",
+        "subjects"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/size",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:contentSize; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "size-and-format"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/southBoundLatitude",
+      "status": "conversion_only",
+      "reason": "A component or container of the geographic-coverage construction; not an independent equivalent target term.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/subject",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:about, schema:keywords; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "language-tags",
+        "subjects"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/subjectScheme",
+      "status": "conversion_only",
+      "reason": "The subjects rule constructs term/set nodes or copies a keyword; the container/qualifier is not an equivalent target term.",
+      "rule_ids": [
+        "subjects"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/title",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:name; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "language-tags",
+        "title-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/titleType",
+      "status": "conversion_only",
+      "reason": "The title-values rule preserves title text and context; qualifier distinctions have no one-to-one Schema.org term.",
+      "rule_ids": [
+        "title-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/valueURI",
+      "status": "conversion_only",
+      "reason": "The subjects rule constructs term/set nodes or copies a keyword; the container/qualifier is not an equivalent target term.",
+      "rule_ids": [
+        "subjects"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/version",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:version; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "size-and-format"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/volume",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:volumeNumber; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "bibliographic-location"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/westBoundLongitude",
+      "status": "conversion_only",
+      "reason": "A component or container of the geographic-coverage construction; not an independent equivalent target term.",
+      "rule_ids": [
+        "geographic-coverage"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ContactPerson",
+      "status": "conversion_only",
+      "reason": "Preserve ContactPerson as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataCollector",
+      "status": "conversion_only",
+      "reason": "Preserve DataCollector as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataCurator",
+      "status": "conversion_only",
+      "reason": "Preserve DataCurator as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataManager",
+      "status": "conversion_only",
+      "reason": "Preserve DataManager as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Distributor",
+      "status": "conversion_only",
+      "reason": "Preserve Distributor as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Editor",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:editor; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/HostingInstitution",
+      "status": "conversion_only",
+      "reason": "Preserve HostingInstitution as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Other",
+      "status": "conversion_only",
+      "reason": "Preserve Other as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Producer",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:producer; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectLeader",
+      "status": "conversion_only",
+      "reason": "Preserve ProjectLeader as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectManager",
+      "status": "conversion_only",
+      "reason": "Preserve ProjectManager as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectMember",
+      "status": "conversion_only",
+      "reason": "Preserve ProjectMember as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAgency",
+      "status": "conversion_only",
+      "reason": "Preserve RegistrationAgency as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAuthority",
+      "status": "conversion_only",
+      "reason": "Preserve RegistrationAuthority as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RelatedPerson",
+      "status": "conversion_only",
+      "reason": "Preserve RelatedPerson as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ResearchGroup",
+      "status": "conversion_only",
+      "reason": "Preserve ResearchGroup as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Researcher",
+      "status": "conversion_only",
+      "reason": "Preserve Researcher as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RightsHolder",
+      "status": "conversion_only",
+      "reason": "Preserve RightsHolder as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Sponsor",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:sponsor; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Supervisor",
+      "status": "conversion_only",
+      "reason": "Preserve Supervisor as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Translator",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:translator; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/WorkPackageLeader",
+      "status": "conversion_only",
+      "reason": "Preserve WorkPackageLeader as roleName through contributor-roles; no equivalent Schema.org role term is asserted.",
+      "rule_ids": [
+        "contributor-roles"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Accepted",
+      "status": "no_equivalent",
+      "reason": "The Accepted date event has no selected generic Schema.org property; retain its dateType, full value and dateInformation through typed-dates.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Available",
+      "status": "no_equivalent",
+      "reason": "The Available date event has no selected generic Schema.org property; retain its dateType, full value and dateInformation through typed-dates.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Collected",
+      "status": "no_equivalent",
+      "reason": "The Collected date event has no selected generic Schema.org property; retain its dateType, full value and dateInformation through typed-dates.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Copyrighted",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:copyrightYear; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Coverage",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:temporalCoverage; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Created",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:dateCreated; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Issued",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:datePublished; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Other",
+      "status": "no_equivalent",
+      "reason": "The Other date event has no selected generic Schema.org property; retain its dateType, full value and dateInformation through typed-dates.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Submitted",
+      "status": "no_equivalent",
+      "reason": "The Submitted date event has no selected generic Schema.org property; retain its dateType, full value and dateInformation through typed-dates.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Updated",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:dateModified; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Valid",
+      "status": "no_equivalent",
+      "reason": "The Valid date event has no selected generic Schema.org property; retain its dateType, full value and dateInformation through typed-dates.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Withdrawn",
+      "status": "no_equivalent",
+      "reason": "The Withdrawn date event has no selected generic Schema.org property; retain its dateType, full value and dateInformation through typed-dates.",
+      "rule_ids": [
+        "typed-dates"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:abstract; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Methods",
+      "status": "conversion_only",
+      "reason": "Use description-values; Schema.org text alone loses this description-kind/container distinction.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Other",
+      "status": "conversion_only",
+      "reason": "Use description-values; Schema.org text alone loses this description-kind/container distinction.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/SeriesInformation",
+      "status": "conversion_only",
+      "reason": "Use description-values; Schema.org text alone loses this description-kind/container distinction.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/TableOfContents",
+      "status": "conversion_only",
+      "reason": "Use description-values; Schema.org text alone loses this description-kind/container distinction.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo",
+      "status": "conversion_only",
+      "reason": "Use description-values; Schema.org text alone loses this description-kind/container distinction.",
+      "rule_ids": [
+        "description-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/CrossrefFunderID",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/GRID",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ISNI",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/Other",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ROR",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/identifierType/DOI",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/nameType/Organizational",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Organization; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/nameType/Personal",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Person; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "agent-nodes"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Article",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:identifier; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-numbers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Chapter",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:position; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-numbers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Other",
+      "status": "conversion_only",
+      "reason": "Use typed-numbers to select a value destination on A and preserve its local publication context; no unconditional equivalent term.",
+      "rule_ids": [
+        "typed-numbers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Report",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:reportNumber; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "typed-numbers"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ARK",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/CSTR",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/DOI",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EAN13",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EISSN",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/Handle",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/IGSN",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISBN",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISSN",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISTC",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LISSN",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LSID",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PMID",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PURL",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RAiD",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RRID",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/SWHID",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/UPC",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URL",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URN",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/arXiv",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/bibcode",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/w3id",
+      "status": "conversion_only",
+      "reason": "Represent the identifier and its scheme using identifier-values on the identified entity; this qualifier/container has no equivalent target term.",
+      "rule_ids": [
+        "identifier-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Cites",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:citation; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-cites"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Collects",
+      "status": "no_equivalent",
+      "reason": "Collection does not necessarily assert CreativeWork part/whole containment. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Compiles",
+      "status": "no_equivalent",
+      "reason": "Compilation is a process relationship, not necessarily work containment. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Continues",
+      "status": "no_equivalent",
+      "reason": "Continuation is distinct from part/whole or derivation; no general continuation property is selected. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Describes",
+      "status": "no_equivalent",
+      "reason": "A descriptive relationship can be approximated by about only with suitable entity context; no unconditional equivalent is selected. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Documents",
+      "status": "no_equivalent",
+      "reason": "Documentation-specific meaning would be lost in a generic about statement. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasMetadata",
+      "status": "no_equivalent",
+      "reason": "Metadata-document linkage and its scheme require retained qualifiers; no lossless Schema.org equivalent is selected. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasPart",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:hasPart; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-haspart"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasTranslation",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:workTranslation; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-hastranslation"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasVersion",
+      "status": "no_equivalent",
+      "reason": "A has-version relation cannot be replaced by isBasedOn without changing meaning. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCitedBy",
+      "status": "conversion_only",
+      "reason": "Inverse of schema:citation: no term-level association is asserted because a consumer could apply it in the wrong direction. The inverse conversion rule emits the triple on the related item.",
+      "rule_ids": [
+        "relation-iscitedby"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy",
+      "status": "no_equivalent",
+      "reason": "Being collected by a resource does not necessarily assert work containment. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCompiledBy",
+      "status": "no_equivalent",
+      "reason": "Compilation direction and process semantics are not captured by a generic derivation link. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsContinuedBy",
+      "status": "no_equivalent",
+      "reason": "Inverse continuation has no selected general Schema.org counterpart. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:isBasedOn; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isderivedfrom"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDescribedBy",
+      "status": "no_equivalent",
+      "reason": "A describing work could support subjectOf in a separate reviewed profile; no unconditional equivalent is selected here. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDocumentedBy",
+      "status": "no_equivalent",
+      "reason": "The documentation relation has no dedicated general Schema.org counterpart. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsIdenticalTo",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:sameAs; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isidenticalto"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsMetadataFor",
+      "status": "no_equivalent",
+      "reason": "Being metadata for a resource is more specific than being about it; retain the metadata scheme and direction. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsNewVersionOf",
+      "status": "no_equivalent",
+      "reason": "A new-version relation does not by itself establish derivation. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsObsoletedBy",
+      "status": "no_equivalent",
+      "reason": "No general replacement relationship is available for arbitrary research resources. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsOriginalFormOf",
+      "status": "no_equivalent",
+      "reason": "Original-form semantics do not necessarily assert derivation or identity. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPartOf",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:isPartOf; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-ispartof"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPreviousVersionOf",
+      "status": "no_equivalent",
+      "reason": "A previous-version relation needs version ordering absent from the selected target vocabulary. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPublishedIn",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:isPartOf; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-ispublishedin"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy",
+      "status": "conversion_only",
+      "reason": "Inverse of schema:citation: no term-level association is asserted because a consumer could apply it in the wrong direction. The inverse conversion rule emits the triple on the related item.",
+      "rule_ids": [
+        "relation-isreferencedby"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsRequiredBy",
+      "status": "no_equivalent",
+      "reason": "Inverse dependency needs a supported forward dependency relation that is not available generically. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsReviewedBy",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:review; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-isreviewedby"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSourceOf",
+      "status": "conversion_only",
+      "reason": "Inverse of schema:isBasedOn: no term-level association is asserted because a consumer could apply it in the wrong direction. The inverse conversion rule emits the triple on the related item.",
+      "rule_ids": [
+        "relation-issourceof"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSupplementTo",
+      "status": "no_equivalent",
+      "reason": "A supplement is not necessarily a part, derivation or related product. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSupplementedBy",
+      "status": "no_equivalent",
+      "reason": "Being supplemented does not imply derivation from the supplement. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsTranslationOf",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:translationOfWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-istranslationof"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsVariantFormOf",
+      "status": "no_equivalent",
+      "reason": "Variant-form semantics do not necessarily assert derivation or identity. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsVersionOf",
+      "status": "no_equivalent",
+      "reason": "Version identity/specificity differs from derivation; no general Schema.org version link is selected. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Obsoletes",
+      "status": "no_equivalent",
+      "reason": "No general supersession relationship is available for arbitrary research resources. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Other",
+      "status": "no_equivalent",
+      "reason": "Other supplies no defined relationship; retain relationTypeInformation and the B identifier. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/References",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:citation; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-references"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Requires",
+      "status": "no_equivalent",
+      "reason": "A dependency can exceed softwareRequirements; no general research-resource dependency property is selected. Preserve the source relation with relation-dispatch; do not substitute schema:isRelatedTo."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Reviews",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:itemReviewed; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "relation-reviews"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Audiovisual",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:VideoObject; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Award",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Grant; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Book",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Book; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/BookChapter",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Chapter; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Collection",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Collection; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ComputationalNotebook",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:SoftwareSourceCode; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferencePaper",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:ScholarlyArticle; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferenceProceeding",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/DataPaper",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:ScholarlyArticle; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dataset",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Dataset; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dissertation",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Thesis; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Event",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Event; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Image",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:ImageObject; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Instrument",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Product; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/InteractiveResource",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Journal",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Periodical; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/JournalArticle",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:ScholarlyArticle; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Model",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:3DModel; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Other",
+      "status": "conversion_only",
+      "reason": "Use resource-types to classify the enclosing entity and retain the original type; there is no unconditional equivalent target term.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/OutputManagementPlan",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PeerReview",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Review; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PhysicalObject",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Thing; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Poster",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Preprint",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:ScholarlyArticle; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Presentation",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Project",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Project; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Report",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Report; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Service",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:Service; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Software",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:SoftwareApplication, schema:SoftwareSourceCode; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Sound",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:AudioObject; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Standard",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/StudyRegistration",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Text",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Workflow",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:CreativeWork; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "resource-types"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/AlternativeTitle",
+      "status": "mapped",
+      "reason": "Reviewed term association with schema:alternateName; read the SSSOM comment and conversion rules before transforming data.",
+      "rule_ids": [
+        "title-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/Other",
+      "status": "conversion_only",
+      "reason": "The title-values rule preserves title text and context; qualifier distinctions have no one-to-one Schema.org term.",
+      "rule_ids": [
+        "title-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/Subtitle",
+      "status": "conversion_only",
+      "reason": "The title-values rule preserves title text and context; qualifier distinctions have no one-to-one Schema.org term.",
+      "rule_ids": [
+        "title-values"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle",
+      "status": "conversion_only",
+      "reason": "The title-values rule preserves title text and context; qualifier distinctions have no one-to-one Schema.org term.",
+      "rule_ids": [
+        "title-values"
+      ]
+    }
+  ]
+}

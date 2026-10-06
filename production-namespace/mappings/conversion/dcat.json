@@ -1,0 +1,780 @@
+{
+  "target": "dcat",
+  "source_version": "4.7",
+  "rules": [
+    {
+      "id": "publication-year",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/publicationYear"
+      ],
+      "condition": "When exporting the resource publication year; do not infer a month or day.",
+      "source_path": "/resource/publicationYear",
+      "target_path": "described resource -> dcterms:issued -> year-precision literal",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep year precision. Publication and public availability are distinct events; choose dcterms:available instead if that is what the source year establishes."
+    },
+    {
+      "id": "identifier-context",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/affiliationIdentifier",
+        "https://w3id.org/tib/datacite/property/awardNumber",
+        "https://w3id.org/tib/datacite/property/funderIdentifier",
+        "https://w3id.org/tib/datacite/property/nameIdentifier",
+        "https://w3id.org/tib/datacite/property/publisherIdentifier",
+        "https://w3id.org/tib/datacite/property/relatedItemIdentifier",
+        "https://w3id.org/tib/datacite/property/rightsIdentifier",
+        "https://w3id.org/tib/datacite/property/classificationCode"
+      ],
+      "condition": "Only on the entity identified by the containing DataCite group.",
+      "source_path": "identifier-bearing subelement in its enclosing agent, award, related item, license, or subject",
+      "target_path": "identified entity -> dcterms:identifier -> identifier literal",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Attach identifiers to their own entity rather than the main resource. Preserve scheme and lexical value separately; bare identifiers are not interchangeable with entity IRIs."
+    },
+    {
+      "id": "identifier-schemes",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/identifierType",
+        "https://w3id.org/tib/datacite/property/alternateIdentifierType",
+        "https://w3id.org/tib/datacite/property/affiliationIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/funderIdentifierType",
+        "https://w3id.org/tib/datacite/property/nameIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/publisherIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/relatedIdentifierType",
+        "https://w3id.org/tib/datacite/property/relatedItemIdentifierType",
+        "https://w3id.org/tib/datacite/property/rightsIdentifierScheme",
+        "https://w3id.org/tib/datacite/vocab/identifierType/DOI",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/CrossrefFunderID",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/GRID",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ISNI",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/Other",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ROR",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ARK",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/CSTR",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/DOI",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EAN13",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EISSN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/Handle",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/IGSN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISBN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISSN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISTC",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LISSN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LSID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PMID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PURL",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RAiD",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RRID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/SWHID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/UPC",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URL",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/arXiv",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/bibcode",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/w3id"
+      ],
+      "condition": "Always retain the scheme when exporting an identifier; normalization requires a scheme-specific rule.",
+      "source_path": "identifier type/scheme qualifier and corresponding identifier value",
+      "target_path": "identifier representation plus retained scheme metadata",
+      "operation": "preserve",
+      "lossiness": "conditional",
+      "notes": "These qualifiers identify an identifier scheme; they are not themselves identifiers of the resource. DCTERMS/DCAT has no universal identifier-scheme field; retain an extension or source record."
+    },
+    {
+      "id": "agent-details",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/creatorName",
+        "https://w3id.org/tib/datacite/property/contributorName",
+        "https://w3id.org/tib/datacite/property/givenName",
+        "https://w3id.org/tib/datacite/property/familyName",
+        "https://w3id.org/tib/datacite/property/nameType",
+        "https://w3id.org/tib/datacite/property/affiliation",
+        "https://w3id.org/tib/datacite/property/funderName"
+      ],
+      "condition": "When constructing or identifying an agent from creator, contributor, publisher, or funding metadata.",
+      "source_path": "agent subelements within their original DataCite group",
+      "target_path": "agent node and retained name/affiliation metadata",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "DCTERMS/DCAT does not supply all name and affiliation fields. Preserve names, name language, agent kind, and affiliations with an appropriate extension; do not identify an agent by its name alone."
+    },
+    {
+      "id": "name-kind",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/nameType/Organizational",
+        "https://w3id.org/tib/datacite/vocab/nameType/Personal"
+      ],
+      "condition": "Only with a containing name-bearing agent; the qualifier is not a statement about the main resource.",
+      "source_path": "agent name/@nameType",
+      "target_path": "agent node type or retained kind qualifier",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Personal and Organizational distinguish the named agent. Preserve this kind using an agent vocabulary; do not assert that the resource itself is a person or organization."
+    },
+    {
+      "id": "descriptions",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/descriptionType",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/Methods",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/Other",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/SeriesInformation",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/TableOfContents",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo"
+      ],
+      "condition": "Select from descriptionType while retaining the associated text and language.",
+      "source_path": "/resource/descriptions/description[@descriptionType]",
+      "target_path": "resource -> dcterms:abstract, dcterms:tableOfContents, or dcterms:description -> text",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Abstract uses dcterms:abstract, TableOfContents uses dcterms:tableOfContents, and other types can use dcterms:description with the original type retained. Methods are not dcterms:instructionalMethod."
+    },
+    {
+      "id": "title-qualifiers",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/titleType",
+        "https://w3id.org/tib/datacite/vocab/titleType/AlternativeTitle",
+        "https://w3id.org/tib/datacite/vocab/titleType/Other",
+        "https://w3id.org/tib/datacite/vocab/titleType/Subtitle",
+        "https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle"
+      ],
+      "condition": "Only for the title text in the same DataCite title element.",
+      "source_path": "title/@titleType with title value and xml:lang",
+      "target_path": "resource -> dcterms:title or dcterms:alternative -> language-tagged title",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "AlternativeTitle can use dcterms:alternative; translated titles require their language. Subtitle and Other must retain their qualifier because DCTERMS does not distinguish all title kinds."
+    },
+    {
+      "id": "related-resources",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/relatedIdentifier",
+        "https://w3id.org/tib/datacite/property/relatedItem",
+        "https://w3id.org/tib/datacite/property/relatedItemType",
+        "https://w3id.org/tib/datacite/property/relationType",
+        "https://w3id.org/tib/datacite/property/relationTypeInformation"
+      ],
+      "condition": "When the related identifier and relationType refer to the same related resource.",
+      "source_path": "relatedIdentifier or relatedItem group, including identifier scheme and relationType",
+      "target_path": "resource -> selected relationship -> identified related resource",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Resolve the related resource identifier with its scheme and select a relationship using relationType. A generic dcterms:relation fallback loses the qualifier unless the original type and relationTypeInformation are retained."
+    },
+    {
+      "id": "related-metadata-scheme",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/relatedMetadataScheme",
+        "https://w3id.org/tib/datacite/property/schemeURI",
+        "https://w3id.org/tib/datacite/property/schemeType"
+      ],
+      "condition": "relatedMetadataScheme/schemeURI/schemeType describe metadata for HasMetadata/IsMetadataFor; schemeURI in other contexts describes the enclosing identifier or subject scheme.",
+      "source_path": "relatedIdentifier or relatedItemIdentifier metadata-scheme attributes; other schemeURI occurrences remain contextual",
+      "target_path": "metadata resource and retained scheme reference; do not claim dcterms:conformsTo without conformance evidence",
+      "operation": "preserve",
+      "lossiness": "conditional",
+      "notes": "A scheme name or URI alone does not establish resource conformance. Preserve the scheme reference with the metadata/identifier/subject context in which it occurs."
+    },
+    {
+      "id": "subject-qualifiers",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/subjectScheme",
+        "https://w3id.org/tib/datacite/property/valueURI"
+      ],
+      "condition": "When a subject has a controlled-vocabulary URI or classification scheme.",
+      "source_path": "/resource/subjects/subject with subjectScheme/valueURI/classificationCode",
+      "target_path": "resource topic relation -> subject concept; concept retains its scheme and notation",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Preserve subject identity and classification scheme. A subject URI describes the topic; it is not the identifier of the main resource."
+    },
+    {
+      "id": "bibliographic-detail",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/edition",
+        "https://w3id.org/tib/datacite/property/firstPage",
+        "https://w3id.org/tib/datacite/property/lastPage",
+        "https://w3id.org/tib/datacite/property/issue",
+        "https://w3id.org/tib/datacite/property/number",
+        "https://w3id.org/tib/datacite/property/numberType",
+        "https://w3id.org/tib/datacite/property/volume",
+        "https://w3id.org/tib/datacite/vocab/numberType/Article",
+        "https://w3id.org/tib/datacite/vocab/numberType/Chapter",
+        "https://w3id.org/tib/datacite/vocab/numberType/Other",
+        "https://w3id.org/tib/datacite/vocab/numberType/Report"
+      ],
+      "condition": "When bibliographic details describe the related item and its relationship to the resource.",
+      "source_path": "/resource/relatedItems/relatedItem bibliographic subelements",
+      "target_path": "related item and containing citation metadata",
+      "operation": "preserve",
+      "lossiness": "conditional",
+      "notes": "Keep edition, volume, issue, page bounds, and article/report/other numbers in their source context. DCTERMS/DCAT lacks dedicated fields for all of these; use an extension or preserve the source group."
+    },
+    {
+      "id": "funding-details",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/fundingReference",
+        "https://w3id.org/tib/datacite/property/awardTitle",
+        "https://w3id.org/tib/datacite/property/awardURI"
+      ],
+      "condition": "When representing the funding supporting the described resource.",
+      "source_path": "/resource/fundingReferences/fundingReference",
+      "target_path": "resource, funding entity, and award nodes with preserved links and award details",
+      "operation": "preserve",
+      "lossiness": "conditional",
+      "notes": "DCTERMS/DCAT has no complete funding-reference model. Preserve the funder and award as distinct entities, their identifiers, award title, and award page; an award page is not a resource landing page."
+    },
+    {
+      "id": "date-annotations",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/dateType",
+        "https://w3id.org/tib/datacite/property/dateInformation"
+      ],
+      "condition": "Preserve the qualifier and additional information alongside the same date value.",
+      "source_path": "/resource/dates/date/@dateType and @dateInformation",
+      "target_path": "selected date predicate plus retained date annotation",
+      "operation": "preserve",
+      "lossiness": "conditional",
+      "notes": "A date qualifier chooses how a date is interpreted; it is not a date value or equivalent date predicate. Keep dateInformation and ranges intact."
+    },
+    {
+      "id": "date-issued",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/dateType/Issued"
+      ],
+      "condition": "dateType is Issued on the date being converted.",
+      "source_path": "/resource/dates/date[@dateType=\"Issued\"]",
+      "target_path": "resource -> dcterms:issued -> date/period value",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Select dcterms:issued only for this qualified date. Preserve original precision and ranges; Coverage needs a temporal-coverage representation, not a publication date."
+    },
+    {
+      "id": "date-updated",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/dateType/Updated"
+      ],
+      "condition": "dateType is Updated on the date being converted.",
+      "source_path": "/resource/dates/date[@dateType=\"Updated\"]",
+      "target_path": "resource -> dcterms:modified -> date/period value",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Select dcterms:modified only for this qualified date. Preserve original precision and ranges; Coverage needs a temporal-coverage representation, not a publication date."
+    },
+    {
+      "id": "date-coverage",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/dateType/Coverage"
+      ],
+      "condition": "dateType is Coverage on the date being converted.",
+      "source_path": "/resource/dates/date[@dateType=\"Coverage\"]",
+      "target_path": "resource -> dcterms:temporal -> date/period value",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Select dcterms:temporal only for this qualified date. Preserve original precision and ranges; Coverage needs a temporal-coverage representation, not a publication date."
+    },
+    {
+      "id": "relation-cites",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/Cites"
+      ],
+      "condition": "relationType is Cites on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=Cites",
+      "target_path": "A -> dcterms:references -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:references with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-references",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/References"
+      ],
+      "condition": "relationType is References on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=References",
+      "target_path": "A -> dcterms:references -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:references with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-iscitedby",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsCitedBy"
+      ],
+      "condition": "relationType is IsCitedBy on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=IsCitedBy",
+      "target_path": "A -> dcterms:isReferencedBy -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:isReferencedBy with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-isreferencedby",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy"
+      ],
+      "condition": "relationType is IsReferencedBy on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=IsReferencedBy",
+      "target_path": "A -> dcterms:isReferencedBy -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:isReferencedBy with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-haspart",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/HasPart"
+      ],
+      "condition": "relationType is HasPart on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=HasPart",
+      "target_path": "A -> dcterms:hasPart -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:hasPart with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-ispartof",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsPartOf"
+      ],
+      "condition": "relationType is IsPartOf on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=IsPartOf",
+      "target_path": "A -> dcterms:isPartOf -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:isPartOf with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-ispublishedin",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsPublishedIn"
+      ],
+      "condition": "relationType is IsPublishedIn on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=IsPublishedIn",
+      "target_path": "A -> dcterms:isPartOf -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:isPartOf with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-hasversion",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/HasVersion"
+      ],
+      "condition": "relationType is HasVersion on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=HasVersion",
+      "target_path": "A -> dcterms:hasVersion -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:hasVersion with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-isversionof",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsVersionOf"
+      ],
+      "condition": "relationType is IsVersionOf on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=IsVersionOf",
+      "target_path": "A -> dcterms:isVersionOf -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:isVersionOf with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "relation-isderivedfrom",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom"
+      ],
+      "condition": "relationType is IsDerivedFrom on related resource B in record A.",
+      "source_path": "relatedIdentifier or relatedItem with relationType=IsDerivedFrom",
+      "target_path": "A -> dcterms:source -> B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Keep A as the described resource and B as the related resource. Select dcterms:source with this direction; preserve the more specific DataCite relation qualifier when the target is broader."
+    },
+    {
+      "id": "contributor-roles",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/contributorType",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ContactPerson",
+        "https://w3id.org/tib/datacite/vocab/contributorType/DataCollector",
+        "https://w3id.org/tib/datacite/vocab/contributorType/DataCurator",
+        "https://w3id.org/tib/datacite/vocab/contributorType/DataManager",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Distributor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Editor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/HostingInstitution",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Other",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Producer",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ProjectLeader",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ProjectManager",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ProjectMember",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAgency",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAuthority",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RelatedPerson",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ResearchGroup",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Researcher",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RightsHolder",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Sponsor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Supervisor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Translator",
+        "https://w3id.org/tib/datacite/vocab/contributorType/WorkPackageLeader"
+      ],
+      "condition": "Only for the contributor agent carrying this contributorType.",
+      "source_path": "/resource/contributors/contributor/@contributorType",
+      "target_path": "resource -> dcterms:contributor -> agent, with retained role; DCAT may use qualified attribution and dcat:hadRole",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Contributor role values are not property equivalents. Preserve the role on the contribution/attribution, not on the main resource; RightsHolder may additionally justify dcterms:rightsHolder. DCAT hadRole belongs on a qualified attribution or relationship node."
+    },
+    {
+      "id": "group-alternateidentifier",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/AlternateIdentifier"
+      ],
+      "condition": "When reading the AlternateIdentifier structured metadata group.",
+      "source_path": "DataCite AlternateIdentifier group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The AlternateIdentifier group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-date",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Date"
+      ],
+      "condition": "When reading the Date structured metadata group.",
+      "source_path": "DataCite Date group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Date group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-identifier",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Identifier"
+      ],
+      "condition": "When reading the Identifier structured metadata group.",
+      "source_path": "DataCite Identifier group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Identifier group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-relatedidentifier",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/RelatedIdentifier"
+      ],
+      "condition": "When reading the RelatedIdentifier structured metadata group.",
+      "source_path": "DataCite RelatedIdentifier group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The RelatedIdentifier group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-subject",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Subject"
+      ],
+      "condition": "When reading the Subject structured metadata group.",
+      "source_path": "DataCite Subject group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Subject group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-fundingreference",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/FundingReference"
+      ],
+      "condition": "When reading the FundingReference structured metadata group.",
+      "source_path": "DataCite FundingReference group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The FundingReference group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-description",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Description"
+      ],
+      "condition": "When reading the Description structured metadata group.",
+      "source_path": "DataCite Description group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Description group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-relateditem",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/RelatedItem"
+      ],
+      "condition": "When reading the RelatedItem structured metadata group.",
+      "source_path": "DataCite RelatedItem group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The RelatedItem group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-contributor",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Contributor"
+      ],
+      "condition": "When reading the Contributor structured metadata group.",
+      "source_path": "DataCite Contributor group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Contributor group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-title",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Title"
+      ],
+      "condition": "When reading the Title structured metadata group.",
+      "source_path": "DataCite Title group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Title group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-resource",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Resource"
+      ],
+      "condition": "When reading the Resource structured metadata group.",
+      "source_path": "DataCite Resource group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Resource group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-format",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Format"
+      ],
+      "condition": "When reading the Format structured metadata group.",
+      "source_path": "DataCite Format group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Format group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-creator",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Creator"
+      ],
+      "condition": "When reading the Creator structured metadata group.",
+      "source_path": "DataCite Creator group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Creator group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-rights",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Rights"
+      ],
+      "condition": "When reading the Rights structured metadata group.",
+      "source_path": "DataCite Rights group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Rights group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-language",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Language"
+      ],
+      "condition": "When reading the Language structured metadata group.",
+      "source_path": "DataCite Language group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Language group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-publicationyear",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/PublicationYear"
+      ],
+      "condition": "When reading the PublicationYear structured metadata group.",
+      "source_path": "DataCite PublicationYear group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The PublicationYear group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-publisher",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Publisher"
+      ],
+      "condition": "When reading the Publisher structured metadata group.",
+      "source_path": "DataCite Publisher group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Publisher group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-version",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Version"
+      ],
+      "condition": "When reading the Version structured metadata group.",
+      "source_path": "DataCite Version group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Version group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-size",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/Size"
+      ],
+      "condition": "When reading the Size structured metadata group.",
+      "source_path": "DataCite Size group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The Size group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "group-resourcetype",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/class/ResourceType"
+      ],
+      "condition": "When reading the ResourceType structured metadata group.",
+      "source_path": "DataCite ResourceType group",
+      "target_path": "target resource or contextual node with the corresponding extracted fields",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The ResourceType group is a DataCite metadata structure; preserve its values and qualifiers on the correct target node. Its presence does not itself establish a target resource class."
+    },
+    {
+      "id": "geometry",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/geoLocationBox",
+        "https://w3id.org/tib/datacite/property/geoLocationPlace",
+        "https://w3id.org/tib/datacite/property/geoLocationPoint",
+        "https://w3id.org/tib/datacite/property/geoLocationPolygon",
+        "https://w3id.org/tib/datacite/property/inPolygonPoint",
+        "https://w3id.org/tib/datacite/property/polygonPoint",
+        "https://w3id.org/tib/datacite/property/pointLatitude",
+        "https://w3id.org/tib/datacite/property/pointLongitude",
+        "https://w3id.org/tib/datacite/property/eastBoundLongitude",
+        "https://w3id.org/tib/datacite/property/westBoundLongitude",
+        "https://w3id.org/tib/datacite/property/northBoundLatitude",
+        "https://w3id.org/tib/datacite/property/southBoundLatitude"
+      ],
+      "condition": "When the coordinates/name describe spatial coverage, not spatial resolution.",
+      "source_path": "/resource/geoLocations/geoLocation",
+      "target_path": "resource -> dcterms:spatial -> dcterms:Location with geometry; box -> dcat:bbox",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Construct a Location and geometry from coordinates; dcat:bbox accepts the whole bounding geometry, not one bound. A point need not be a centroid; do not use dcat:centroid unless it is established as such."
+    },
+    {
+      "id": "format-distribution",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/format"
+      ],
+      "condition": "Only when the technical format describes a particular dataset distribution.",
+      "source_path": "/resource/formats/format",
+      "target_path": "dataset -> dcat:distribution -> distribution -> dcterms:format or dcat:mediaType",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "DCAT format/mediaType describe a distribution. Use dcat:mediaType for a recognized IANA media type; keep other format descriptions without inventing a downloadable distribution."
+    },
+    {
+      "id": "size-distribution",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/size"
+      ],
+      "condition": "Only a size explicitly in bytes and applicable to the particular distribution can be byteSize.",
+      "source_path": "/resource/sizes/size",
+      "target_path": "distribution -> dcat:byteSize -> byte count, or retained extent metadata",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Pages, physical dimensions, and durations cannot be converted to byteSize. Preserve units and placement; do not assume all DataCite size values measure a downloadable file."
+    },
+    {
+      "id": "subject-kind",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/subject"
+      ],
+      "condition": "Select a keyword or controlled theme based on the source subject and its qualifiers.",
+      "source_path": "/resource/subjects/subject",
+      "target_path": "resource -> dcat:keyword -> literal, or dcat:theme -> subject concept",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Use keyword for plain textual tags and theme for controlled concepts. Preserve language, subjectScheme, valueURI, and classificationCode; a subject concept is not a literal keyword."
+    },
+    {
+      "id": "contributor-attribution",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/contributor"
+      ],
+      "condition": "When an agent and its contribution role are known.",
+      "source_path": "/resource/contributors/contributor",
+      "target_path": "resource -> qualified attribution -> agent and dcat:hadRole -> role",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "DCAT supports qualified attribution using PROV; preserve the agent and contributor role in that pattern. The source agent is not a vCard contact point unless the ContactPerson role and contact information justify it."
+    },
+    {
+      "id": "date-selection",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/date"
+      ],
+      "condition": "Choose according to dateType and the date value context.",
+      "source_path": "/resource/dates/date",
+      "target_path": "resource -> dcterms:issued, dcterms:modified, or dcterms:temporal; retain other date kinds",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "DCAT distinguishes release, modification, and temporal coverage. The general DataCite date field cannot always become dcterms:issued."
+    },
+    {
+      "id": "service-type",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Service"
+      ],
+      "condition": "Only if the service actually provides discovery, access, or processing operations on data.",
+      "source_path": "/resource/resourceType[@resourceTypeGeneral=\"Service\"]",
+      "target_path": "catalogued data service -> rdf:type -> dcat:DataService",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "DataCite Service includes services beyond data services; apply dcat:DataService only after inspecting the service and retain other services without forcing this type."
+    },
+    {
+      "id": "collection-type",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Collection"
+      ],
+      "condition": "Distinguish an actual metadata catalog, a dataset series, and an arbitrary collection.",
+      "source_path": "/resource/resourceType[@resourceTypeGeneral=\"Collection\"]",
+      "target_path": "dcat:Catalog or dcat:DatasetSeries only when their definitions are satisfied",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "A generic DataCite Collection does not establish a DCAT Catalog or DatasetSeries. Classify only from evidence about its contents and organization."
+    }
+  ]
+}

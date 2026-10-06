@@ -68,6 +68,18 @@ fi
   PAGES_BASE_PATH="$PAGES_BASE_PATH" node "$SCRIPT_DIR/generate-index-pages.js"
 )
 
+# Publish the curated mapping sets so their w3id mapping_set_id IRIs resolve
+# (https://w3id.org/tib/datacite/mappings/<file>). Internal tooling inputs such
+# as target-vocabularies.json stay in the toolkit repository.
+MAPPINGS_SRC="${MAPPINGS_SRC:-mappings}"
+mkdir -p "$DST/mappings"
+cp "$MAPPINGS_SRC"/datacite-*.sssom.tsv \
+   "$MAPPINGS_SRC/SKOS_crosswalks.jsonld" \
+   "$MAPPINGS_SRC/jskos-mappings.json" \
+   "$MAPPINGS_SRC/target-sources.json" \
+   "$DST/mappings/"
+cp -r "$MAPPINGS_SRC/conversion" "$MAPPINGS_SRC/coverage" "$DST/mappings/"
+
 CHECKSUMS_FILE="CHECKSUMS.sha256"
 INTEGRITY_FILE="manifest/bundle-integrity.json"
 rm -f "$DST/$CHECKSUMS_FILE" "$DST/$INTEGRITY_FILE"

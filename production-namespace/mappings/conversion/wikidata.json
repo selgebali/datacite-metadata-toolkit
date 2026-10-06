@@ -1,0 +1,19 @@
+{
+  "target": "wikidata",
+  "source_version": "4.7",
+  "rules": [
+    {
+      "id": "orcid-identifier",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/nameIdentifier",
+        "https://w3id.org/tib/datacite/property/nameIdentifierScheme"
+      ],
+      "condition": "Only if the enclosing agent is a person and nameIdentifierScheme explicitly identifies ORCID, and the identifier is valid.",
+      "source_path": "creator/nameIdentifier or contributor/nameIdentifier with nameIdentifierScheme=ORCID",
+      "target_path": "identified person -> Wikidata P496 external-identifier statement",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "This is a documented conditional statement-conversion candidate, outside the Q-item mapping set. Do not map a generic nameIdentifier to ORCID, attach the identifier to the research resource, or emit an unvalidated value."
+    }
+  ]
+}

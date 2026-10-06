@@ -1,0 +1,2220 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@graph": [
+    {
+      "@id": "https://w3id.org/tib/datacite/mappings/SKOS_crosswalks.jsonld",
+      "dcterms:title": "DataCite 4.7 crosswalks (generated SKOS view)",
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "dcterms:creator": [
+        {
+          "@id": "https://orcid.org/0000-0003-1378-5495"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@id": "https://w3id.org/tib/datacite/mappings/datacite-dcat.sssom.tsv"
+        },
+        {
+          "@id": "https://w3id.org/tib/datacite/mappings/datacite-dcterms.sssom.tsv"
+        },
+        {
+          "@id": "https://w3id.org/tib/datacite/mappings/datacite-schemaorg.sssom.tsv"
+        },
+        {
+          "@id": "https://w3id.org/tib/datacite/mappings/datacite-wikidata.sssom.tsv"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/class/Contributor",
+      "rdfs:label": "Contributor",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/Organization"
+        },
+        {
+          "@id": "https://schema.org/Person"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/class/Creator",
+      "rdfs:label": "Creator",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/Organization"
+        },
+        {
+          "@id": "https://schema.org/Person"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/class/GeoLocation",
+      "rdfs:label": "GeoLocation",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/Location"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/class/Language",
+      "rdfs:label": "Language",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/LinguisticSystem"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/class/Rights",
+      "rdfs:label": "Rights",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/RightsStatement"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/class/Size",
+      "rdfs:label": "Size",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/SizeOrDuration"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/affiliation",
+      "rdfs:label": "affiliation",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/affiliation"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/affiliationIdentifier",
+      "rdfs:label": "affiliationIdentifier",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/alternateIdentifier",
+      "rdfs:label": "alternateIdentifier",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/awardNumber",
+      "rdfs:label": "awardNumber",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/awardTitle",
+      "rdfs:label": "awardTitle",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/name"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/awardURI",
+      "rdfs:label": "awardURI",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/url"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/classificationCode",
+      "rdfs:label": "classificationCode",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/termCode"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/contributor",
+      "rdfs:label": "contributor",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/contributor"
+        },
+        {
+          "@id": "https://schema.org/contributor"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/contributorName",
+      "rdfs:label": "contributorName",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/name"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/contributorType",
+      "rdfs:label": "contributorType",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/roleName"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/creator",
+      "rdfs:label": "creator",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/creator"
+        },
+        {
+          "@id": "https://schema.org/creator"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/creatorName",
+      "rdfs:label": "creatorName",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/name"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/date",
+      "rdfs:label": "date",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/date"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/description",
+      "rdfs:label": "description",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://schema.org/description"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/edition",
+      "rdfs:label": "edition",
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/bookEdition"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/familyName",
+      "rdfs:label": "familyName",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/familyName"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/firstPage",
+      "rdfs:label": "firstPage",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/pageStart"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/format",
+      "rdfs:label": "format",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/format"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/encodingFormat"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/funderIdentifier",
+      "rdfs:label": "funderIdentifier",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/funderName",
+      "rdfs:label": "funderName",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/name"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/fundingReference",
+      "rdfs:label": "fundingReference",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/funding"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/geoLocation",
+      "rdfs:label": "geoLocation",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "@id": "https://schema.org/spatialCoverage"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/geoLocationBox",
+      "rdfs:label": "geoLocationBox",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/box"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/geoLocationPlace",
+      "rdfs:label": "geoLocationPlace",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/name"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/geoLocationPoint",
+      "rdfs:label": "geoLocationPoint",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/GeoCoordinates"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/geoLocationPolygon",
+      "rdfs:label": "geoLocationPolygon",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/polygon"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/givenName",
+      "rdfs:label": "givenName",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/givenName"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/identifier",
+      "rdfs:label": "identifier",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/issue",
+      "rdfs:label": "issue",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/issueNumber"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/language",
+      "rdfs:label": "language",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/language"
+        },
+        {
+          "@id": "https://schema.org/inLanguage"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/lastPage",
+      "rdfs:label": "lastPage",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/pageEnd"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/nameIdentifier",
+      "rdfs:label": "nameIdentifier",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/pointLatitude",
+      "rdfs:label": "pointLatitude",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/latitude"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/pointLongitude",
+      "rdfs:label": "pointLongitude",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/longitude"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/publicationYear",
+      "rdfs:label": "publicationYear",
+      "skos:relatedMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://schema.org/datePublished"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/publisher",
+      "rdfs:label": "publisher",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/publisher"
+        },
+        {
+          "@id": "https://schema.org/publisher"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/publisherIdentifier",
+      "rdfs:label": "publisherIdentifier",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/relatedItemIdentifier",
+      "rdfs:label": "relatedItemIdentifier",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/resourceType",
+      "rdfs:label": "resourceType",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/type"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/resourceTypeGeneral",
+      "rdfs:label": "resourceTypeGeneral",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/type"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/rights",
+      "rdfs:label": "rights",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/rights"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/conditionsOfAccess"
+        },
+        {
+          "@id": "https://schema.org/license"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/rightsIdentifier",
+      "rdfs:label": "rightsIdentifier",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/rightsURI",
+      "rdfs:label": "rightsURI",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/license"
+        },
+        {
+          "@id": "https://schema.org/license"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/size",
+      "rdfs:label": "size",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/extent"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/contentSize"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/subject",
+      "rdfs:label": "subject",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/subject"
+        },
+        {
+          "@id": "https://schema.org/keywords"
+        }
+      ],
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/about"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/title",
+      "rdfs:label": "title",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/name"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/title"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/version",
+      "rdfs:label": "version",
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.w3.org/ns/dcat#version"
+        },
+        {
+          "@id": "https://schema.org/version"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/property/volume",
+      "rdfs:label": "volume",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/volumeNumber"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/contributorType/Editor",
+      "rdfs:label": "Editor",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/editor"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/contributorType/Producer",
+      "rdfs:label": "Producer",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/producer"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/contributorType/RightsHolder",
+      "rdfs:label": "RightsHolder",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/rightsHolder"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/contributorType/Sponsor",
+      "rdfs:label": "Sponsor",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/sponsor"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/contributorType/Translator",
+      "rdfs:label": "Translator",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/translator"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Accepted",
+      "rdfs:label": "Accepted",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/dateAccepted"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Available",
+      "rdfs:label": "Available",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/available"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Copyrighted",
+      "rdfs:label": "Copyrighted",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/dateCopyrighted"
+        }
+      ],
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/copyrightYear"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Coverage",
+      "rdfs:label": "Coverage",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://schema.org/temporalCoverage"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Created",
+      "rdfs:label": "Created",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/created"
+        },
+        {
+          "@id": "https://schema.org/dateCreated"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Issued",
+      "rdfs:label": "Issued",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://schema.org/datePublished"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Submitted",
+      "rdfs:label": "Submitted",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/dateSubmitted"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Updated",
+      "rdfs:label": "Updated",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/modified"
+        },
+        {
+          "@id": "https://schema.org/dateModified"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/dateType/Valid",
+      "rdfs:label": "Valid",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/valid"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
+      "rdfs:label": "Abstract",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/abstract"
+        },
+        {
+          "@id": "https://schema.org/abstract"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/descriptionType/TableOfContents",
+      "rdfs:label": "TableOfContents",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/tableOfContents"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/nameType/Organizational",
+      "rdfs:label": "Organizational",
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q43229"
+        }
+      ],
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/Organization"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/nameType/Personal",
+      "rdfs:label": "Personal",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/Person"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/numberType/Article",
+      "rdfs:label": "Article",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/identifier"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/numberType/Chapter",
+      "rdfs:label": "Chapter",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/position"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/numberType/Report",
+      "rdfs:label": "Report",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/reportNumber"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/Cites",
+      "rdfs:label": "Cites",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/references"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/citation"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/HasPart",
+      "rdfs:label": "HasPart",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/hasPart"
+        },
+        {
+          "@id": "https://schema.org/hasPart"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/HasTranslation",
+      "rdfs:label": "HasTranslation",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/workTranslation"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/HasVersion",
+      "rdfs:label": "HasVersion",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/hasVersion"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsCitedBy",
+      "rdfs:label": "IsCitedBy",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isReferencedBy"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom",
+      "rdfs:label": "IsDerivedFrom",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/source"
+        },
+        {
+          "@id": "https://schema.org/isBasedOn"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsIdenticalTo",
+      "rdfs:label": "IsIdenticalTo",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/sameAs"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsNewVersionOf",
+      "rdfs:label": "IsNewVersionOf",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isVersionOf"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsObsoletedBy",
+      "rdfs:label": "IsObsoletedBy",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isReplacedBy"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsOriginalFormOf",
+      "rdfs:label": "IsOriginalFormOf",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/hasFormat"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsPartOf",
+      "rdfs:label": "IsPartOf",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://schema.org/isPartOf"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsPreviousVersionOf",
+      "rdfs:label": "IsPreviousVersionOf",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/hasVersion"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsPublishedIn",
+      "rdfs:label": "IsPublishedIn",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isPartOf"
+        },
+        {
+          "@id": "https://schema.org/isPartOf"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy",
+      "rdfs:label": "IsReferencedBy",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isReferencedBy"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsRequiredBy",
+      "rdfs:label": "IsRequiredBy",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isRequiredBy"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsReviewedBy",
+      "rdfs:label": "IsReviewedBy",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/review"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsTranslationOf",
+      "rdfs:label": "IsTranslationOf",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/translationOfWork"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsVariantFormOf",
+      "rdfs:label": "IsVariantFormOf",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isFormatOf"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/IsVersionOf",
+      "rdfs:label": "IsVersionOf",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/isVersionOf"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/Obsoletes",
+      "rdfs:label": "Obsoletes",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/replaces"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/References",
+      "rdfs:label": "References",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/references"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/citation"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/Requires",
+      "rdfs:label": "Requires",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/requires"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/relationType/Reviews",
+      "rdfs:label": "Reviews",
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/itemReviewed"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Audiovisual",
+      "rdfs:label": "Audiovisual",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/MovingImage"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/VideoObject"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Award",
+      "rdfs:label": "Award",
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/Grant"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Book",
+      "rdfs:label": "Book",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q571"
+        },
+        {
+          "@id": "https://schema.org/Book"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/BookChapter",
+      "rdfs:label": "BookChapter",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q1980247"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "https://schema.org/Chapter"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Collection",
+      "rdfs:label": "Collection",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Collection"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q2668072"
+        },
+        {
+          "@id": "https://schema.org/Collection"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ComputationalNotebook",
+      "rdfs:label": "ComputationalNotebook",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/SoftwareSourceCode"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferencePaper",
+      "rdfs:label": "ConferencePaper",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q23927052"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferenceProceeding",
+      "rdfs:label": "ConferenceProceeding",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q1143604"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/DataPaper",
+      "rdfs:label": "DataPaper",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q17009938"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dataset",
+      "rdfs:label": "Dataset",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Dataset"
+        },
+        {
+          "@id": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q1172284"
+        },
+        {
+          "@id": "https://schema.org/Dataset"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dissertation",
+      "rdfs:label": "Dissertation",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q1266946"
+        },
+        {
+          "@id": "https://schema.org/Thesis"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Event",
+      "rdfs:label": "Event",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Event"
+        },
+        {
+          "@id": "https://schema.org/Event"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Image",
+      "rdfs:label": "Image",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Image"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q478798"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/ImageObject"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Instrument",
+      "rdfs:label": "Instrument",
+      "skos:relatedMatch": [
+        {
+          "@id": "https://schema.org/Product"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/InteractiveResource",
+      "rdfs:label": "InteractiveResource",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/InteractiveResource"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Journal",
+      "rdfs:label": "Journal",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "https://schema.org/Periodical"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q737498"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/JournalArticle",
+      "rdfs:label": "JournalArticle",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q191067"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Model",
+      "rdfs:label": "Model",
+      "skos:broadMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q1979154"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/3DModel"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/OutputManagementPlan",
+      "rdfs:label": "OutputManagementPlan",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q17085509"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PeerReview",
+      "rdfs:label": "PeerReview",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q265158"
+        },
+        {
+          "@id": "https://schema.org/Review"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PhysicalObject",
+      "rdfs:label": "PhysicalObject",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/Thing"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/PhysicalObject"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q223557"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Poster",
+      "rdfs:label": "Poster",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q54670950"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Preprint",
+      "rdfs:label": "Preprint",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "https://schema.org/ScholarlyArticle"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q580922"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Presentation",
+      "rdfs:label": "Presentation",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q110611535"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Project",
+      "rdfs:label": "Project",
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q170584"
+        },
+        {
+          "@id": "https://schema.org/Project"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Report",
+      "rdfs:label": "Report",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q10870555"
+        },
+        {
+          "@id": "https://schema.org/Report"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Service",
+      "rdfs:label": "Service",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Service"
+        },
+        {
+          "@id": "https://schema.org/Service"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Software",
+      "rdfs:label": "Software",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Software"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q7397"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/SoftwareApplication"
+        },
+        {
+          "@id": "https://schema.org/SoftwareSourceCode"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Sound",
+      "rdfs:label": "Sound",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Sound"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q108676767"
+        }
+      ],
+      "skos:narrowMatch": [
+        {
+          "@id": "https://schema.org/AudioObject"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Standard",
+      "rdfs:label": "Standard",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/Standard"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/StudyRegistration",
+      "rdfs:label": "StudyRegistration",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Text",
+      "rdfs:label": "Text",
+      "skos:broadMatch": [
+        {
+          "@id": "http://purl.org/dc/dcmitype/Text"
+        },
+        {
+          "@id": "http://www.wikidata.org/entity/Q234460"
+        },
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Workflow",
+      "rdfs:label": "Workflow",
+      "skos:broadMatch": [
+        {
+          "@id": "https://schema.org/CreativeWork"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q627335"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/titleType/AlternativeTitle",
+      "rdfs:label": "AlternativeTitle",
+      "skos:closeMatch": [
+        {
+          "@id": "http://purl.org/dc/terms/alternative"
+        },
+        {
+          "@id": "https://schema.org/alternateName"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/tib/datacite/vocab/titleType/Subtitle",
+      "rdfs:label": "Subtitle",
+      "skos:closeMatch": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q1135389"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Collection",
+      "rdfs:label": "Collection"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Dataset",
+      "rdfs:label": "Dataset"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Event",
+      "rdfs:label": "Event"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Image",
+      "rdfs:label": "Image"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/InteractiveResource",
+      "rdfs:label": "InteractiveResource"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/MovingImage",
+      "rdfs:label": "MovingImage"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/PhysicalObject",
+      "rdfs:label": "PhysicalObject"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Service",
+      "rdfs:label": "Service"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Software",
+      "rdfs:label": "Software"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Sound",
+      "rdfs:label": "Sound"
+    },
+    {
+      "@id": "http://purl.org/dc/dcmitype/Text",
+      "rdfs:label": "Text"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/LinguisticSystem",
+      "rdfs:label": "LinguisticSystem"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/Location",
+      "rdfs:label": "Location"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/RightsStatement",
+      "rdfs:label": "RightsStatement"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/SizeOrDuration",
+      "rdfs:label": "SizeOrDuration"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/Standard",
+      "rdfs:label": "Standard"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/abstract",
+      "rdfs:label": "abstract"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/alternative",
+      "rdfs:label": "alternative"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/available",
+      "rdfs:label": "available"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/contributor",
+      "rdfs:label": "contributor"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/created",
+      "rdfs:label": "created"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/creator",
+      "rdfs:label": "creator"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/date",
+      "rdfs:label": "date"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/dateAccepted",
+      "rdfs:label": "dateAccepted"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/dateCopyrighted",
+      "rdfs:label": "dateCopyrighted"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/dateSubmitted",
+      "rdfs:label": "dateSubmitted"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/description",
+      "rdfs:label": "description"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/extent",
+      "rdfs:label": "extent"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/format",
+      "rdfs:label": "format"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/hasFormat",
+      "rdfs:label": "hasFormat"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/hasPart",
+      "rdfs:label": "hasPart"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/hasVersion",
+      "rdfs:label": "hasVersion"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/identifier",
+      "rdfs:label": "identifier"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/isFormatOf",
+      "rdfs:label": "isFormatOf"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/isPartOf",
+      "rdfs:label": "isPartOf"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/isReferencedBy",
+      "rdfs:label": "isReferencedBy"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/isReplacedBy",
+      "rdfs:label": "isReplacedBy"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/isRequiredBy",
+      "rdfs:label": "isRequiredBy"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/isVersionOf",
+      "rdfs:label": "isVersionOf"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/issued",
+      "rdfs:label": "issued"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/language",
+      "rdfs:label": "language"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/license",
+      "rdfs:label": "license"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/modified",
+      "rdfs:label": "modified"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/publisher",
+      "rdfs:label": "publisher"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/references",
+      "rdfs:label": "references"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/replaces",
+      "rdfs:label": "replaces"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/requires",
+      "rdfs:label": "requires"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/rights",
+      "rdfs:label": "rights"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/rightsHolder",
+      "rdfs:label": "rightsHolder"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/source",
+      "rdfs:label": "source"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/spatial",
+      "rdfs:label": "spatial"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/subject",
+      "rdfs:label": "subject"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/tableOfContents",
+      "rdfs:label": "tableOfContents"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/temporal",
+      "rdfs:label": "temporal"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/title",
+      "rdfs:label": "title"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/type",
+      "rdfs:label": "type"
+    },
+    {
+      "@id": "http://purl.org/dc/terms/valid",
+      "rdfs:label": "valid"
+    },
+    {
+      "@id": "http://www.w3.org/ns/dcat#Dataset",
+      "rdfs:label": "Dataset"
+    },
+    {
+      "@id": "http://www.w3.org/ns/dcat#version",
+      "rdfs:label": "version"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q108676767",
+      "rdfs:label": "audio content"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q10870555",
+      "rdfs:label": "report"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q110611535",
+      "rdfs:label": "slide deck"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q1135389",
+      "rdfs:label": "subtitle"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q1143604",
+      "rdfs:label": "conference proceedings"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q1172284",
+      "rdfs:label": "data set"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q1266946",
+      "rdfs:label": "thesis"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q17009938",
+      "rdfs:label": "data paper"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q170584",
+      "rdfs:label": "project"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q17085509",
+      "rdfs:label": "data management plan"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q191067",
+      "rdfs:label": "article"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q1979154",
+      "rdfs:label": "model"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q1980247",
+      "rdfs:label": "chapter"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q223557",
+      "rdfs:label": "physical object"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q234460",
+      "rdfs:label": "text"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q23927052",
+      "rdfs:label": "conference paper"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q265158",
+      "rdfs:label": "review"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q2668072",
+      "rdfs:label": "collection"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q43229",
+      "rdfs:label": "organization"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q478798",
+      "rdfs:label": "image"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q54670950",
+      "rdfs:label": "conference poster"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q571",
+      "rdfs:label": "book"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q580922",
+      "rdfs:label": "preprint"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q627335",
+      "rdfs:label": "workflow"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q737498",
+      "rdfs:label": "academic journal"
+    },
+    {
+      "@id": "http://www.wikidata.org/entity/Q7397",
+      "rdfs:label": "software"
+    },
+    {
+      "@id": "https://schema.org/3DModel",
+      "rdfs:label": "3DModel"
+    },
+    {
+      "@id": "https://schema.org/AudioObject",
+      "rdfs:label": "AudioObject"
+    },
+    {
+      "@id": "https://schema.org/Book",
+      "rdfs:label": "Book"
+    },
+    {
+      "@id": "https://schema.org/Chapter",
+      "rdfs:label": "Chapter"
+    },
+    {
+      "@id": "https://schema.org/Collection",
+      "rdfs:label": "Collection"
+    },
+    {
+      "@id": "https://schema.org/CreativeWork",
+      "rdfs:label": "CreativeWork"
+    },
+    {
+      "@id": "https://schema.org/Dataset",
+      "rdfs:label": "Dataset"
+    },
+    {
+      "@id": "https://schema.org/Event",
+      "rdfs:label": "Event"
+    },
+    {
+      "@id": "https://schema.org/GeoCoordinates",
+      "rdfs:label": "GeoCoordinates"
+    },
+    {
+      "@id": "https://schema.org/Grant",
+      "rdfs:label": "Grant"
+    },
+    {
+      "@id": "https://schema.org/ImageObject",
+      "rdfs:label": "ImageObject"
+    },
+    {
+      "@id": "https://schema.org/Organization",
+      "rdfs:label": "Organization"
+    },
+    {
+      "@id": "https://schema.org/Periodical",
+      "rdfs:label": "Periodical"
+    },
+    {
+      "@id": "https://schema.org/Person",
+      "rdfs:label": "Person"
+    },
+    {
+      "@id": "https://schema.org/Product",
+      "rdfs:label": "Product"
+    },
+    {
+      "@id": "https://schema.org/Project",
+      "rdfs:label": "Project"
+    },
+    {
+      "@id": "https://schema.org/Report",
+      "rdfs:label": "Report"
+    },
+    {
+      "@id": "https://schema.org/Review",
+      "rdfs:label": "Review"
+    },
+    {
+      "@id": "https://schema.org/ScholarlyArticle",
+      "rdfs:label": "ScholarlyArticle"
+    },
+    {
+      "@id": "https://schema.org/Service",
+      "rdfs:label": "Service"
+    },
+    {
+      "@id": "https://schema.org/SoftwareApplication",
+      "rdfs:label": "SoftwareApplication"
+    },
+    {
+      "@id": "https://schema.org/SoftwareSourceCode",
+      "rdfs:label": "SoftwareSourceCode"
+    },
+    {
+      "@id": "https://schema.org/Thesis",
+      "rdfs:label": "Thesis"
+    },
+    {
+      "@id": "https://schema.org/Thing",
+      "rdfs:label": "Thing"
+    },
+    {
+      "@id": "https://schema.org/VideoObject",
+      "rdfs:label": "VideoObject"
+    },
+    {
+      "@id": "https://schema.org/about",
+      "rdfs:label": "about"
+    },
+    {
+      "@id": "https://schema.org/abstract",
+      "rdfs:label": "abstract"
+    },
+    {
+      "@id": "https://schema.org/affiliation",
+      "rdfs:label": "affiliation"
+    },
+    {
+      "@id": "https://schema.org/alternateName",
+      "rdfs:label": "alternateName"
+    },
+    {
+      "@id": "https://schema.org/bookEdition",
+      "rdfs:label": "bookEdition"
+    },
+    {
+      "@id": "https://schema.org/box",
+      "rdfs:label": "box"
+    },
+    {
+      "@id": "https://schema.org/citation",
+      "rdfs:label": "citation"
+    },
+    {
+      "@id": "https://schema.org/conditionsOfAccess",
+      "rdfs:label": "conditionsOfAccess"
+    },
+    {
+      "@id": "https://schema.org/contentSize",
+      "rdfs:label": "contentSize"
+    },
+    {
+      "@id": "https://schema.org/contributor",
+      "rdfs:label": "contributor"
+    },
+    {
+      "@id": "https://schema.org/copyrightYear",
+      "rdfs:label": "copyrightYear"
+    },
+    {
+      "@id": "https://schema.org/creator",
+      "rdfs:label": "creator"
+    },
+    {
+      "@id": "https://schema.org/dateCreated",
+      "rdfs:label": "dateCreated"
+    },
+    {
+      "@id": "https://schema.org/dateModified",
+      "rdfs:label": "dateModified"
+    },
+    {
+      "@id": "https://schema.org/datePublished",
+      "rdfs:label": "datePublished"
+    },
+    {
+      "@id": "https://schema.org/description",
+      "rdfs:label": "description"
+    },
+    {
+      "@id": "https://schema.org/editor",
+      "rdfs:label": "editor"
+    },
+    {
+      "@id": "https://schema.org/encodingFormat",
+      "rdfs:label": "encodingFormat"
+    },
+    {
+      "@id": "https://schema.org/familyName",
+      "rdfs:label": "familyName"
+    },
+    {
+      "@id": "https://schema.org/funding",
+      "rdfs:label": "funding"
+    },
+    {
+      "@id": "https://schema.org/givenName",
+      "rdfs:label": "givenName"
+    },
+    {
+      "@id": "https://schema.org/hasPart",
+      "rdfs:label": "hasPart"
+    },
+    {
+      "@id": "https://schema.org/identifier",
+      "rdfs:label": "identifier"
+    },
+    {
+      "@id": "https://schema.org/inLanguage",
+      "rdfs:label": "inLanguage"
+    },
+    {
+      "@id": "https://schema.org/isBasedOn",
+      "rdfs:label": "isBasedOn"
+    },
+    {
+      "@id": "https://schema.org/isPartOf",
+      "rdfs:label": "isPartOf"
+    },
+    {
+      "@id": "https://schema.org/issueNumber",
+      "rdfs:label": "issueNumber"
+    },
+    {
+      "@id": "https://schema.org/itemReviewed",
+      "rdfs:label": "itemReviewed"
+    },
+    {
+      "@id": "https://schema.org/keywords",
+      "rdfs:label": "keywords"
+    },
+    {
+      "@id": "https://schema.org/latitude",
+      "rdfs:label": "latitude"
+    },
+    {
+      "@id": "https://schema.org/license",
+      "rdfs:label": "license"
+    },
+    {
+      "@id": "https://schema.org/longitude",
+      "rdfs:label": "longitude"
+    },
+    {
+      "@id": "https://schema.org/name",
+      "rdfs:label": "name"
+    },
+    {
+      "@id": "https://schema.org/pageEnd",
+      "rdfs:label": "pageEnd"
+    },
+    {
+      "@id": "https://schema.org/pageStart",
+      "rdfs:label": "pageStart"
+    },
+    {
+      "@id": "https://schema.org/polygon",
+      "rdfs:label": "polygon"
+    },
+    {
+      "@id": "https://schema.org/position",
+      "rdfs:label": "position"
+    },
+    {
+      "@id": "https://schema.org/producer",
+      "rdfs:label": "producer"
+    },
+    {
+      "@id": "https://schema.org/publisher",
+      "rdfs:label": "publisher"
+    },
+    {
+      "@id": "https://schema.org/reportNumber",
+      "rdfs:label": "reportNumber"
+    },
+    {
+      "@id": "https://schema.org/review",
+      "rdfs:label": "review"
+    },
+    {
+      "@id": "https://schema.org/roleName",
+      "rdfs:label": "roleName"
+    },
+    {
+      "@id": "https://schema.org/sameAs",
+      "rdfs:label": "sameAs"
+    },
+    {
+      "@id": "https://schema.org/spatialCoverage",
+      "rdfs:label": "spatialCoverage"
+    },
+    {
+      "@id": "https://schema.org/sponsor",
+      "rdfs:label": "sponsor"
+    },
+    {
+      "@id": "https://schema.org/temporalCoverage",
+      "rdfs:label": "temporalCoverage"
+    },
+    {
+      "@id": "https://schema.org/termCode",
+      "rdfs:label": "termCode"
+    },
+    {
+      "@id": "https://schema.org/translationOfWork",
+      "rdfs:label": "translationOfWork"
+    },
+    {
+      "@id": "https://schema.org/translator",
+      "rdfs:label": "translator"
+    },
+    {
+      "@id": "https://schema.org/url",
+      "rdfs:label": "url"
+    },
+    {
+      "@id": "https://schema.org/version",
+      "rdfs:label": "version"
+    },
+    {
+      "@id": "https://schema.org/volumeNumber",
+      "rdfs:label": "volumeNumber"
+    },
+    {
+      "@id": "https://schema.org/workTranslation",
+      "rdfs:label": "workTranslation"
+    }
+  ]
+}

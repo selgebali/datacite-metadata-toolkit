@@ -1,0 +1,57 @@
+# mapping_set_id: https://w3id.org/tib/datacite/mappings/datacite-wikidata.sssom.tsv
+# mapping_set_version: 0.3.0
+# mapping_set_description: DataCite 4.7 conceptual correspondences to Wikidata Q-items. This is not a DataCite-to-Wikidata
+#   statement exporter. Narrow and broad matches express conceptual scope and do not license unconditional rdf:type
+#   or P31 statements. Generic identifier-to-ORCID equivalence is explicitly excluded.
+# creator_id:
+# - orcid:0000-0003-1378-5495
+# creator_label:
+# - Sara El-Gebali
+# license: https://creativecommons.org/licenses/by/4.0/
+# subject_source: dataciteschema:kernel-4.7/metadata.xsd
+# subject_source_version: '4.7'
+# mapping_date: '2026-10-06'
+# comment: Curated from source definitions and official target documentation.
+#   Wikidata evidence is a dated lookup, not an immutable vocabulary release.
+# curie_map:
+#   orcid: https://orcid.org/
+#   dataciteschema: https://schema.datacite.org/meta/
+#   datacite-class: https://w3id.org/tib/datacite/class/
+#   datacite-prop: https://w3id.org/tib/datacite/property/
+#   datacite-vocab: https://w3id.org/tib/datacite/vocab/
+#   dcterms: http://purl.org/dc/terms/
+#   dcmitype: http://purl.org/dc/dcmitype/
+#   dcat: http://www.w3.org/ns/dcat#
+#   wd: http://www.wikidata.org/entity/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+#   dcmi-doc: https://www.dublincore.org/specifications/dublin-core/
+#   w3c-tr: https://www.w3.org/TR/
+#   wd-doc: https://www.wikidata.org/wiki/
+subject_id	predicate_id	object_id	mapping_justification	subject_label	object_label	object_source	object_source_version	author_id	author_label	reviewer_id	reviewer_label	comment
+datacite-vocab:nameType/Organizational	skos:closeMatch	wd:Q43229	semapv:ManualMappingCuration	Organizational	organization	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	The qualifier identifies an organizational name; the corresponding entity-kind concept is organization, without generating a Wikidata instance assertion.
+datacite-vocab:resourceTypeGeneral/Book	skos:closeMatch	wd:Q571	semapv:ManualMappingCuration	Book	book	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	The concepts describe books; do not infer a particular edition or physical copy.
+datacite-vocab:resourceTypeGeneral/BookChapter	skos:broadMatch	wd:Q1980247	semapv:ManualMappingCuration	BookChapter	chapter	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Wikidata chapter includes divisions of works beyond books; the target concept is broader.
+datacite-vocab:resourceTypeGeneral/Collection	skos:closeMatch	wd:Q2668072	semapv:ManualMappingCuration	Collection	collection	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe purposely grouped resources or objects.
+datacite-vocab:resourceTypeGeneral/ConferencePaper	skos:narrowMatch	wd:Q23927052	semapv:ManualMappingCuration	ConferencePaper	conference paper	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Wikidata conference paper describes a document published in conference proceedings; DataCite also includes submissions intended for conference acceptance.
+datacite-vocab:resourceTypeGeneral/ConferenceProceeding	skos:closeMatch	wd:Q1143604	semapv:ManualMappingCuration	ConferenceProceeding	conference proceedings	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe a collection of papers issued for an academic conference.
+datacite-vocab:resourceTypeGeneral/DataPaper	skos:closeMatch	wd:Q17009938	semapv:ManualMappingCuration	DataPaper	data paper	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe a scholarly publication focused on describing data.
+datacite-vocab:resourceTypeGeneral/Dataset	skos:closeMatch	wd:Q1172284	semapv:ManualMappingCuration	Dataset	data set	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe a collection of data; this is concept alignment, not a generated Wikidata statement.
+datacite-vocab:resourceTypeGeneral/Dissertation	skos:closeMatch	wd:Q1266946	semapv:ManualMappingCuration	Dissertation	thesis	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe academic thesis work; qualification-level details require source preservation.
+datacite-vocab:resourceTypeGeneral/Image	skos:closeMatch	wd:Q478798	semapv:ManualMappingCuration	Image	image	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe a visual representation; no file format or licensing inference is implied.
+datacite-vocab:resourceTypeGeneral/Journal	skos:closeMatch	wd:Q737498	semapv:ManualMappingCuration	Journal	academic journal	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe an academic periodical; preserve the source scholarly-publication context.
+datacite-vocab:resourceTypeGeneral/JournalArticle	skos:broadMatch	wd:Q191067	semapv:ManualMappingCuration	JournalArticle	article	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	The Wikidata article concept also includes newspaper and magazine articles, beyond a journal article.
+datacite-vocab:resourceTypeGeneral/Model	skos:broadMatch	wd:Q1979154	semapv:ManualMappingCuration	Model	model	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	The Wikidata model concept includes physical and conceptual representations; DataCite Model describes abstract representations. No 3D restriction is imposed.
+datacite-vocab:resourceTypeGeneral/OutputManagementPlan	skos:narrowMatch	wd:Q17085509	semapv:ManualMappingCuration	OutputManagementPlan	data management plan	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	A data management plan covers a subset of the broader DataCite plans for research outputs, which may also include software and other outputs.
+datacite-vocab:resourceTypeGeneral/PeerReview	skos:broadMatch	wd:Q265158	semapv:ManualMappingCuration	PeerReview	review	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Wikidata review includes evaluations beyond scientific or professional peer review.
+datacite-vocab:resourceTypeGeneral/PhysicalObject	skos:closeMatch	wd:Q223557	semapv:ManualMappingCuration	PhysicalObject	physical object	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe tangible objects; retain specific sample or material descriptions.
+datacite-vocab:resourceTypeGeneral/Poster	skos:closeMatch	wd:Q54670950	semapv:ManualMappingCuration	Poster	conference poster	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe research posters for academic events; correspondence checked against the Wikidata conference-poster item.
+datacite-vocab:resourceTypeGeneral/Preprint	skos:closeMatch	wd:Q580922	semapv:ManualMappingCuration	Preprint	preprint	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe a scholarly paper before formal peer-reviewed publication.
+datacite-vocab:resourceTypeGeneral/Presentation	skos:closeMatch	wd:Q110611535	semapv:ManualMappingCuration	Presentation	slide deck	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	The DataCite value describes a set of slides; the matching item is a slide deck, not the delivery event or a single slide.
+datacite-vocab:resourceTypeGeneral/Project	skos:closeMatch	wd:Q170584	semapv:ManualMappingCuration	Project	project	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe a planned endeavor to achieve a goal using allocated resources.
+datacite-vocab:resourceTypeGeneral/Report	skos:closeMatch	wd:Q10870555	semapv:ManualMappingCuration	Report	report	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe a report document; a record-level conversion still requires independent bibliographic modeling.
+datacite-vocab:resourceTypeGeneral/Software	skos:closeMatch	wd:Q7397	semapv:ManualMappingCuration	Software	software	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both describe computer software; DataCite excludes computational notebooks and includes source code, so exact equivalence is not asserted.
+datacite-vocab:resourceTypeGeneral/Sound	skos:closeMatch	wd:Q108676767	semapv:ManualMappingCuration	Sound	audio content	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both concern recorded audio content; an audio-record conversion requires separate graph and media modeling.
+datacite-vocab:resourceTypeGeneral/Text	skos:broadMatch	wd:Q234460	semapv:ManualMappingCuration	Text	text	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Wikidata text is broader; DataCite Text excludes separately enumerated textual resource types.
+datacite-vocab:resourceTypeGeneral/Workflow	skos:closeMatch	wd:Q627335	semapv:ManualMappingCuration	Workflow	workflow	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both denote an organized sequence of activities; execution metadata is outside this correspondence.
+datacite-vocab:titleType/Subtitle	skos:closeMatch	wd:Q1135389	semapv:ManualMappingCuration	Subtitle	subtitle	wd-doc:Wikidata:Main_Page	lookup-2026-10-06	orcid:0000-0003-1378-5495	Sara El-Gebali	orcid:0000-0003-1378-5495	Sara El-Gebali	Both denote the secondary title accompanying a main title; no literal title statement is produced.

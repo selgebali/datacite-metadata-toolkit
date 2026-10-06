@@ -1,0 +1,618 @@
+{
+  "target": "schemaorg",
+  "source_version": "4.7",
+  "rules": [
+    {
+      "id": "agent-nodes",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/creator",
+        "https://w3id.org/tib/datacite/property/contributor",
+        "https://w3id.org/tib/datacite/property/creatorName",
+        "https://w3id.org/tib/datacite/property/contributorName",
+        "https://w3id.org/tib/datacite/property/givenName",
+        "https://w3id.org/tib/datacite/property/familyName",
+        "https://w3id.org/tib/datacite/property/nameType",
+        "https://w3id.org/tib/datacite/class/Creator",
+        "https://w3id.org/tib/datacite/class/Contributor",
+        "https://w3id.org/tib/datacite/vocab/nameType/Personal",
+        "https://w3id.org/tib/datacite/vocab/nameType/Organizational"
+      ],
+      "condition": "For each creator or contributor of A, or of a related item B; use nameType where supplied and never infer a person merely from a name string.",
+      "source_path": "resource/creators/creator; resource/contributors/contributor; resource/relatedItems/relatedItem/{creators/creator,contributors/contributor}",
+      "target_path": "A or B / schema:creator or schema:contributor / agent; agent @type schema:Person or schema:Organization; agent schema:name, schema:givenName, schema:familyName",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Construct distinct agent nodes; put creatorName/contributorName on the agent, not the resource. Personal selects Person; Organizational selects Organization. Given/family names apply to people, including related-item people. If type is unknown retain an untyped node and the source name. schema:creator is suitable for CreativeWork; for a physical instrument use schema:manufacturer only when manufacturer identity is established. Preserve creator order in the source record or an explicit ordered extension; an unordered RDF property does not preserve priority."
+    },
+    {
+      "id": "title-values",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/title",
+        "https://w3id.org/tib/datacite/property/titleType",
+        "https://w3id.org/tib/datacite/class/Title",
+        "https://w3id.org/tib/datacite/vocab/titleType/AlternativeTitle",
+        "https://w3id.org/tib/datacite/vocab/titleType/Subtitle",
+        "https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle",
+        "https://w3id.org/tib/datacite/vocab/titleType/Other"
+      ],
+      "condition": "For the primary title or a typed title variant of the primary resource A or related item B.",
+      "source_path": "resource/titles/title; resource/relatedItems/relatedItem/titles/title",
+      "target_path": "A or B / schema:name or schema:alternateName as language-tagged literals",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Use schema:name for the primary title. AlternativeTitle may use alternateName; a TranslatedTitle can be another language-tagged name of the same resource and does not establish a translated work. Subtitle and Other have no lossless dedicated slot: retain their source qualifier, and only use alternateName when the text actually names the resource. Keep each literal and its xml:lang together. Never move B titles to A."
+    },
+    {
+      "id": "language-tags",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/creatorName",
+        "https://w3id.org/tib/datacite/property/contributorName",
+        "https://w3id.org/tib/datacite/property/title",
+        "https://w3id.org/tib/datacite/property/publisher",
+        "https://w3id.org/tib/datacite/property/subject",
+        "https://w3id.org/tib/datacite/property/rights",
+        "https://w3id.org/tib/datacite/property/description",
+        "https://w3id.org/tib/datacite/property/language",
+        "https://w3id.org/tib/datacite/class/Language"
+      ],
+      "condition": "Whenever xml:lang is present or inherited on a text element; resource/language separately describes the resource content.",
+      "source_path": "resource/{creators/creator/creatorName,contributors/contributor/contributorName,titles/title,publisher,subjects/subject,rightsList/rights,descriptions/description}; resource/relatedItems/relatedItem/{creators/creator/creatorName,contributors/contributor/contributorName,titles/title}",
+      "target_path": "Corresponding RDF literal / @language; resource/language becomes A / schema:inLanguage",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "Preserve all ten DataCite 4.7 xml:lang locations as JSON-LD value objects {\"@value\": text, \"@language\": tag}; retain inherited language where applicable. Do not use a title/name language to infer the resource content language. Use the input language code for inLanguage; do not invent a locale or translate names. XML markup within descriptions requires a deliberate text or markup-preservation policy."
+    },
+    {
+      "id": "identifier-values",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/identifier",
+        "https://w3id.org/tib/datacite/property/identifierType",
+        "https://w3id.org/tib/datacite/property/alternateIdentifier",
+        "https://w3id.org/tib/datacite/property/alternateIdentifierType",
+        "https://w3id.org/tib/datacite/property/nameIdentifier",
+        "https://w3id.org/tib/datacite/property/nameIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/affiliationIdentifier",
+        "https://w3id.org/tib/datacite/property/affiliationIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/publisherIdentifier",
+        "https://w3id.org/tib/datacite/property/publisherIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/funderIdentifier",
+        "https://w3id.org/tib/datacite/property/funderIdentifierType",
+        "https://w3id.org/tib/datacite/property/rightsIdentifier",
+        "https://w3id.org/tib/datacite/property/rightsIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/relatedIdentifierType",
+        "https://w3id.org/tib/datacite/property/relatedItemIdentifier",
+        "https://w3id.org/tib/datacite/property/relatedItemIdentifierType",
+        "https://w3id.org/tib/datacite/property/schemeURI",
+        "https://w3id.org/tib/datacite/class/Identifier",
+        "https://w3id.org/tib/datacite/class/AlternateIdentifier",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/GRID",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/CrossrefFunderID",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ROR",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/Other",
+        "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ISNI",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISSN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISTC",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LSID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/bibcode",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/arXiv",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/IGSN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RRID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PURL",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/DOI",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/Handle",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URL",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LISSN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RAiD",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/CSTR",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PMID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ARK",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EAN13",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/UPC",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISBN",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/SWHID",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/w3id",
+        "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EISSN",
+        "https://w3id.org/tib/datacite/vocab/identifierType/DOI"
+      ],
+      "condition": "For each identifier, its scheme and the entity that the enclosing DataCite element actually identifies.",
+      "source_path": "resource/identifier; alternateIdentifiers/alternateIdentifier; creator or contributor/nameIdentifier; affiliation/@affiliationIdentifier; publisher/@publisherIdentifier; fundingReference/funderIdentifier; rights/@rightsIdentifier; relatedIdentifier and relatedItem/relatedItemIdentifier",
+      "target_path": "Identified resource, agent, affiliation, funder, license or related item / schema:identifier / schema:PropertyValue {schema:propertyID: scheme name or URI, schema:value: original identifier}",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "The DOI identifies A; name identifiers identify the agent; affiliation identifiers identify the affiliation organization; related identifiers identify B. Preserve identifier strings including leading zeros, scheme case, and original schemeURI. propertyID accepts a scheme name or URI; preserving both may need a source extension. Never put the scheme URL into the identified entity's schema:url. Do not assume every name identifier is ORCID. Related identifiers do not establish citation: apply relation-dispatch separately. The 23 relatedIdentifierType values, five funderIdentifierType values and DOI are scheme labels, not equivalent target terms. A URI can become @id only when identity and a valid expansion are established; a license identifier belongs on the license, not on A."
+    },
+    {
+      "id": "affiliations",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/affiliation",
+        "https://w3id.org/tib/datacite/property/affiliationIdentifier",
+        "https://w3id.org/tib/datacite/property/affiliationIdentifierScheme",
+        "https://w3id.org/tib/datacite/class/Creator",
+        "https://w3id.org/tib/datacite/class/Contributor"
+      ],
+      "condition": "The creator/contributor is a Person and the affiliation describes an organization with which that person is affiliated.",
+      "source_path": "resource/{creators/creator,contributors/contributor}/affiliation",
+      "target_path": "Person / schema:affiliation / Organization {schema:name, schema:identifier}",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Keep affiliation names and identifiers on the affiliation organization. schema:affiliation is intended for Person; an Organizational agent's affiliation does not justify inventing an employment or parent-organization relationship. Retain that source association when no fitting Schema.org relationship is established."
+    },
+    {
+      "id": "publisher-node",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/publisher",
+        "https://w3id.org/tib/datacite/property/publisherIdentifier",
+        "https://w3id.org/tib/datacite/property/publisherIdentifierScheme",
+        "https://w3id.org/tib/datacite/class/Publisher"
+      ],
+      "condition": "The named entity has a publishing role for the described creative work (A or related item B); broader repository holding/distribution roles require review.",
+      "source_path": "resource/publisher; resource/relatedItems/relatedItem/publisher",
+      "target_path": "A or B / schema:publisher / agent {schema:name, schema:identifier}",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Publisher can be Person or Organization; use known identity rather than always assigning Organization. DataCite permits holding, archiving and distribution roles beyond publication, so preserve that wider source role where schema:publisher is inappropriate. Related-item publisher belongs to B."
+    },
+    {
+      "id": "subjects",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/subject",
+        "https://w3id.org/tib/datacite/property/subjectScheme",
+        "https://w3id.org/tib/datacite/property/valueURI",
+        "https://w3id.org/tib/datacite/property/classificationCode",
+        "https://w3id.org/tib/datacite/property/schemeURI",
+        "https://w3id.org/tib/datacite/class/Subject"
+      ],
+      "condition": "A subject is either a free-text keyword or a controlled term with an identified vocabulary.",
+      "source_path": "resource/subjects/subject and @subjectScheme, @schemeURI, @valueURI, @classificationCode",
+      "target_path": "A / schema:keywords literal; or A / schema:about / schema:DefinedTerm {schema:name, schema:termCode, schema:inDefinedTermSet}",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "For a controlled term, valueURI identifies the term; classificationCode becomes termCode; subjectScheme names a DefinedTermSet and schemeURI identifies that set. Keep term identity separate from scheme identity. Preserve xml:lang on term labels. Use about/keywords only where appropriate for A's target type; retain source qualifiers if no controlled term node can be established."
+    },
+    {
+      "id": "contributor-roles",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/contributorType",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ProjectManager",
+        "https://w3id.org/tib/datacite/vocab/contributorType/DataCurator",
+        "https://w3id.org/tib/datacite/vocab/contributorType/WorkPackageLeader",
+        "https://w3id.org/tib/datacite/vocab/contributorType/HostingInstitution",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ResearchGroup",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Supervisor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ProjectLeader",
+        "https://w3id.org/tib/datacite/vocab/contributorType/DataManager",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RightsHolder",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Producer",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Distributor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RelatedPerson",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Editor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Researcher",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ProjectMember",
+        "https://w3id.org/tib/datacite/vocab/contributorType/ContactPerson",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Other",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Sponsor",
+        "https://w3id.org/tib/datacite/vocab/contributorType/Translator",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAuthority",
+        "https://w3id.org/tib/datacite/vocab/contributorType/DataCollector",
+        "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAgency"
+      ],
+      "condition": "A contributor and its declared contributorType belong to A or a related item B, and that node supports schema:contributor.",
+      "source_path": "resource/contributors/contributor/@contributorType; resource/relatedItems/relatedItem/contributors/contributor/@contributorType",
+      "target_path": "A or B / schema:contributor / schema:Role {schema:roleName: original contributorType, schema:contributor: agent}",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Use the Role pattern to retain every DataCite role, including ContactPerson, RightsHolder and Other. ContactPerson is a person, not a ContactPoint node. A rights holder is not necessarily a copyright holder. Editor, Producer, Sponsor and Translator may additionally use editor, producer, sponsor and translator when their Schema.org meanings/domain and agent range fit; editor and translator expect Person. Preserve the role and agent identity even when using a dedicated property. For instruments or other non-CreativeWork entities, preserve the source contribution instead of forcing a CreativeWork type."
+    },
+    {
+      "id": "resource-types",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/resourceType",
+        "https://w3id.org/tib/datacite/property/resourceTypeGeneral",
+        "https://w3id.org/tib/datacite/property/relatedItemType",
+        "https://w3id.org/tib/datacite/class/Resource",
+        "https://w3id.org/tib/datacite/class/ResourceType",
+        "https://w3id.org/tib/datacite/class/RelatedItem",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Audiovisual",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Award",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Book",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/BookChapter",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Collection",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ComputationalNotebook",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferencePaper",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferenceProceeding",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/DataPaper",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dataset",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dissertation",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Event",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Image",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Instrument",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/InteractiveResource",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Journal",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/JournalArticle",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Model",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/OutputManagementPlan",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PeerReview",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PhysicalObject",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Poster",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Preprint",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Presentation",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Project",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Report",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Service",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Software",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Sound",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Standard",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/StudyRegistration",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Text",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Workflow",
+        "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Other"
+      ],
+      "condition": "For A/resourceTypeGeneral or B/relatedItemType; classify the identified entity from its actual nature and the source resource type.",
+      "source_path": "resource/resourceType/@resourceTypeGeneral; resource/resourceType text; resource/relatedItems/relatedItem/@relatedItemType",
+      "target_path": "A or B / @type; A or B / schema:additionalType as original DataCite type label; retain free-text resourceType separately",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Apply the type-specific conditions in the SSSOM row comments. Controlled values and target RDF classes have different modeling roles, so relatedMatch does not instruct unconditional rdf:type substitution. Keep free-text resourceType verbatim; schema:additionalType can retain its descriptive type text when applicable. Other provides no type evidence: retain it without guessing CreativeWork. Do not use a DataCite SKOS value IRI as an RDF class. Scope CreativeWork-only field rules to actual creative works. For Software, choose SoftwareSourceCode versus SoftwareApplication; for Model, select 3DModel only with 3D evidence. Poster and Presentation are content types; do not confuse a presentation with an event."
+    },
+    {
+      "id": "relation-dispatch",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/relatedIdentifier",
+        "https://w3id.org/tib/datacite/property/relatedItem",
+        "https://w3id.org/tib/datacite/property/relationType",
+        "https://w3id.org/tib/datacite/property/relationTypeInformation",
+        "https://w3id.org/tib/datacite/class/RelatedIdentifier"
+      ],
+      "condition": "For each relation from the registered resource A to the identified or described related resource B.",
+      "source_path": "resource/relatedIdentifiers/relatedIdentifier; resource/relatedItems/relatedItem",
+      "target_path": "A and B nodes; selected Schema.org relationship only through a matching relation-* rule",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Identify B independently using identifier-values or its related-item metadata. Do not default to citation, and do not use isRelatedTo as a generic scholarly relationship. Apply exactly the rule matching relationType and its domain/range conditions; inverse rules emit a statement on B. When no target relationship exists, preserve the original DataCite relationType, B identifier, and relationTypeInformation in the source record or an explicit DataCite extension. This is an acknowledged gap in a pure Schema.org export, not a generic equivalence. Repeated relatedIdentifier and relatedItem entries may be joined only by verified identity."
+    },
+    {
+      "id": "relation-cites",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/Cites"
+      ],
+      "condition": "A is a CreativeWork and B is the cited work.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"Cites\"]",
+      "target_path": "A / schema:citation / B",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "A includes B in a citation. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-iscitedby",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsCitedBy"
+      ],
+      "condition": "B is a CreativeWork and A is the cited work.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsCitedBy\"]",
+      "target_path": "B / schema:citation / A",
+      "operation": "inverse",
+      "lossiness": "conditional",
+      "notes": "A IsCitedBy B must emit B citation A; never A citation B. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-references",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/References"
+      ],
+      "condition": "A is a CreativeWork and the reference to B is a bibliographic citation.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"References\"]",
+      "target_path": "A / schema:citation / B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "References can exceed bibliographic citation; retain the source relation if this condition is not met. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-isreferencedby",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy"
+      ],
+      "condition": "B is a CreativeWork and its reference to A is a bibliographic citation.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsReferencedBy\"]",
+      "target_path": "B / schema:citation / A",
+      "operation": "inverse",
+      "lossiness": "conditional",
+      "notes": "Reverse the endpoints; a generic reference is not automatically a citation. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-ispartof",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsPartOf"
+      ],
+      "condition": "A and B are CreativeWork instances and the relation is work containment.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsPartOf\"]",
+      "target_path": "A / schema:isPartOf / B",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "Keep A as the part and B as the containing work. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-haspart",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/HasPart"
+      ],
+      "condition": "A and B are CreativeWork instances and the relation is work containment.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"HasPart\"]",
+      "target_path": "A / schema:hasPart / B",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "Keep A as the containing work and B as its part. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-ispublishedin",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsPublishedIn"
+      ],
+      "condition": "A and B are works and B contains the publication of A.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsPublishedIn\"]",
+      "target_path": "A / schema:isPartOf / B or appropriate issue/volume node within B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Preserve the stronger publication relation in the source; bibliographic-location creates issue/volume nodes when known. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-reviews",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/Reviews"
+      ],
+      "condition": "A is the review and is modeled as schema:Review.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"Reviews\"]",
+      "target_path": "A / schema:itemReviewed / B",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "Correct direction: the review A points to the item B. schema:reviews is deprecated and has the opposite direction. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-isreviewedby",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsReviewedBy"
+      ],
+      "condition": "B is a schema:Review and A is a type for which schema:review is intended.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsReviewedBy\"]",
+      "target_path": "A / schema:review / B",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "The reviewed item A points to review B; B itemReviewed A is also valid when A lacks a suitable review domain. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-isderivedfrom",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom"
+      ],
+      "condition": "A is a CreativeWork derived from B, which is a work, product or identified source URL.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsDerivedFrom\"]",
+      "target_path": "A / schema:isBasedOn / B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Use derivation evidence; this does not replace supplement or version relations. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-issourceof",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsSourceOf"
+      ],
+      "condition": "B is a CreativeWork derived from A, which is a work, product or identified source URL.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsSourceOf\"]",
+      "target_path": "B / schema:isBasedOn / A",
+      "operation": "inverse",
+      "lossiness": "conditional",
+      "notes": "A is the source, so derivation must be asserted on B. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-istranslationof",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsTranslationOf"
+      ],
+      "condition": "A and B are works and A translates the content of B.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsTranslationOf\"]",
+      "target_path": "A / schema:translationOfWork / B",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "A translated title alone is insufficient evidence of a translated work. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-hastranslation",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/HasTranslation"
+      ],
+      "condition": "A and B are works and B translates the content of A.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"HasTranslation\"]",
+      "target_path": "A / schema:workTranslation / B",
+      "operation": "copy",
+      "lossiness": "conditional",
+      "notes": "Preserve A as original and B as translation. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "relation-isidenticalto",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/vocab/relationType/IsIdenticalTo"
+      ],
+      "condition": "B is an authoritative reference identifying the same entity as A.",
+      "source_path": "resource/{relatedIdentifiers/relatedIdentifier,relatedItems/relatedItem}[@relationType=\"IsIdenticalTo\"]",
+      "target_path": "A / schema:sameAs / B IRI",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "DataCite content identity alone is insufficient for entity identity; do not equate two distinct files, versions or records merely because content matches. Retain relationTypeInformation with its specific A-to-B relation; it is not a description of either endpoint."
+    },
+    {
+      "id": "metadata-scheme-qualifiers",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/relatedMetadataScheme",
+        "https://w3id.org/tib/datacite/property/schemeURI",
+        "https://w3id.org/tib/datacite/property/schemeType",
+        "https://w3id.org/tib/datacite/property/relationTypeInformation"
+      ],
+      "condition": "relatedMetadataScheme/schemeURI/schemeType occur only on HasMetadata or IsMetadataFor relationships; relationTypeInformation may annotate any qualified relation.",
+      "source_path": "resource/relatedIdentifiers/relatedIdentifier/@{relatedMetadataScheme,schemeURI,schemeType,relationTypeInformation}; resource/relatedItems/relatedItem/relatedItemIdentifier/@{relatedMetadataScheme,schemeURI,schemeType}; resource/relatedItems/relatedItem/@relationTypeInformation",
+      "target_path": "Retained DataCite relation structure outside the pure Schema.org projection",
+      "operation": "preserve",
+      "lossiness": "none",
+      "notes": "These describe the metadata schema (for example DDI and its XSD), not the identifier scheme or media encoding. Keep them on the particular relationship/identifier structure; do not map schemeType to encodingFormat or schemeURI to the related item URL. The relatedItem qualifiers are on relatedItemIdentifier, not on relatedItem."
+    },
+    {
+      "id": "typed-dates",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/date",
+        "https://w3id.org/tib/datacite/property/dateType",
+        "https://w3id.org/tib/datacite/property/dateInformation",
+        "https://w3id.org/tib/datacite/property/publicationYear",
+        "https://w3id.org/tib/datacite/class/Date",
+        "https://w3id.org/tib/datacite/class/PublicationYear",
+        "https://w3id.org/tib/datacite/vocab/dateType/Created",
+        "https://w3id.org/tib/datacite/vocab/dateType/Available",
+        "https://w3id.org/tib/datacite/vocab/dateType/Accepted",
+        "https://w3id.org/tib/datacite/vocab/dateType/Copyrighted",
+        "https://w3id.org/tib/datacite/vocab/dateType/Coverage",
+        "https://w3id.org/tib/datacite/vocab/dateType/Submitted",
+        "https://w3id.org/tib/datacite/vocab/dateType/Other",
+        "https://w3id.org/tib/datacite/vocab/dateType/Collected",
+        "https://w3id.org/tib/datacite/vocab/dateType/Issued",
+        "https://w3id.org/tib/datacite/vocab/dateType/Valid",
+        "https://w3id.org/tib/datacite/vocab/dateType/Updated",
+        "https://w3id.org/tib/datacite/vocab/dateType/Withdrawn"
+      ],
+      "condition": "Select a target only when the dateType denotes the same event and the supplied precision is representable without inventing components.",
+      "source_path": "resource/dates/date[@dateType]; resource/publicationYear; resource/relatedItems/relatedItem/publicationYear",
+      "target_path": "A / schema:dateCreated, schema:dateModified, schema:datePublished, schema:copyrightYear or schema:temporalCoverage; B publication date handled on B",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Created -> dateCreated; Updated -> dateModified; Issued -> datePublished only for first publication/broadcast; Coverage -> temporalCoverage on a work. Copyrighted can contribute an integer copyrightYear after extracting the year, retaining the full date to avoid loss. Date and DateTime fields require fitting precision: never turn 2024 into 2024-01-01 or silently select an endpoint of an interval. A bare publicationYear stays in a DataCite extension or source record unless the consumer explicitly supports reduced ISO-8601 precision; document that profile. Collected is data gathering, not necessarily creation. Available may be a later access/embargo date, not first publication. Accepted, Submitted, Valid, Withdrawn and Other have no generic equivalent here. Retain dateInformation with its original dateType/value, not as a free-floating resource description."
+    },
+    {
+      "id": "size-and-format",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/size",
+        "https://w3id.org/tib/datacite/property/format",
+        "https://w3id.org/tib/datacite/property/version",
+        "https://w3id.org/tib/datacite/class/Size",
+        "https://w3id.org/tib/datacite/class/Format",
+        "https://w3id.org/tib/datacite/class/Version"
+      ],
+      "condition": "Distinguish the resource from a particular media encoding and distinguish bytes from pages, dimensions and duration.",
+      "source_path": "resource/sizes/size; resource/formats/format; resource/version",
+      "target_path": "MediaObject / schema:contentSize and schema:encodingFormat; supported work / schema:encodingFormat, schema:numberOfPages or schema:duration; CreativeWork / schema:version",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Use contentSize only for a file byte size on MediaObject; retain units and do not interpret pages as bytes. For an abstract work with a known encoding, use schema:encoding to attach the MediaObject. Book page counts may use numberOfPages only when the count is established; a known media duration may use ISO-8601 duration. Retain unsupported extents as source data rather than guessing. encodingFormat accepts the supplied format description/MIME type; do not manufacture a MIME type. Keep version strings intact. Schema.org field applicability depends on the actual entity type."
+    },
+    {
+      "id": "rights-and-licenses",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/rights",
+        "https://w3id.org/tib/datacite/property/rightsURI",
+        "https://w3id.org/tib/datacite/property/rightsIdentifier",
+        "https://w3id.org/tib/datacite/property/rightsIdentifierScheme",
+        "https://w3id.org/tib/datacite/property/schemeURI",
+        "https://w3id.org/tib/datacite/class/Rights"
+      ],
+      "condition": "Determine whether each rights statement denotes a license, an access policy, or another rights assertion.",
+      "source_path": "resource/rightsList/rights and @rightsURI, @rightsIdentifier, @rightsIdentifierScheme, @schemeURI",
+      "target_path": "CreativeWork / schema:license / license URL or CreativeWork document; CreativeWork / schema:conditionsOfAccess for access-policy text",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Use license only for an actual license. rightsURI identifies the license document; its SPDX or other code is an identifier on that document (identifier-values), not an identifier of the resource. Other rights text has no general lossless license slot; preserve it and its language. conditionsOfAccess is only for genuine access conditions. Preserve the schemeURI as identifier-scheme information rather than setting the work URL."
+    },
+    {
+      "id": "description-values",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/description",
+        "https://w3id.org/tib/datacite/property/descriptionType",
+        "https://w3id.org/tib/datacite/class/Description",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/Methods",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/SeriesInformation",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/TableOfContents",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo",
+        "https://w3id.org/tib/datacite/vocab/descriptionType/Other"
+      ],
+      "condition": "For each typed description on A, preserve its text, language and descriptionType.",
+      "source_path": "resource/descriptions/description[@descriptionType]",
+      "target_path": "A / schema:abstract for an Abstract on a CreativeWork; A / schema:description for other descriptive text",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Abstract uses abstract on a work. Other kinds can be projected to description, but Schema.org description alone cannot retain Methods, SeriesInformation, TableOfContents, TechnicalInfo and Other distinctions. Keep those qualifiers and any embedded markup in source data or an explicit extension. Do not infer structured methodology, a contents hierarchy or a series entity from unparsed free text."
+    },
+    {
+      "id": "geographic-coverage",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/geoLocation",
+        "https://w3id.org/tib/datacite/property/geoLocationPlace",
+        "https://w3id.org/tib/datacite/property/geoLocationPoint",
+        "https://w3id.org/tib/datacite/property/pointLatitude",
+        "https://w3id.org/tib/datacite/property/pointLongitude",
+        "https://w3id.org/tib/datacite/property/geoLocationBox",
+        "https://w3id.org/tib/datacite/property/westBoundLongitude",
+        "https://w3id.org/tib/datacite/property/eastBoundLongitude",
+        "https://w3id.org/tib/datacite/property/southBoundLatitude",
+        "https://w3id.org/tib/datacite/property/northBoundLatitude",
+        "https://w3id.org/tib/datacite/property/geoLocationPolygon",
+        "https://w3id.org/tib/datacite/property/polygonPoint",
+        "https://w3id.org/tib/datacite/property/inPolygonPoint",
+        "https://w3id.org/tib/datacite/class/GeoLocation"
+      ],
+      "condition": "The location denotes where data was gathered or the geographic focus of a creative work; distinguish places, points, bounding boxes and polygons.",
+      "source_path": "resource/geoLocations/geoLocation/{geoLocationPlace,geoLocationPoint,geoLocationBox,geoLocationPolygon}",
+      "target_path": "CreativeWork / schema:spatialCoverage / Place {schema:name, schema:geo: GeoCoordinates or GeoShape}",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Keep each geoLocation grouped. GeoCoordinates uses latitude and longitude in decimal degrees. For box construct \"south west north east\" as two latitude-longitude corner points. For polygon use ordered \"latitude longitude\" pairs, repeating the first pair at the end, on GeoShape.polygon; individual polygon vertices do not become unrelated geo assertions. Retain coordinate reference assumptions (DataCite uses WGS84), original ordering and precision. The DataCite inPolygonPoint can distinguish the intended area (including the larger hemisphere); Schema.org polygon lacks that selector, so retain it in source data and do not claim lossless geometry. Geographic gathering locations may need contentLocation rather than spatialCoverage when they are not the subject of the work; verify the context."
+    },
+    {
+      "id": "funding",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/fundingReference",
+        "https://w3id.org/tib/datacite/property/funderName",
+        "https://w3id.org/tib/datacite/property/funderIdentifier",
+        "https://w3id.org/tib/datacite/property/funderIdentifierType",
+        "https://w3id.org/tib/datacite/property/awardNumber",
+        "https://w3id.org/tib/datacite/property/awardTitle",
+        "https://w3id.org/tib/datacite/property/awardURI",
+        "https://w3id.org/tib/datacite/class/FundingReference"
+      ],
+      "condition": "A financial-support statement names a funder and may identify an actual funding grant or award.",
+      "source_path": "resource/fundingReferences/fundingReference/{funderName,funderIdentifier,awardNumber,awardTitle}",
+      "target_path": "Supported entity / schema:funder / agent; if a grant is known: supported entity / schema:funding / Grant {schema:identifier, schema:name, schema:url, schema:funder}",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Do not invent a grant merely from a funder name. With award evidence construct a Grant, place awardNumber in its identifier, awardTitle in its name, and awardURI in its url. Put funderName and funderIdentifier on the funding agent, not on the grant or supported resource. Choose Person/Organization from identity evidence. Check the Schema.org domain for the supported entity; broad DataCite funding coverage does not justify typing every entity as CreativeWork."
+    },
+    {
+      "id": "bibliographic-location",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/volume",
+        "https://w3id.org/tib/datacite/property/issue",
+        "https://w3id.org/tib/datacite/property/firstPage",
+        "https://w3id.org/tib/datacite/property/lastPage",
+        "https://w3id.org/tib/datacite/property/edition"
+      ],
+      "condition": "A is published in a related item B and the supplied values locate A within that publication; otherwise retain them until the bibliographic context is known.",
+      "source_path": "resource/relatedItems/relatedItem[@relationType=\"IsPublishedIn\"]/{volume,issue,firstPage,lastPage,edition}",
+      "target_path": "A / schema:isPartOf / PublicationIssue / schema:isPartOf / PublicationVolume / schema:isPartOf / B; issue schema:issueNumber; volume schema:volumeNumber; A schema:pageStart and schema:pageEnd; Book B schema:bookEdition",
+      "operation": "construct",
+      "lossiness": "conditional",
+      "notes": "Create issue/volume nodes only when supplied, and keep the journal/series identifier on B rather than pretending it identifies an issue. DataCite firstPage/lastPage are pages of A within B, so put them on A, not the journal B. Copy lexical page and issue/volume labels including Roman numerals. Edition describes B; use bookEdition only for Book, otherwise version for a suitable CreativeWork with genuine version meaning. Do not flatten issue/volume fields onto a journal or article merely because the target property exists."
+    },
+    {
+      "id": "typed-numbers",
+      "subject_ids": [
+        "https://w3id.org/tib/datacite/property/number",
+        "https://w3id.org/tib/datacite/property/numberType",
+        "https://w3id.org/tib/datacite/vocab/numberType/Article",
+        "https://w3id.org/tib/datacite/vocab/numberType/Chapter",
+        "https://w3id.org/tib/datacite/vocab/numberType/Report",
+        "https://w3id.org/tib/datacite/vocab/numberType/Other"
+      ],
+      "condition": "The relatedItem number locates the registered resource A within B, normally with relationType IsPublishedIn; inspect numberType and A's actual class.",
+      "source_path": "resource/relatedItems/relatedItem/number[@numberType]",
+      "target_path": "A / schema:reportNumber for a Report; A / schema:identifier / PropertyValue {schema:propertyID: \"Article number\", schema:value}; A / schema:position for an established chapter sequence",
+      "operation": "conditional",
+      "lossiness": "conditional",
+      "notes": "Report numbers are assigned to Report A via reportNumber, never issueNumber. Article numbers identify article A using PropertyValue, not the journal issue. Chapter numbers may use position only when they denote sequence; keep their original lexical label. Other or absent numberType remains a source-qualified number unless its meaning is independently established. Preserve the association to B because a local number may not be globally unique."
+    }
+  ]
+}

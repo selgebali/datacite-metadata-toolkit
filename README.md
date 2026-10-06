@@ -208,6 +208,8 @@ Supporting files:
   - `jskos-mappings.json` is a JSON array of [JSKOS](https://gbv.github.io/jskos/) mappings ready for import into [jskos-server](https://github.com/gbv/jskos-server) and [Cocoda](https://coli-conc.gbv.de/cocoda/). Each mapping names its vocabularies by [BARTOC](https://bartoc.org/) URI (`fromScheme`/`toScheme`) and carries labels, creator, date, justification and the SSSOM comment as a note.
   - `SKOS_crosswalks.jsonld` is a self-contained JSON-LD graph: SKOS match links, `rdfs:label` for every term, and licence/creator/source metadata.
 
+Each set's `mapping_set_id` is a persistent w3id IRI, e.g. `https://w3id.org/tib/datacite/mappings/datacite-schemaorg.sssom.tsv`. `generate-production-namespace.sh` copies the published mapping files into `production-namespace/mappings/`, and `npm run check:mappings` fails if that copy is out of date.
+
 Mapping predicates are deliberately conservative. A `skos:relatedMatch` records an association, not permission to substitute one term for another; read the row comment and conversion rule before transforming records.
 
 ```bash

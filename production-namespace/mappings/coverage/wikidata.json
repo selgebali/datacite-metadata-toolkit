@@ -1,0 +1,1277 @@
+{
+  "target": "wikidata",
+  "source_version": "4.7",
+  "records": [
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/AlternateIdentifier",
+      "status": "no_equivalent",
+      "reason": "The DataCite AlternateIdentifier metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Contributor",
+      "status": "no_equivalent",
+      "reason": "The DataCite Contributor metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Creator",
+      "status": "no_equivalent",
+      "reason": "The DataCite Creator metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Date",
+      "status": "no_equivalent",
+      "reason": "The DataCite Date metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Description",
+      "status": "no_equivalent",
+      "reason": "The DataCite Description metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Format",
+      "status": "no_equivalent",
+      "reason": "The DataCite Format metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/FundingReference",
+      "status": "no_equivalent",
+      "reason": "The DataCite FundingReference metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/GeoLocation",
+      "status": "no_equivalent",
+      "reason": "The DataCite GeoLocation metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Identifier",
+      "status": "no_equivalent",
+      "reason": "The DataCite Identifier metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Language",
+      "status": "no_equivalent",
+      "reason": "The DataCite Language metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/PublicationYear",
+      "status": "no_equivalent",
+      "reason": "The DataCite PublicationYear metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Publisher",
+      "status": "no_equivalent",
+      "reason": "The DataCite Publisher metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/RelatedIdentifier",
+      "status": "no_equivalent",
+      "reason": "The DataCite RelatedIdentifier metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/RelatedItem",
+      "status": "no_equivalent",
+      "reason": "The DataCite RelatedItem metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Resource",
+      "status": "no_equivalent",
+      "reason": "The DataCite Resource metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/ResourceType",
+      "status": "no_equivalent",
+      "reason": "The DataCite ResourceType metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Rights",
+      "status": "no_equivalent",
+      "reason": "The DataCite Rights metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Size",
+      "status": "no_equivalent",
+      "reason": "The DataCite Size metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Subject",
+      "status": "no_equivalent",
+      "reason": "The DataCite Subject metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches. Q18616576 means Wikidata property and Q164573 means grammatical subject; neither denotes a research topic."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Title",
+      "status": "no_equivalent",
+      "reason": "The DataCite Title metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/class/Version",
+      "status": "no_equivalent",
+      "reason": "The DataCite Version metadata class is not established as equivalent to a Wikidata Q-item; this set does not force container-to-entity-class matches."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliation",
+      "status": "out_of_scope",
+      "reason": "The affiliation field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliationIdentifier",
+      "status": "out_of_scope",
+      "reason": "The affiliationIdentifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/affiliationIdentifierScheme",
+      "status": "out_of_scope",
+      "reason": "The affiliationIdentifierScheme field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/alternateIdentifier",
+      "status": "out_of_scope",
+      "reason": "The alternateIdentifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/alternateIdentifierType",
+      "status": "out_of_scope",
+      "reason": "The alternateIdentifierType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardNumber",
+      "status": "out_of_scope",
+      "reason": "The awardNumber field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardTitle",
+      "status": "out_of_scope",
+      "reason": "The awardTitle field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/awardURI",
+      "status": "out_of_scope",
+      "reason": "The awardURI field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/classificationCode",
+      "status": "out_of_scope",
+      "reason": "The classificationCode field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributor",
+      "status": "out_of_scope",
+      "reason": "The contributor field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributorName",
+      "status": "out_of_scope",
+      "reason": "The contributorName field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/contributorType",
+      "status": "out_of_scope",
+      "reason": "The contributorType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/creator",
+      "status": "out_of_scope",
+      "reason": "The creator field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/creatorName",
+      "status": "out_of_scope",
+      "reason": "The creatorName field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/date",
+      "status": "out_of_scope",
+      "reason": "The date field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/dateInformation",
+      "status": "out_of_scope",
+      "reason": "The dateInformation field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/dateType",
+      "status": "out_of_scope",
+      "reason": "The dateType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/description",
+      "status": "out_of_scope",
+      "reason": "The description field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/descriptionType",
+      "status": "out_of_scope",
+      "reason": "The descriptionType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/eastBoundLongitude",
+      "status": "out_of_scope",
+      "reason": "The eastBoundLongitude field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/edition",
+      "status": "out_of_scope",
+      "reason": "The edition field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/familyName",
+      "status": "out_of_scope",
+      "reason": "The familyName field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/firstPage",
+      "status": "out_of_scope",
+      "reason": "The firstPage field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/format",
+      "status": "out_of_scope",
+      "reason": "The format field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderIdentifier",
+      "status": "out_of_scope",
+      "reason": "The funderIdentifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderIdentifierType",
+      "status": "out_of_scope",
+      "reason": "The funderIdentifierType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/funderName",
+      "status": "out_of_scope",
+      "reason": "The funderName field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/fundingReference",
+      "status": "out_of_scope",
+      "reason": "The fundingReference field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocation",
+      "status": "out_of_scope",
+      "reason": "The geoLocation field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationBox",
+      "status": "out_of_scope",
+      "reason": "The geoLocationBox field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPlace",
+      "status": "out_of_scope",
+      "reason": "The geoLocationPlace field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPoint",
+      "status": "out_of_scope",
+      "reason": "The geoLocationPoint field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/geoLocationPolygon",
+      "status": "out_of_scope",
+      "reason": "The geoLocationPolygon field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/givenName",
+      "status": "out_of_scope",
+      "reason": "The givenName field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/identifier",
+      "status": "out_of_scope",
+      "reason": "The identifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/identifierType",
+      "status": "out_of_scope",
+      "reason": "The identifierType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/inPolygonPoint",
+      "status": "out_of_scope",
+      "reason": "The inPolygonPoint field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/issue",
+      "status": "out_of_scope",
+      "reason": "The issue field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/language",
+      "status": "out_of_scope",
+      "reason": "The language field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/lastPage",
+      "status": "out_of_scope",
+      "reason": "The lastPage field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameIdentifier",
+      "status": "conversion_only",
+      "reason": "This is a documented conditional statement-conversion candidate, outside the Q-item mapping set. Do not map a generic nameIdentifier to ORCID, attach the identifier to the research resource, or emit an unvalidated value.",
+      "rule_ids": [
+        "orcid-identifier"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameIdentifierScheme",
+      "status": "conversion_only",
+      "reason": "This is a documented conditional statement-conversion candidate, outside the Q-item mapping set. Do not map a generic nameIdentifier to ORCID, attach the identifier to the research resource, or emit an unvalidated value.",
+      "rule_ids": [
+        "orcid-identifier"
+      ]
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/nameType",
+      "status": "out_of_scope",
+      "reason": "The nameType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/northBoundLatitude",
+      "status": "out_of_scope",
+      "reason": "The northBoundLatitude field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/number",
+      "status": "out_of_scope",
+      "reason": "The number field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/numberType",
+      "status": "out_of_scope",
+      "reason": "The numberType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/pointLatitude",
+      "status": "out_of_scope",
+      "reason": "The pointLatitude field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/pointLongitude",
+      "status": "out_of_scope",
+      "reason": "The pointLongitude field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/polygonPoint",
+      "status": "out_of_scope",
+      "reason": "The polygonPoint field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publicationYear",
+      "status": "out_of_scope",
+      "reason": "The publicationYear field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisher",
+      "status": "out_of_scope",
+      "reason": "The publisher field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisherIdentifier",
+      "status": "out_of_scope",
+      "reason": "The publisherIdentifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/publisherIdentifierScheme",
+      "status": "out_of_scope",
+      "reason": "The publisherIdentifierScheme field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedIdentifier",
+      "status": "out_of_scope",
+      "reason": "The relatedIdentifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedIdentifierType",
+      "status": "out_of_scope",
+      "reason": "The relatedIdentifierType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItem",
+      "status": "out_of_scope",
+      "reason": "The relatedItem field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemIdentifier",
+      "status": "out_of_scope",
+      "reason": "The relatedItemIdentifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemIdentifierType",
+      "status": "out_of_scope",
+      "reason": "The relatedItemIdentifierType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedItemType",
+      "status": "out_of_scope",
+      "reason": "The relatedItemType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relatedMetadataScheme",
+      "status": "out_of_scope",
+      "reason": "The relatedMetadataScheme field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relationType",
+      "status": "out_of_scope",
+      "reason": "The relationType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/relationTypeInformation",
+      "status": "out_of_scope",
+      "reason": "The relationTypeInformation field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/resourceType",
+      "status": "out_of_scope",
+      "reason": "The resourceType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules. The previous Q22097967 target is missing and has been removed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/resourceTypeGeneral",
+      "status": "out_of_scope",
+      "reason": "The resourceTypeGeneral field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rights",
+      "status": "out_of_scope",
+      "reason": "The rights field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsIdentifier",
+      "status": "out_of_scope",
+      "reason": "The rightsIdentifier field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsIdentifierScheme",
+      "status": "out_of_scope",
+      "reason": "The rightsIdentifierScheme field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/rightsURI",
+      "status": "out_of_scope",
+      "reason": "The rightsURI field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/schemeType",
+      "status": "out_of_scope",
+      "reason": "The schemeType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/schemeURI",
+      "status": "out_of_scope",
+      "reason": "The schemeURI field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/size",
+      "status": "out_of_scope",
+      "reason": "The size field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/southBoundLatitude",
+      "status": "out_of_scope",
+      "reason": "The southBoundLatitude field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/subject",
+      "status": "out_of_scope",
+      "reason": "The subject field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/subjectScheme",
+      "status": "out_of_scope",
+      "reason": "The subjectScheme field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/title",
+      "status": "out_of_scope",
+      "reason": "The title field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/titleType",
+      "status": "out_of_scope",
+      "reason": "The titleType field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/valueURI",
+      "status": "out_of_scope",
+      "reason": "The valueURI field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/version",
+      "status": "out_of_scope",
+      "reason": "The version field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/volume",
+      "status": "out_of_scope",
+      "reason": "The volume field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/property/westBoundLongitude",
+      "status": "out_of_scope",
+      "reason": "The westBoundLongitude field describes record data. This target set aligns concepts to Wikidata Q-items; a field-to-statement export needs separately reviewed Wikidata properties and value rules."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ContactPerson",
+      "status": "out_of_scope",
+      "reason": "The ContactPerson contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataCollector",
+      "status": "out_of_scope",
+      "reason": "The DataCollector contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataCurator",
+      "status": "out_of_scope",
+      "reason": "The DataCurator contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/DataManager",
+      "status": "out_of_scope",
+      "reason": "The DataManager contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Distributor",
+      "status": "out_of_scope",
+      "reason": "The Distributor contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Editor",
+      "status": "out_of_scope",
+      "reason": "The Editor contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/HostingInstitution",
+      "status": "out_of_scope",
+      "reason": "The HostingInstitution contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Other",
+      "status": "out_of_scope",
+      "reason": "The Other contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Producer",
+      "status": "out_of_scope",
+      "reason": "The Producer contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectLeader",
+      "status": "out_of_scope",
+      "reason": "The ProjectLeader contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectManager",
+      "status": "out_of_scope",
+      "reason": "The ProjectManager contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ProjectMember",
+      "status": "out_of_scope",
+      "reason": "The ProjectMember contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAgency",
+      "status": "out_of_scope",
+      "reason": "The RegistrationAgency contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RegistrationAuthority",
+      "status": "out_of_scope",
+      "reason": "The RegistrationAuthority contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RelatedPerson",
+      "status": "out_of_scope",
+      "reason": "The RelatedPerson contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/ResearchGroup",
+      "status": "out_of_scope",
+      "reason": "The ResearchGroup contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Researcher",
+      "status": "out_of_scope",
+      "reason": "The Researcher contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/RightsHolder",
+      "status": "out_of_scope",
+      "reason": "The RightsHolder contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Sponsor",
+      "status": "out_of_scope",
+      "reason": "The Sponsor contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Supervisor",
+      "status": "out_of_scope",
+      "reason": "The Supervisor contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/Translator",
+      "status": "out_of_scope",
+      "reason": "The Translator contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/contributorType/WorkPackageLeader",
+      "status": "out_of_scope",
+      "reason": "The WorkPackageLeader contributorType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Accepted",
+      "status": "out_of_scope",
+      "reason": "The Accepted dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Available",
+      "status": "out_of_scope",
+      "reason": "The Available dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Collected",
+      "status": "out_of_scope",
+      "reason": "The Collected dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Copyrighted",
+      "status": "out_of_scope",
+      "reason": "The Copyrighted dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Coverage",
+      "status": "out_of_scope",
+      "reason": "The Coverage dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Created",
+      "status": "out_of_scope",
+      "reason": "The Created dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Issued",
+      "status": "out_of_scope",
+      "reason": "The Issued dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Other",
+      "status": "out_of_scope",
+      "reason": "The Other dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Submitted",
+      "status": "out_of_scope",
+      "reason": "The Submitted dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Updated",
+      "status": "out_of_scope",
+      "reason": "The Updated dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Valid",
+      "status": "out_of_scope",
+      "reason": "The Valid dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/dateType/Withdrawn",
+      "status": "out_of_scope",
+      "reason": "The Withdrawn dateType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
+      "status": "out_of_scope",
+      "reason": "The Abstract descriptionType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Methods",
+      "status": "out_of_scope",
+      "reason": "The Methods descriptionType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/Other",
+      "status": "out_of_scope",
+      "reason": "The Other descriptionType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/SeriesInformation",
+      "status": "out_of_scope",
+      "reason": "The SeriesInformation descriptionType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/TableOfContents",
+      "status": "out_of_scope",
+      "reason": "The TableOfContents descriptionType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo",
+      "status": "out_of_scope",
+      "reason": "The TechnicalInfo descriptionType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/CrossrefFunderID",
+      "status": "out_of_scope",
+      "reason": "The CrossrefFunderID funderIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/GRID",
+      "status": "out_of_scope",
+      "reason": "The GRID funderIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ISNI",
+      "status": "out_of_scope",
+      "reason": "The ISNI funderIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/Other",
+      "status": "out_of_scope",
+      "reason": "The Other funderIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/funderIdentifierType/ROR",
+      "status": "out_of_scope",
+      "reason": "The ROR funderIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/identifierType/DOI",
+      "status": "out_of_scope",
+      "reason": "The DOI identifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/nameType/Organizational",
+      "status": "mapped",
+      "reason": "The qualifier identifies an organizational name; the corresponding entity-kind concept is organization, without generating a Wikidata instance assertion."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/nameType/Personal",
+      "status": "no_equivalent",
+      "reason": "A personal-name qualifier is not directly equivalent to the person or human classes; agent typing requires contextual interpretation."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Article",
+      "status": "out_of_scope",
+      "reason": "The Article numberType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Chapter",
+      "status": "out_of_scope",
+      "reason": "The Chapter numberType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Other",
+      "status": "out_of_scope",
+      "reason": "The Other numberType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/numberType/Report",
+      "status": "out_of_scope",
+      "reason": "The Report numberType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ARK",
+      "status": "out_of_scope",
+      "reason": "The ARK relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/CSTR",
+      "status": "out_of_scope",
+      "reason": "The CSTR relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/DOI",
+      "status": "out_of_scope",
+      "reason": "The DOI relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EAN13",
+      "status": "out_of_scope",
+      "reason": "The EAN13 relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/EISSN",
+      "status": "out_of_scope",
+      "reason": "The EISSN relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/Handle",
+      "status": "out_of_scope",
+      "reason": "The Handle relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/IGSN",
+      "status": "out_of_scope",
+      "reason": "The IGSN relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISBN",
+      "status": "out_of_scope",
+      "reason": "The ISBN relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISSN",
+      "status": "out_of_scope",
+      "reason": "The ISSN relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/ISTC",
+      "status": "out_of_scope",
+      "reason": "The ISTC relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LISSN",
+      "status": "out_of_scope",
+      "reason": "The LISSN relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/LSID",
+      "status": "out_of_scope",
+      "reason": "The LSID relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PMID",
+      "status": "out_of_scope",
+      "reason": "The PMID relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/PURL",
+      "status": "out_of_scope",
+      "reason": "The PURL relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RAiD",
+      "status": "out_of_scope",
+      "reason": "The RAiD relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/RRID",
+      "status": "out_of_scope",
+      "reason": "The RRID relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/SWHID",
+      "status": "out_of_scope",
+      "reason": "The SWHID relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/UPC",
+      "status": "out_of_scope",
+      "reason": "The UPC relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URL",
+      "status": "out_of_scope",
+      "reason": "The URL relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/URN",
+      "status": "out_of_scope",
+      "reason": "The URN relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/arXiv",
+      "status": "out_of_scope",
+      "reason": "The arXiv relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/bibcode",
+      "status": "out_of_scope",
+      "reason": "The bibcode relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relatedIdentifierType/w3id",
+      "status": "out_of_scope",
+      "reason": "The w3id relatedIdentifierType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Cites",
+      "status": "out_of_scope",
+      "reason": "The Cites relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Collects",
+      "status": "out_of_scope",
+      "reason": "The Collects relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Compiles",
+      "status": "out_of_scope",
+      "reason": "The Compiles relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Continues",
+      "status": "out_of_scope",
+      "reason": "The Continues relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Describes",
+      "status": "out_of_scope",
+      "reason": "The Describes relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Documents",
+      "status": "out_of_scope",
+      "reason": "The Documents relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasMetadata",
+      "status": "out_of_scope",
+      "reason": "The HasMetadata relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasPart",
+      "status": "out_of_scope",
+      "reason": "The HasPart relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasTranslation",
+      "status": "out_of_scope",
+      "reason": "The HasTranslation relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/HasVersion",
+      "status": "out_of_scope",
+      "reason": "The HasVersion relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCitedBy",
+      "status": "out_of_scope",
+      "reason": "The IsCitedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy",
+      "status": "out_of_scope",
+      "reason": "The IsCollectedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsCompiledBy",
+      "status": "out_of_scope",
+      "reason": "The IsCompiledBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsContinuedBy",
+      "status": "out_of_scope",
+      "reason": "The IsContinuedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom",
+      "status": "out_of_scope",
+      "reason": "The IsDerivedFrom relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDescribedBy",
+      "status": "out_of_scope",
+      "reason": "The IsDescribedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsDocumentedBy",
+      "status": "out_of_scope",
+      "reason": "The IsDocumentedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsIdenticalTo",
+      "status": "out_of_scope",
+      "reason": "The IsIdenticalTo relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsMetadataFor",
+      "status": "out_of_scope",
+      "reason": "The IsMetadataFor relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsNewVersionOf",
+      "status": "out_of_scope",
+      "reason": "The IsNewVersionOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsObsoletedBy",
+      "status": "out_of_scope",
+      "reason": "The IsObsoletedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsOriginalFormOf",
+      "status": "out_of_scope",
+      "reason": "The IsOriginalFormOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPartOf",
+      "status": "out_of_scope",
+      "reason": "The IsPartOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPreviousVersionOf",
+      "status": "out_of_scope",
+      "reason": "The IsPreviousVersionOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsPublishedIn",
+      "status": "out_of_scope",
+      "reason": "The IsPublishedIn relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy",
+      "status": "out_of_scope",
+      "reason": "The IsReferencedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsRequiredBy",
+      "status": "out_of_scope",
+      "reason": "The IsRequiredBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsReviewedBy",
+      "status": "out_of_scope",
+      "reason": "The IsReviewedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSourceOf",
+      "status": "out_of_scope",
+      "reason": "The IsSourceOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSupplementTo",
+      "status": "out_of_scope",
+      "reason": "The IsSupplementTo relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsSupplementedBy",
+      "status": "out_of_scope",
+      "reason": "The IsSupplementedBy relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsTranslationOf",
+      "status": "out_of_scope",
+      "reason": "The IsTranslationOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsVariantFormOf",
+      "status": "out_of_scope",
+      "reason": "The IsVariantFormOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/IsVersionOf",
+      "status": "out_of_scope",
+      "reason": "The IsVersionOf relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Obsoletes",
+      "status": "out_of_scope",
+      "reason": "The Obsoletes relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Other",
+      "status": "out_of_scope",
+      "reason": "The Other relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/References",
+      "status": "out_of_scope",
+      "reason": "The References relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Requires",
+      "status": "out_of_scope",
+      "reason": "The Requires relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/relationType/Reviews",
+      "status": "out_of_scope",
+      "reason": "The Reviews relationType qualifier would need a separately reviewed record/statement conversion; this Q-item set does not align qualifier concepts to statement properties."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Audiovisual",
+      "status": "no_equivalent",
+      "reason": "The previous Wikidata audiovisual target requires both sound and visual components, whereas DataCite moving images may be silent. No equal-scope target was approved."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Award",
+      "status": "no_equivalent",
+      "reason": "DataCite Award includes grants, investment, training support, and non-monetary resources. Neither a merit award nor a grant alone covers it."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Book",
+      "status": "mapped",
+      "reason": "The concepts describe books; do not infer a particular edition or physical copy."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/BookChapter",
+      "status": "mapped",
+      "reason": "Wikidata chapter includes divisions of works beyond books; the target concept is broader."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Collection",
+      "status": "mapped",
+      "reason": "Both describe purposely grouped resources or objects."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ComputationalNotebook",
+      "status": "no_equivalent",
+      "reason": "A notebook environment and an individual computational notebook are not automatically the same object; the old notebook-interface target is not accepted as an unconditional correspondence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferencePaper",
+      "status": "mapped",
+      "reason": "Wikidata conference paper describes a document published in conference proceedings; DataCite also includes submissions intended for conference acceptance."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/ConferenceProceeding",
+      "status": "mapped",
+      "reason": "Both describe a collection of papers issued for an academic conference."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/DataPaper",
+      "status": "mapped",
+      "reason": "Both describe a scholarly publication focused on describing data."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dataset",
+      "status": "mapped",
+      "reason": "Both describe a collection of data; this is concept alignment, not a generated Wikidata statement."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Dissertation",
+      "status": "mapped",
+      "reason": "Both describe academic thesis work; qualification-level details require source preservation."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Event",
+      "status": "no_equivalent",
+      "reason": "The inspected planned-event item excludes unplanned occurrences included by DataCite Event; no equal-scope target was approved."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Image",
+      "status": "mapped",
+      "reason": "Both describe a visual representation; no file format or licensing inference is implied."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Instrument",
+      "status": "no_equivalent",
+      "reason": "A physical tool is broader in purpose and excludes potential nonphysical instruments; the former weak association is omitted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/InteractiveResource",
+      "status": "no_equivalent",
+      "reason": "No independently verified Wikidata concept with the DataCite user-interaction scope was approved."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Journal",
+      "status": "mapped",
+      "reason": "Both describe an academic periodical; preserve the source scholarly-publication context."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/JournalArticle",
+      "status": "mapped",
+      "reason": "The Wikidata article concept also includes newspaper and magazine articles, beyond a journal article."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Model",
+      "status": "mapped",
+      "reason": "The Wikidata model concept includes physical and conceptual representations; DataCite Model describes abstract representations. No 3D restriction is imposed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Other",
+      "status": "no_equivalent",
+      "reason": "Other requires a free-text resource type; there is no universal Wikidata concept equivalent to the residual category."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/OutputManagementPlan",
+      "status": "mapped",
+      "reason": "A data management plan covers a subset of the broader DataCite plans for research outputs, which may also include software and other outputs."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PeerReview",
+      "status": "mapped",
+      "reason": "Wikidata review includes evaluations beyond scientific or professional peer review."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/PhysicalObject",
+      "status": "mapped",
+      "reason": "Both describe tangible objects; retain specific sample or material descriptions."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Poster",
+      "status": "mapped",
+      "reason": "Both describe research posters for academic events; correspondence checked against the Wikidata conference-poster item."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Preprint",
+      "status": "mapped",
+      "reason": "Both describe a scholarly paper before formal peer-reviewed publication."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Presentation",
+      "status": "mapped",
+      "reason": "The DataCite value describes a set of slides; the matching item is a slide deck, not the delivery event or a single slide."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Project",
+      "status": "mapped",
+      "reason": "Both describe a planned endeavor to achieve a goal using allocated resources."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Report",
+      "status": "mapped",
+      "reason": "Both describe a report document; a record-level conversion still requires independent bibliographic modeling."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Service",
+      "status": "no_equivalent",
+      "reason": "The inspected economic-service item does not establish equivalence to every DataCite system supplying end-user functions."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Software",
+      "status": "mapped",
+      "reason": "Both describe computer software; DataCite excludes computational notebooks and includes source code, so exact equivalence is not asserted."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Sound",
+      "status": "mapped",
+      "reason": "Both concern recorded audio content; an audio-record conversion requires separate graph and media modeling."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Standard",
+      "status": "no_equivalent",
+      "reason": "DataCite Standard includes standards by authority, custom, or general consent. A metadata scheme is a much narrower and different category; the previous Q41623316 exact match is removed."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/StudyRegistration",
+      "status": "no_equivalent",
+      "reason": "A registered research-plan document is not the study or registry itself; no equal-scope Wikidata item was approved."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Text",
+      "status": "mapped",
+      "reason": "Wikidata text is broader; DataCite Text excludes separately enumerated textual resource types."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/resourceTypeGeneral/Workflow",
+      "status": "mapped",
+      "reason": "Both denote an organized sequence of activities; execution metadata is outside this correspondence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/AlternativeTitle",
+      "status": "no_equivalent",
+      "reason": "The audited alternative-title item has a narrower second-title sense; no unconditional same-scope correspondence was approved."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/Other",
+      "status": "no_equivalent",
+      "reason": "Other is a residual title-kind category with no stable Wikidata correspondence."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/Subtitle",
+      "status": "mapped",
+      "reason": "Both denote the secondary title accompanying a main title; no literal title statement is produced."
+    },
+    {
+      "subject_id": "https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle",
+      "status": "no_equivalent",
+      "reason": "A translated title is not the translation process; the previous translation item is omitted."
+    }
+  ]
+}

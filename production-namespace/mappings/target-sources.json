@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "sources": {
+    "schemaorg": {
+      "filename": "schemaorg-30.1.jsonld",
+      "url": "https://schema.org/version/30.1/schemaorg-current-https.jsonld",
+      "version": "30.1",
+      "namespace": "https://schema.org/",
+      "format": "json-ld",
+      "retrieved": "2026-10-06",
+      "sha256": "0a4b8c4c910fc831ec8695196510973390906a5ee34dc6b862dfec4d21a12f74"
+    },
+    "dcterms": {
+      "filename": "dcterms.ttl",
+      "url": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl",
+      "version": "2020-01-20",
+      "namespace": "http://purl.org/dc/terms/",
+      "format": "turtle",
+      "retrieved": "2026-10-06",
+      "sha256": "13df401072dd7015bf9d75162f3e41c8138075304b7b9cc1aa1e9c16db976797"
+    },
+    "dcmitype": {
+      "filename": "dcmitype.ttl",
+      "url": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.ttl",
+      "version": "2020-01-20",
+      "namespace": "http://purl.org/dc/dcmitype/",
+      "format": "turtle",
+      "retrieved": "2026-10-06",
+      "sha256": "f987b11d556e556fef95d7e9410c1c561fc1b7ac05ccd457128dc8962641b01e"
+    },
+    "dcat": {
+      "filename": "dcat.ttl",
+      "url": "https://www.w3.org/ns/dcat3.ttl",
+      "version": "3",
+      "namespace": "http://www.w3.org/ns/dcat#",
+      "format": "turtle",
+      "retrieved": "2026-10-06",
+      "sha256": "d1624d3bbf364f6fc1d43b9a188bbb9e67639b1a7d46a5cb7ea3f5d47d02b62f"
+    },
+    "wikidata-0": {
+      "filename": "wikidata-0.json",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=P496%7CQ101352%7CQ1071027%7CQ108676767%7CQ10870555%7CQ1122506%7CQ1135389%7CQ1143604%7CQ1172284%7CQ1172480%7CQ11784425%7CQ1266946%7CQ1298668%7CQ13442814%7CQ1361758%7CQ164573%7CQ1656682%7CQ17009938%7CQ170584%7CQ17085509%7CQ18616576%7CQ18918145%7CQ191067%7CQ193946%7CQ1979154%7CQ1980247%7CQ20204892%7CQ202444%7CQ215627%7CQ22097967%7CQ2221906%7CQ223557%7CQ230788%7CQ234460%7CQ23927052%7CQ2500638%7CQ2516866%7CQ2623243%7CQ265158%7CQ2668072%7CQ28405706%7CQ3284399%7CQ34770%7CQ386724%7CQ39546%7CQ41623316%7CQ43229%7CQ46135267%7CQ4736562%7CQ478798&props=labels%7Cdescriptions&languages=en&format=json",
+      "version": "2026-10-06",
+      "namespace": "http://www.wikidata.org/entity/",
+      "format": "wikidata-json",
+      "retrieved": "2026-10-06",
+      "sha256": "d42c17754a5be3877d72c9f92c287ef6254a0743dfffe9651dd9af823a37a627"
+    },
+    "wikidata-50": {
+      "filename": "wikidata-50.json",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q482980%7CQ486902%7CQ5%7CQ5633421%7CQ571%7CQ580922%7CQ5962346%7CQ618779%7CQ627335%7CQ737498%7CQ7397%7CQ7406919%7CQ7553%7CQ758901%7CQ783521%7CQ82799%7CQ853614&props=labels%7Cdescriptions&languages=en&format=json",
+      "version": "2026-10-06",
+      "namespace": "http://www.wikidata.org/entity/",
+      "format": "wikidata-json",
+      "retrieved": "2026-10-06",
+      "sha256": "055d530de0d965cab2c020df49cdee9b3de9c0416f91c794f3d2d8356828604d"
+    },
+    "wikidata-new": {
+      "filename": "wikidata-new.json",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q54670950%7CQ110611535&props=labels%7Cdescriptions&languages=en&format=json",
+      "version": "2026-10-06",
+      "namespace": "http://www.wikidata.org/entity/",
+      "format": "wikidata-json",
+      "retrieved": "2026-10-06",
+      "sha256": "07350254613a1add251728d1701af7854103364879cdfc7c0341a1cb4d19644b"
+    }
+  }
+}

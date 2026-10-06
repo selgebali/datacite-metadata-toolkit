@@ -381,5 +381,20 @@ def build(root, check=False):
             (directory / name).write_text(text, encoding="utf-8")
     skos, jskos = export_triples(directory)
     require(triples == skos == jskos, "SSSOM, SKOS, and JSKOS mapping triples differ")
+    if check:
+        check_published_copy(root)
     return counts, len(triples), source_count
 
+
+def check_published_copy(root):
+    """The production bundle serves mapping_set_id IRIs; its copies must be current."""
+    published = root / "production-namespace" / "mappings"
+    require(published.is_dir(), f"Missing {published}; run bash rdf-build-scripts/generate-production-namespace.sh")
+    source = root / "mappings"
+    names = [p.name for p in source.glob("datacite-*.sssom.tsv")]
+    names += [*EXPORTS, "target-sources.json"]
+    names += [f"{group}/{p.name}" for group in ("conversion", "coverage") for p in (source / group).glob("*.json")]
+    for name in sorted(names):
+        copy = published / name
+        require(copy.is_file() and copy.read_bytes() == (source / name).read_bytes(),
+                f"Stale published mapping {copy}; run bash rdf-build-scripts/generate-production-namespace.sh")
